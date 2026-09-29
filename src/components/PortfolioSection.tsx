@@ -99,29 +99,27 @@ export default function PortfolioSection() {
                 <h3 className="text-lg font-editorial text-[#2c2c2c] dark:text-white mb-2">
                   {item.title}
                 </h3>
-                <p className="text-[13px] text-[#444141] dark:text-[#d1d5db] leading-relaxed line-clamp-3 mb-4">
+                <p className="text-[13px] text-[#444141] dark:text-[#d1d5db] leading-relaxed line-clamp-3 mb-2">
                   {item.description}
                 </p>
               </div>
             </div>
 
-            {/* Footer Tech List & Link */}
-            <div className="px-5 pb-5 pt-2 border-t border-[#dee2de] dark:border-[#24272b] flex items-center justify-between text-[11px] font-mono text-[#646464] dark:text-[#a0a5ad]">
-              <div className="truncate max-w-[70%]">
-                {item.technologies.slice(0, 3).join(' • ')}
-              </div>
+            {/* Footer Action (Clean without redundant tech labels) */}
+            <div className="px-5 pb-5 pt-3 border-t border-[#dee2de] dark:border-[#24272b] flex items-center justify-between text-[12px] font-mono text-[#646464] dark:text-[#a0a5ad]">
+              <span>{item.industry}</span>
               {item.url ? (
                 <a
                   href={item.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#41a1cf] hover:underline flex items-center gap-1 font-medium"
+                  className="text-[#41a1cf] hover:underline flex items-center gap-1 font-medium text-[13px]"
                 >
-                  <span>Buka</span>
+                  <span>Buka Platform</span>
                   <span>↗</span>
                 </a>
               ) : (
-                <span className="text-[#b4b8b4] dark:text-[#646464]">Internal</span>
+                <span className="text-[#b4b8b4] dark:text-[#646464]">Sistem Internal</span>
               )}
             </div>
           </div>
