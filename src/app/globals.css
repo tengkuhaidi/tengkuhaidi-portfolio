@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
 @font-face {
   font-family: 'ppmondwest';
   src: url('/fonts/ppmondwest.woff2') format('woff2');
@@ -17,7 +19,7 @@
 }
 
 @theme {
-  /* Colors - General Intelligence Company Spec */
+  /* Colors - General Intelligence Spec */
   --color-parchment: #fefffc;
   --color-paper: #ffffff;
   --color-linen: #f9faf7;
@@ -34,29 +36,38 @@
 
   /* Typography */
   --font-ppmondwest: 'ppmondwest', Georgia, serif;
-  --font-af: 'af', ui-sans-serif, system-ui, sans-serif;
+  --font-af: 'af', var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 }
 
 :root {
-  --color-parchment: #fefffc;
-  --color-paper: #ffffff;
-  --color-linen: #f9faf7;
-  --color-ink-black: #171717;
-  --color-graphite: #2c2c2c;
-  --color-charcoal: #444141;
-  --color-ash: #646464;
-  --color-fog: #b4b8b4;
-  --color-mist: #dee2de;
-  --color-twilight: #282834;
-  --color-dusk: #1f1f29;
-  --color-signal-blue: #41a1cf;
-  --color-cerulean: #0081c0;
+  --canvas-bg: #fefffc;
+  --card-bg: #ffffff;
+  --card-subtle-bg: #f9faf7;
+  --border-mist: #dee2de;
+  --text-main: #2c2c2c;
+  --text-sub: #444141;
+  --text-muted: #646464;
+  --nav-bg: rgba(255, 255, 255, 0.85);
+  --nav-border: rgba(222, 226, 222, 0.9);
+}
+
+[data-theme='dark'], .dark {
+  --canvas-bg: #0c0d0e;
+  --card-bg: #141517;
+  --card-subtle-bg: #1a1c1e;
+  --border-mist: #24272b;
+  --text-main: #f3f4f6;
+  --text-sub: #c9ccd1;
+  --text-muted: #858c96;
+  --nav-bg: rgba(20, 21, 23, 0.85);
+  --nav-border: rgba(36, 39, 43, 0.9);
 }
 
 body {
-  background-color: var(--color-parchment);
-  color: var(--color-graphite);
-  font-family: 'af', ui-sans-serif, system-ui, sans-serif;
+  background-color: var(--canvas-bg);
+  color: var(--text-main);
+  font-family: 'af', var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
 h1, h2, h3, .font-editorial {

@@ -56,7 +56,7 @@ export default function Home() {
   };
 
   return (
-    <main className="min-h-screen bg-[#fefffc] text-[#2c2c2c] antialiased">
+    <main className="min-h-screen bg-[var(--canvas-bg)] text-[var(--text-main)] transition-colors antialiased">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
