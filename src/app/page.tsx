@@ -57,19 +57,28 @@ export default function Home() {
   };
 
   return (
-    <main className="min-h-screen bg-[var(--canvas-bg)] text-[var(--text-main)] transition-colors antialiased">
+    <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <Navbar />
-      <Hero />
-      <Ecosystem />
-      <CapabilitiesStory />
-      <Services />
-      <PortfolioSection />
-      <AboutCompany />
+
+      {/* 
+        Solid Main Content Shell (z-10, relative, solid bg)
+        Ensures the fixed footer curtain underneath is 100% occluded until the user scrolls to the bottom
+      */}
+      <main className="relative z-10 w-full bg-[var(--canvas-bg)] text-[var(--text-main)] shadow-[0_20px_50px_rgba(0,0,0,0.15)] dark:shadow-[0_20px_50px_rgba(0,0,0,0.7)] transition-colors antialiased">
+        <Hero />
+        <Ecosystem />
+        <CapabilitiesStory />
+        <Services />
+        <PortfolioSection />
+        <AboutCompany />
+      </main>
+
+      {/* Sticky Curtain Reveal Footer outside main content */}
       <Footer />
-    </main>
+    </>
   );
 }

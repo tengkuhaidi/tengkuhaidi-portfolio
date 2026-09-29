@@ -110,10 +110,10 @@ export default function Footer() {
         Fixed to the bottom of the viewport with z-[-1]. As the user scrolls past the footer content,
         this illustrated landscape is revealed with deep atmospheric parallax.
       */}
-      <div className="fixed bottom-0 left-0 right-0 z-0 h-[380px] md:h-[460px] xl:h-[520px] overflow-hidden pointer-events-none">
+      <div className="fixed bottom-0 left-0 right-0 -z-10 h-[380px] md:h-[460px] xl:h-[520px] overflow-hidden pointer-events-none">
         
         {/* Subtle dark gradient overlay for typography readability */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent z-10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent z-10" />
 
         {/* Parallax Landscape Illustration */}
         <div className="relative w-full h-full">
