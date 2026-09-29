@@ -3,158 +3,129 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowRight, Menu, X, ShieldCheck, Sparkles } from 'lucide-react';
+import { ArrowRight, Menu, X } from 'lucide-react';
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? 'bg-neutral-950/85 backdrop-blur-xl border-b border-neutral-800/80 py-3.5 shadow-2xl shadow-black/40'
-          : 'bg-transparent py-5'
-      }`}
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between">
-          {/* Brand Logo */}
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="relative h-9 w-auto">
-              <Image
-                src="/logo-digitas.png"
-                alt="PT Digitas Solusi Indonesia"
-                width={160}
-                height={36}
-                className="h-8 md:h-9 w-auto object-contain brightness-0 invert transition-transform group-hover:scale-105"
-                priority
-              />
-            </div>
-            <span className="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-neutral-900 border border-neutral-800 text-neutral-400">
-              <span className="size-1.5 rounded-full bg-emerald-500 animate-pulse" />
-              Holding & Studio
-            </span>
+    <header className="fixed top-5 left-0 right-0 z-50 flex justify-center px-4">
+      {/* Frosted Navigation Pill - Exactly from General Intelligence spec */}
+      <div className="w-full max-w-4xl bg-white/75 backdrop-blur-md border border-[#dee2de] rounded-full px-5 py-2.5 shadow-[0_2px_6px_rgba(0,0,0,0.06)] flex items-center justify-between transition-all">
+        {/* Brand */}
+        <Link href="/" className="flex items-center gap-2.5 group">
+          <Image
+            src="/logo-digitas.png"
+            alt="PT Digitas Solusi Indonesia"
+            width={120}
+            height={26}
+            className="h-6 w-auto object-contain"
+            priority
+          />
+          <span className="hidden sm:inline-block text-[11px] font-mono tracking-tight text-[#646464] border-l border-[#dee2de] pl-2.5">
+            Holding &amp; Systems
+          </span>
+        </Link>
+
+        {/* Center Links (af / sans, 15px, weight 500) */}
+        <nav className="hidden md:flex items-center gap-7 text-[15px] font-medium text-[#444141]">
+          <Link href="#ecosystem" className="hover:text-[#171717] transition-colors">
+            Ekosistem
           </Link>
+          <Link href="#capabilities" className="hover:text-[#171717] transition-colors">
+            Kapabilitas
+          </Link>
+          <Link href="#portfolio" className="hover:text-[#171717] transition-colors">
+            Sistem &amp; Karya
+          </Link>
+          <Link href="#about" className="hover:text-[#171717] transition-colors">
+            Tentang
+          </Link>
+        </nav>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
-            <Link
-              href="#ecosystem"
-              className="text-sm font-medium text-neutral-300 hover:text-white transition-colors"
-            >
-              Ekosistem Bisnis
-            </Link>
-            <Link
-              href="#services"
-              className="text-sm font-medium text-neutral-300 hover:text-white transition-colors"
-            >
-              Kapabilitas Teknis
-            </Link>
-            <Link
-              href="#portfolio"
-              className="text-sm font-medium text-neutral-300 hover:text-white transition-colors"
-            >
-              Portofolio & Sistem
-            </Link>
-            <Link
-              href="#about"
-              className="text-sm font-medium text-neutral-300 hover:text-white transition-colors"
-            >
-              Tentang Kami
-            </Link>
-          </nav>
-
-          {/* CTA & Actions */}
-          <div className="hidden md:flex items-center gap-4">
-            <a
-              href="https://legalizin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-xs font-semibold text-emerald-400 bg-emerald-950/40 border border-emerald-800/60 hover:bg-emerald-900/50 transition-all"
-            >
-              <ShieldCheck className="size-3.5" />
-              <span>Unit Legalizin.com</span>
-            </a>
-            <a
-              href="https://wa.me/6281235247820"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-semibold text-neutral-950 bg-white hover:bg-neutral-200 transition-all shadow-md shadow-white/10 active:scale-95"
-            >
-              <span>Mulai Diskusi</span>
-              <ArrowRight className="size-3.5" />
-            </a>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 rounded-lg text-neutral-400 hover:text-white hover:bg-neutral-900 focus:outline-none"
-            aria-label="Toggle navigation"
+        {/* Outlined Action Buttons */}
+        <div className="hidden md:flex items-center gap-3">
+          <a
+            href="https://legalizin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-[8px] border border-[#dee2de] text-[13px] font-medium text-[#444141] hover:text-[#171717] hover:border-[#b4b8b4] transition-all bg-[#ffffff]"
           >
-            {mobileMenuOpen ? <X className="size-6" /> : <Menu className="size-6" />}
-          </button>
+            <span>Legalizin</span>
+            <span className="text-[10px] font-mono text-[#41a1cf]">↗</span>
+          </a>
+
+          {/* Primary Outlined CTA Button - Signal Blue border (#41a1cf), transparent bg */}
+          <a
+            href="https://wa.me/6281235247820"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-[8px] border border-[#41a1cf] text-[14px] font-medium text-[#41a1cf] hover:bg-[#41a1cf]/5 transition-all group"
+          >
+            <span>Mulai Diskusi</span>
+            <span className="inline-flex items-center justify-center size-4 rounded-full border border-[#41a1cf]/60 text-[10px] group-hover:translate-x-0.5 transition-transform">
+              →
+            </span>
+          </a>
         </div>
+
+        {/* Mobile menu toggle */}
+        <button
+          onClick={() => setMobileOpen(!mobileOpen)}
+          className="md:hidden p-1.5 rounded-full text-[#444141] hover:text-[#171717]"
+          aria-label="Toggle Menu"
+        >
+          {mobileOpen ? <X className="size-5" /> : <Menu className="size-5" />}
+        </button>
       </div>
 
-      {/* Mobile Menu Dropdown */}
-      {mobileMenuOpen && (
-        <div className="md:hidden bg-neutral-950 border-b border-neutral-800 px-4 pt-4 pb-6 space-y-4 shadow-2xl">
+      {/* Mobile Drawer */}
+      {mobileOpen && (
+        <div className="md:hidden absolute top-16 left-4 right-4 bg-white border border-[#dee2de] rounded-2xl p-5 shadow-lg space-y-4">
           <Link
             href="#ecosystem"
-            onClick={() => setMobileMenuOpen(false)}
-            className="block text-base font-medium text-neutral-200 hover:text-white"
+            onClick={() => setMobileOpen(false)}
+            className="block text-[15px] font-medium text-[#2c2c2c]"
           >
-            Ekosistem Bisnis
+            Ekosistem Legalizin
           </Link>
           <Link
-            href="#services"
-            onClick={() => setMobileMenuOpen(false)}
-            className="block text-base font-medium text-neutral-200 hover:text-white"
+            href="#capabilities"
+            onClick={() => setMobileOpen(false)}
+            className="block text-[15px] font-medium text-[#2c2c2c]"
           >
             Kapabilitas Teknis
           </Link>
           <Link
             href="#portfolio"
-            onClick={() => setMobileMenuOpen(false)}
-            className="block text-base font-medium text-neutral-200 hover:text-white"
+            onClick={() => setMobileOpen(false)}
+            className="block text-[15px] font-medium text-[#2c2c2c]"
           >
-            Portofolio & Sistem
+            Sistem &amp; Karya
           </Link>
           <Link
             href="#about"
-            onClick={() => setMobileMenuOpen(false)}
-            className="block text-base font-medium text-neutral-200 hover:text-white"
+            onClick={() => setMobileOpen(false)}
+            className="block text-[15px] font-medium text-[#2c2c2c]"
           >
-            Tentang Kami
+            Tentang Perusahaan
           </Link>
-          <div className="pt-4 border-t border-neutral-800 flex flex-col gap-3">
+          <div className="pt-3 border-t border-[#dee2de] flex flex-col gap-2.5">
             <a
               href="https://legalizin.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg text-xs font-semibold text-emerald-400 bg-emerald-950/40 border border-emerald-800/60"
+              className="text-center py-2 rounded-[8px] border border-[#dee2de] text-[13px] font-medium text-[#444141]"
             >
-              <ShieldCheck className="size-4" />
-              <span>Kunjungi Unit Usaha Legalizin.com</span>
+              Kunjungi Legalizin.com ↗
             </a>
             <a
               href="https://wa.me/6281235247820"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-full text-xs font-bold text-neutral-950 bg-white"
+              className="text-center py-2.5 rounded-[8px] border border-[#41a1cf] text-[14px] font-medium text-[#41a1cf] bg-[#41a1cf]/5"
             >
-              <span>Hubungi Kami via WhatsApp</span>
-              <ArrowRight className="size-4" />
+              Mulai Diskusi WhatsApp →
             </a>
           </div>
         </div>

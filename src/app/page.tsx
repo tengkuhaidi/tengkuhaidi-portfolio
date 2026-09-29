@@ -8,24 +8,16 @@ import Footer from '@/components/Footer';
 
 export const metadata = {
   metadataBase: new URL('https://digitasolusindo.com'),
-  title: 'PT Digitas Solusi Indonesia | Technology Venture & Systems Holding',
-  description: 'Studio rekayasa perangkat lunak dan holding venture di Jakarta Selatan. Menghadirkan ekosistem LegalTech Legalizin.com, arsitektur Next.js modern, dan sistem ERP internal terintegrasi.',
+  title: 'PT Digitas Solusi Indonesia | Studio Rekayasa & Holding Sistem',
+  description: 'Studio rekayasa sistem dan holding teknologi di Jakarta Selatan. Penaung Legalizin.com, arsitektur web modern, dan sistem digital terpercaya.',
   alternates: {
     canonical: 'https://digitasolusindo.com',
   },
   openGraph: {
-    title: 'PT Digitas Solusi Indonesia | Systems Holding & Technology Studio',
-    description: 'Studio rekayasa perangkat lunak dan holding teknologi terpadu di Indonesia. Mengoperasikan ekosistem LegalTech Legalizin.com dan sistem enterprise handal.',
+    title: 'PT Digitas Solusi Indonesia | Studio Rekayasa & Holding Sistem',
+    description: 'Studio rekayasa perangkat lunak dan holding teknologi di Indonesia. Penaung ekosistem LegalTech Legalizin.com.',
     url: 'https://digitasolusindo.com',
     siteName: 'PT Digitas Solusi Indonesia',
-    images: [
-      {
-        url: '/og-image.png',
-        width: 1200,
-        height: 630,
-        alt: 'PT Digitas Solusi Indonesia'
-      }
-    ],
     locale: 'id_ID',
     type: 'website',
   }
@@ -64,13 +56,11 @@ export default function Home() {
   };
 
   return (
-    <main className="min-h-screen bg-neutral-950 text-neutral-100 selection:bg-blue-500 selection:text-white antialiased">
-      {/* Schema.org Structured Data */}
+    <main className="min-h-screen bg-[#fefffc] text-[#2c2c2c] antialiased">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-
       <Navbar />
       <Hero />
       <Ecosystem />

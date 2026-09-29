@@ -1,91 +1,73 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Terminal, Shield, Cpu, ExternalLink, CheckCircle2 } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[92vh] flex items-center justify-center pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden bg-neutral-950">
-      {/* Background Subtle Gradient & Grid */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#1f29370f_1px,transparent_1px),linear-gradient(to_bottom,#1f29370f_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 size-[600px] bg-blue-600/10 rounded-full blur-[140px] pointer-events-none" />
-      <div className="absolute top-1/3 left-1/3 size-[400px] bg-emerald-600/10 rounded-full blur-[120px] pointer-events-none" />
+    <section className="relative pt-36 pb-20 md:pt-44 md:pb-28 px-4 sm:px-6 max-w-[1200px] mx-auto">
+      {/* Subdued Editorial Eyebrow */}
+      <div className="mb-6 flex items-center gap-2">
+        <span className="text-[13px] font-mono text-[#646464] tracking-tight">
+          PT Digitas Solusi Indonesia
+        </span>
+        <span className="text-[#b4b8b4]">—</span>
+        <span className="text-[13px] text-[#444141]">
+          Jakarta Selatan
+        </span>
+      </div>
 
-      <div className="relative z-10 max-w-5xl mx-auto text-center">
-        {/* Anti-Slop Badge */}
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-neutral-900/90 border border-neutral-800 text-xs font-medium text-neutral-300 mb-8 backdrop-blur-md hover:border-neutral-700 transition-colors">
-          <span className="size-2 rounded-full bg-blue-500 animate-ping" />
-          <span className="text-neutral-400 font-mono">PT Digitas Solusi Indonesia</span>
-          <span className="text-neutral-600">•</span>
-          <span className="text-blue-400 font-semibold">Technology Venture & Systems Holding</span>
-        </div>
+      {/* Literary Display Headline (ppmondwest/serif style, 48-54px, weight 400, tight tracking) */}
+      <h1 className="text-4xl sm:text-5xl md:text-[54px] font-editorial text-[#2c2c2c] leading-[1.12] tracking-[-0.035em] max-w-4xl mb-8">
+        Kami merancang perangkat lunak dan sistem operasional yang menopang pertumbuhan bisnis nyata.
+      </h1>
 
-        {/* Hero Headline (Sharp, Concrete, No Jargon) */}
-        <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-[1.1] mb-6">
-          Membangun Sistem Digital Nyata.{' '}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-sky-300 to-emerald-400">
-            Bukan Sekadar Ekspektasi.
+      {/* Editorial Body (af / sans, 16-18px, Charcoal #444141, leading 1.5) */}
+      <p className="text-[17px] sm:text-[18px] text-[#444141] leading-[1.55] max-w-2xl mb-10">
+        Digitas Solusi Indonesia adalah studio rekayasa teknologi independen sekaligus entitas penaung platform LegalTech terintegrasi <a href="https://legalizin.com" target="_blank" rel="noopener noreferrer" className="underline decoration-[#41a1cf] underline-offset-4 text-[#171717] hover:text-[#41a1cf] transition-colors">Legalizin.com</a>. Kami tidak membuat prototipe dekoratif; kami membangun infrastruktur digital yang bekerja setiap hari tanpa henti.
+      </p>
+
+      {/* Buttons: Outlined Signal Blue Primary + Outlined Neutral Secondary */}
+      <div className="flex flex-wrap items-center gap-3.5 mb-20">
+        <a
+          href="https://wa.me/6281235247820"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2.5 px-4 py-2 rounded-[8px] border border-[#41a1cf] text-[15px] font-medium text-[#41a1cf] hover:bg-[#41a1cf]/5 transition-all group"
+        >
+          <span>Konsultasi Proyek</span>
+          <span className="inline-flex items-center justify-center size-4 rounded-full border border-[#41a1cf]/50 text-[10px] group-hover:translate-x-0.5 transition-transform">
+            →
           </span>
-        </h1>
+        </a>
 
-        {/* Value Proposition (The 3-Second Rule) */}
-        <p className="max-w-2xl mx-auto text-base sm:text-lg text-neutral-400 leading-relaxed mb-10">
-          Studio rekayasa perangkat lunak dan holding venture di Jakarta Selatan. Kami merancang arsitektur web berkinerja tinggi, mengelola platform LegalTech terintegrasi nasional, dan membangun sistem ERP/operasional kustom untuk bisnis yang menuntut stabilitas tinggi.
-        </p>
+        <a
+          href="#portfolio"
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-[8px] border border-[#282834] text-[15px] font-medium text-[#282834] hover:bg-[#f9faf7] transition-all"
+        >
+          <span>Lihat Portofolio Sistem</span>
+        </a>
+      </div>
 
-        {/* Primary CTAs */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-          <a
-            href="https://wa.me/6281235247820"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-full text-sm font-semibold text-neutral-950 bg-white hover:bg-neutral-200 transition-all shadow-xl shadow-white/5 active:scale-95"
-          >
-            <span>Konsultasi Rekayasa Sistem</span>
-            <ArrowRight className="size-4" />
-          </a>
-          <a
-            href="#portfolio"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full text-sm font-semibold text-neutral-300 bg-neutral-900 border border-neutral-800 hover:bg-neutral-800/80 hover:text-white transition-all"
-          >
-            <span>Lihat Hasil Kerja Nyata</span>
-          </a>
-        </div>
-
-        {/* Trust & Real Highlights Bar */}
-        <div className="pt-8 border-t border-neutral-900/80 grid grid-cols-2 md:grid-cols-4 gap-6 text-left">
-          <div className="p-4 rounded-xl bg-neutral-900/30 border border-neutral-800/40">
-            <div className="text-xs font-mono text-neutral-500 mb-1">VENTURE UTAMA</div>
-            <div className="text-base font-semibold text-white flex items-center gap-1.5">
-              <span>Legalizin.com</span>
-              <CheckCircle2 className="size-4 text-emerald-400" />
-            </div>
-            <div className="text-xs text-neutral-400 mt-1">Platform Legalitas OSS RBA</div>
+      {/* Atmospheric Accent Card (Cerulean #0081c0 accent surface as punctuation) */}
+      <div className="rounded-[24px] bg-[#0081c0] text-white p-8 sm:p-12 md:p-14 relative overflow-hidden shadow-[0_2px_2px_rgba(0,0,0,0.06)]">
+        <div className="max-w-2xl relative z-10">
+          <div className="text-[12px] font-mono tracking-widest uppercase text-white/75 mb-3">
+            Inisiatif Utama • Flagship Ecosystem
           </div>
-
-          <div className="p-4 rounded-xl bg-neutral-900/30 border border-neutral-800/40">
-            <div className="text-xs font-mono text-neutral-500 mb-1">ARSITEKTUR STACK</div>
-            <div className="text-base font-semibold text-white flex items-center gap-1.5">
-              <span>Modern Cloud Edge</span>
-            </div>
-            <div className="text-xs text-neutral-400 mt-1">Next.js 16 • TS • Vercel • Laravel</div>
-          </div>
-
-          <div className="p-4 rounded-xl bg-neutral-900/30 border border-neutral-800/40">
-            <div className="text-xs font-mono text-neutral-500 mb-1">ENTITAS RESMI</div>
-            <div className="text-base font-semibold text-white flex items-center gap-1.5">
-              <span>Perseroan Terbatas</span>
-            </div>
-            <div className="text-xs text-neutral-400 mt-1">SK Kemenkumham RI Terdaftar</div>
-          </div>
-
-          <div className="p-4 rounded-xl bg-neutral-900/30 border border-neutral-800/40">
-            <div className="text-xs font-mono text-neutral-500 mb-1">KANTOR OPERASIONAL</div>
-            <div className="text-base font-semibold text-white flex items-center gap-1.5">
-              <span>Alamanda Tower</span>
-            </div>
-            <div className="text-xs text-neutral-400 mt-1">TB. Simatupang, Jakarta Selatan</div>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-editorial text-white leading-tight mb-4">
+            Legalizin.com: Menghubungkan kepatuhan hukum dan perizinan bisnis dalam satu arsitektur modern.
+          </h2>
+          <p className="text-[15px] sm:text-[16px] text-white/90 leading-relaxed mb-6 font-sans">
+            Lebih dari 1.500 kode KBLI 2025, integrasi otomatis ke Google Indexing API, dan ratusan transaksi pendirian badan usaha PT &amp; CV yang diproses secara terstruktur tanpa kekacauan dokumen fisik.
+          </p>
+          <div className="flex flex-wrap items-center gap-6 text-[13px] font-mono text-white/80 pt-4 border-t border-white/20">
+            <span>• Next.js 16 App Router</span>
+            <span>• Headless WordPress Engine</span>
+            <span>• OSS RBA Verified</span>
           </div>
         </div>
+
+        {/* Subtle decorative background ring */}
+        <div className="absolute -right-20 -bottom-20 size-80 rounded-full border border-white/10 pointer-events-none" />
       </div>
     </section>
   );
