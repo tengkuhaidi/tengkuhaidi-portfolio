@@ -4,9 +4,9 @@ import Link from 'next/link';
 
 export default function Hero() {
   return (
-    <section className="relative w-full min-h-[92vh] flex flex-col justify-end p-4 sm:p-6 md:p-10 mb-12">
-      {/* Full-Bleed Atmospheric Background Illustration */}
-      <div className="absolute inset-2 sm:inset-4 md:inset-6 rounded-[24px] overflow-hidden shadow-[0_2px_12px_rgba(0,0,0,0.08)] bg-[#1f2937]">
+    <section className="relative w-full h-[96vh] min-h-[680px] max-h-[920px] flex flex-col justify-end p-3 sm:p-6 md:p-8 mb-16">
+      {/* Edge-to-Edge Atmospheric Background Illustration with 24px radius */}
+      <div className="absolute inset-2 sm:inset-3 md:inset-4 rounded-[24px] overflow-hidden shadow-[0_4px_24px_rgba(0,0,0,0.12)] bg-[#1f2937]">
         <Image
           src="/spring-hero.avif"
           alt="Spring Landscape Atmosphere"
