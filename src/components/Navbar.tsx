@@ -10,15 +10,26 @@ export default function Navbar() {
     <header className="fixed top-4 left-0 right-0 z-50 flex justify-center px-4 pointer-events-none">
       <nav className="pointer-events-auto flex items-center justify-between gap-3 sm:gap-6 px-4 py-2 rounded-full border border-[#dee2de] dark:border-[#24272b] bg-[#fefffc]/85 dark:bg-[#0c0d0e]/85 backdrop-blur-md shadow-[0_2px_12px_rgba(0,0,0,0.04)] transition-colors">
         
-        {/* Brand Logo & Name */}
+        {/* Brand Logo & Name with dynamic dark mode switch */}
         <Link href="/" className="flex items-center gap-2 pr-2 border-r border-[#dee2de] dark:border-neutral-800">
-          <Image
-            src="/logo-digitas.png"
-            alt="PT Digitas Solusi Indonesia"
-            width={28}
-            height={28}
-            className="rounded-full object-contain"
-          />
+          <div className="relative w-7 h-7 flex items-center justify-center">
+            {/* Light Mode Logo */}
+            <Image
+              src="/logo-digitas.png"
+              alt="PT Digitas Solusi Indonesia"
+              width={28}
+              height={28}
+              className="rounded-full object-contain dark:hidden"
+            />
+            {/* Dark Mode Logo */}
+            <Image
+              src="/logo-digitas-dark.png"
+              alt="PT Digitas Solusi Indonesia"
+              width={28}
+              height={28}
+              className="rounded-full object-contain hidden dark:block"
+            />
+          </div>
           <span className="font-editorial text-[17px] text-[#2c2c2c] dark:text-white font-medium tracking-tight">
             Digitas
           </span>
