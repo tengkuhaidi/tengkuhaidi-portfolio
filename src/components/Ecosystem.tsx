@@ -105,7 +105,7 @@ export default function Ecosystem() {
               Tailored Architecture
             </span>
             <a
-              href="https://wa.me/6281235247820"
+              href="https://wa.me/6281235247820?text=Halo%20Digitas%2C%20saya%20ingin%20berdiskusi%20mengenai%20pengembangan%20software%20dan%20implementasi%20sistem%20otomasi%20untuk%20perusahaan."
               target="_blank"
               rel="noopener noreferrer"
               className="text-[14px] text-[#41a1cf] font-medium hover:underline inline-flex items-center gap-1"

@@ -28,7 +28,7 @@ export default function Footer() {
             <p className="text-[15px] text-[#444141] dark:text-[#d1d5db] font-sans leading-relaxed mb-8">
               Ready to automate operations with custom software and autonomous agents?{' '}
               <a
-                href="https://wa.me/6281235247820"
+                href="https://wa.me/6281235247820?text=Halo%20Digitas%2C%20saya%20ingin%20berdiskusi%20mengenai%20pengembangan%20software%20dan%20implementasi%20sistem%20otomasi%20untuk%20perusahaan."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1 text-[#171717] dark:text-white font-medium border-b border-neutral-400 dark:border-neutral-500 hover:border-[#41a1cf] hover:text-[#41a1cf] transition-colors"
@@ -40,7 +40,7 @@ export default function Footer() {
 
             <div className="flex items-center gap-3">
               <a
-                href="https://wa.me/6281235247820"
+                href="https://wa.me/6281235247820?text=Halo%20Digitas%2C%20saya%20ingin%20berdiskusi%20mengenai%20pengembangan%20software%20dan%20implementasi%20sistem%20otomasi%20untuk%20perusahaan."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 py-2.5 rounded-[8px] bg-[#282834] dark:bg-[#ffffff] text-white dark:text-[#171717] text-[14px] font-sans font-medium hover:opacity-90 transition-opacity"

@@ -1,69 +1,242 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import ThemeToggle from './ThemeToggle';
 
+const WA_URL = "https://wa.me/6281235247820?text=Halo%20Digitas%2C%20saya%20ingin%20berdiskusi%20mengenai%20pengembangan%20software%20dan%20implementasi%20sistem%20otomasi%20untuk%20perusahaan.";
+
 export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  // Prevent background scroll when mobile menu is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isOpen]);
+
+  const navLinks = [
+    { label: 'Home', href: '#' },
+    { label: 'Ecosystem', href: '#ecosystem' },
+    { label: 'Capabilities', href: '#capabilities' },
+    { label: 'Systems & Work', href: '#portfolio' },
+    { label: 'About', href: '#about' },
+  ];
+
   return (
-    <header className="fixed top-4 left-0 right-0 z-50 flex justify-center px-4 pointer-events-none">
-      <nav className="pointer-events-auto flex items-center justify-between gap-3 sm:gap-6 px-3.5 py-2 rounded-full border border-[#dee2de] dark:border-[#24272b] bg-[#fefffc]/85 dark:bg-[#0c0d0e]/85 backdrop-blur-md shadow-[0_2px_12px_rgba(0,0,0,0.04)] transition-colors">
-        
-        {/* Brand Icon Only (No Text, clean symbol icon) */}
-        <Link href="/" aria-label="Home" className="flex items-center pr-3 border-r border-[#dee2de] dark:border-neutral-800">
-          <div className="relative w-7 h-7 flex items-center justify-center">
+    <>
+      <header className="fixed top-4 left-0 right-0 z-50 flex justify-center px-4 pointer-events-none">
+        <nav className="pointer-events-auto flex items-center justify-between gap-3 sm:gap-6 px-3.5 py-2 rounded-full border border-[#dee2de] dark:border-[#24272b] bg-[#fefffc]/85 dark:bg-[#0c0d0e]/85 backdrop-blur-md shadow-[0_2px_12px_rgba(0,0,0,0.04)] transition-colors">
+          
+          {/* Brand Icon Only (No Text, clean symbol icon) */}
+          <Link href="/" aria-label="Home" className="flex items-center pr-3 border-r border-[#dee2de] dark:border-neutral-800">
+            <div className="relative w-7 h-7 flex items-center justify-center">
+              <Image
+                src="/favicon.png"
+                alt="Digitas Solusi Indonesia"
+                width={26}
+                height={26}
+                className="object-contain"
+                priority
+              />
+            </div>
+          </Link>
+
+          {/* Desktop Navigation Links */}
+          <div className="hidden md:flex items-center gap-5 text-[14px] text-[#444141] dark:text-[#d1d5db]">
+            {navLinks.slice(1).map((link) => (
+              <Link
+                key={link.label}
+                href={link.href}
+                className="hover:text-black dark:hover:text-white transition-colors"
+              >
+                {link.label}
+              </Link>
+            ))}
+            <a
+              href="https://legalizin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1 text-[#41a1cf] hover:opacity-80 transition-opacity font-medium"
+            >
+              <span>Legalizin</span>
+              <span className="text-[11px]">↗</span>
+            </a>
+          </div>
+
+          {/* Right Actions: Theme Toggle, CTA & Mobile Hamburger */}
+          <div className="flex items-center gap-2 pl-1">
+            <ThemeToggle />
+            
+            {/* Desktop CTA */}
+            <a
+              href={WA_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden sm:flex px-3.5 py-1.5 rounded-full border border-[#41a1cf] text-[#41a1cf] dark:text-[#52b4e5] text-[13px] font-medium hover:bg-[#41a1cf] hover:text-white transition-all items-center gap-1.5"
+            >
+              <span>Start Discussion</span>
+              <span className="text-[10px]">→</span>
+            </a>
+
+            {/* Mobile Menu Hamburger Button */}
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="flex md:hidden flex-col justify-center items-center w-8 h-8 rounded-full border border-[#dee2de] dark:border-[#24272b] bg-white/50 dark:bg-neutral-900/50 backdrop-blur-sm focus:outline-none cursor-pointer"
+              aria-label="Toggle mobile menu"
+            >
+              <span
+                className={`block w-4 h-0.5 rounded-full bg-[#2c2c2c] dark:bg-white transition-all duration-300 ease-in-out ${
+                  isOpen ? 'rotate-45 translate-y-1' : '-translate-y-0.5'
+                }`}
+              />
+              <span
+                className={`block w-4 h-0.5 rounded-full bg-[#2c2c2c] dark:bg-white transition-all duration-300 ease-in-out ${
+                  isOpen ? '-rotate-45 -translate-y-0.5' : 'translate-y-0.5'
+                }`}
+              />
+            </button>
+          </div>
+
+        </nav>
+      </header>
+
+      {/* Fullscreen Mobile Navigation Overlay (1:1 General Intelligence Company style) */}
+      <div
+        className={`fixed inset-0 z-[100] h-dvh w-full bg-[#fefffc] dark:bg-[#0c0d0e] transition-all duration-500 flex flex-col justify-between p-6 sm:p-8 md:hidden ${
+          isOpen
+            ? 'opacity-100 pointer-events-auto scale-100'
+            : 'opacity-0 pointer-events-none scale-95'
+        }`}
+      >
+        {/* Top Bar: Icon Mark, Dark Pill CTA, Close X */}
+        <div className="flex items-center justify-between w-full pt-2">
+          {/* Left Brand Mark */}
+          <div className="w-8 h-8 flex items-center justify-center">
             <Image
               src="/favicon.png"
-              alt="Digitas Solusi Indonesia"
+              alt="Digitas Logo"
               width={26}
               height={26}
               className="object-contain"
-              priority
             />
           </div>
-        </Link>
 
-        {/* Navigation Links */}
-        <div className="hidden md:flex items-center gap-5 text-[14px] text-[#444141] dark:text-[#d1d5db]">
-          <Link href="#ecosystem" className="hover:text-black dark:hover:text-white transition-colors">
-            Ecosystem
-          </Link>
-          <Link href="#capabilities" className="hover:text-black dark:hover:text-white transition-colors">
-            Capabilities
-          </Link>
-          <Link href="#portfolio" className="hover:text-black dark:hover:text-white transition-colors">
-            Systems &amp; Work
-          </Link>
-          <Link href="#about" className="hover:text-black dark:hover:text-white transition-colors">
-            About
-          </Link>
+          {/* Center Pill Button */}
+          <a
+            href={WA_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setIsOpen(false)}
+            className="px-4 py-2 rounded-full bg-[#171717] dark:bg-white text-white dark:text-[#171717] text-[13px] font-sans font-medium flex items-center gap-1.5 shadow-sm active:scale-95 transition-transform"
+          >
+            <span>Start Discussion</span>
+            <span className="text-[11px]">→</span>
+          </a>
+
+          {/* Right Close Button */}
+          <button
+            onClick={() => setIsOpen(false)}
+            aria-label="Close menu"
+            className="w-9 h-9 rounded-full border border-[#dee2de] dark:border-[#24272b] flex items-center justify-center text-[#2c2c2c] dark:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.8"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+          </button>
+        </div>
+
+        {/* Center: Stacked Large Serif Menu Links with Stagger Animation */}
+        <div className="flex flex-col items-center justify-center space-y-4 my-auto">
+          {navLinks.map((item, idx) => (
+            <Link
+              key={item.label}
+              href={item.href}
+              onClick={() => setIsOpen(false)}
+              style={{
+                transitionDelay: isOpen ? `${idx * 60 + 100}ms` : '0ms'
+              }}
+              className={`text-4xl sm:text-5xl font-editorial font-medium tracking-tight text-[#171717] dark:text-white hover:text-[#41a1cf] dark:hover:text-[#41a1cf] transition-all duration-300 transform ${
+                isOpen
+                  ? 'opacity-100 translate-y-0 blur-0'
+                  : 'opacity-0 translate-y-6 blur-sm'
+              }`}
+            >
+              {item.label}
+            </Link>
+          ))}
           <a
             href="https://legalizin.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1 text-[#41a1cf] hover:opacity-80 transition-opacity font-medium"
+            onClick={() => setIsOpen(false)}
+            style={{
+              transitionDelay: isOpen ? `${navLinks.length * 60 + 100}ms` : '0ms'
+            }}
+            className={`text-4xl sm:text-5xl font-editorial font-medium tracking-tight text-[#41a1cf] hover:opacity-80 transition-all duration-300 transform flex items-center gap-2 ${
+              isOpen
+                ? 'opacity-100 translate-y-0 blur-0'
+                : 'opacity-0 translate-y-6 blur-sm'
+            }`}
           >
             <span>Legalizin</span>
-            <span className="text-[11px]">↗</span>
+            <span className="text-2xl">↗</span>
           </a>
         </div>
 
-        {/* Right Actions: Theme Toggle & Primary Action */}
-        <div className="flex items-center gap-2 pl-1">
-          <ThemeToggle />
-          <a
-            href="https://wa.me/6281235247820"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-3.5 py-1.5 rounded-full border border-[#41a1cf] text-[#41a1cf] dark:text-[#52b4e5] text-[13px] font-medium hover:bg-[#41a1cf] hover:text-white transition-all flex items-center gap-1.5"
-          >
-            <span>Start Discussion</span>
-            <span className="text-[10px]">→</span>
-          </a>
+        {/* Bottom Bar: Social Icons & Copyright */}
+        <div className="flex flex-col items-center gap-4 pb-4">
+          <div className="flex items-center gap-3">
+            {/* WhatsApp Icon Box */}
+            <a
+              href={WA_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Chat on WhatsApp"
+              className="w-10 h-10 rounded-lg border border-[#dee2de] dark:border-[#24272b] flex items-center justify-center text-[#2c2c2c] dark:text-white hover:border-[#41a1cf] transition-colors"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+              </svg>
+            </a>
+
+            {/* Email Icon Box */}
+            <a
+              href="mailto:info@digitasolusindo.com"
+              aria-label="Send Email"
+              className="w-10 h-10 rounded-lg border border-[#dee2de] dark:border-[#24272b] flex items-center justify-center text-[#2c2c2c] dark:text-white hover:border-[#41a1cf] transition-colors"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <rect width="20" height="16" x="2" y="4" rx="2" />
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+              </svg>
+            </a>
+          </div>
+
+          <p className="font-mono text-[12px] text-[#646464] dark:text-[#a0a5ad] tracking-tight">
+            © 2026 PT Digitas Solusi Indonesia
+          </p>
         </div>
 
-      </nav>
-    </header>
+      </div>
+    </>
   );
 }

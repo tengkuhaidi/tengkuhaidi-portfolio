@@ -263,16 +263,6 @@ export default function CapabilitiesStory() {
                 </svg>
               </div>
 
-              {/* Clean Bottom Label */}
-              <div className="pt-3 border-t border-[#dee2de] dark:border-[#24272b] flex items-center justify-between text-[12px] font-mono text-[#646464] dark:text-[#a0a5ad] relative z-10">
-                <span className="text-[#171717] dark:text-white font-medium">
-                  {currentStage.title}
-                </span>
-                <span className="text-[#41a1cf]">
-                  Active
-                </span>
-              </div>
-
             </div>
           </div>
 
