@@ -27,13 +27,13 @@ export default function Services() {
   return (
     <section id="capabilities" className="py-20 md:py-28 px-4 sm:px-6 max-w-[1200px] mx-auto border-t border-[#dee2de] dark:border-[#24272b]">
       <div className="max-w-2xl mb-14">
-        <div className="text-[13px] font-mono text-[#646464] dark:text-[#858c96] mb-2 tracking-tight">
+        <div className="text-[13px] font-mono text-[#646464] dark:text-[#a0a5ad] mb-2 tracking-tight">
           02 / Kapabilitas Teknis
         </div>
-        <h2 className="text-3xl sm:text-4xl font-editorial text-[#2c2c2c] dark:text-[#f3f4f6] leading-tight mb-4">
+        <h2 className="text-3xl sm:text-4xl font-editorial text-[#2c2c2c] dark:text-white leading-tight mb-4">
           Prinsip rekayasa yang disiplin, ringkas, dan dapat diandalkan.
         </h2>
-        <p className="text-[16px] text-[#444141] dark:text-[#c9ccd1] leading-relaxed">
+        <p className="text-[16px] text-[#444141] dark:text-[#d1d5db] leading-relaxed">
           Kami menolak penulisan kode berlebihan. Kode terbaik adalah kode yang menyelesaikan masalah nyata dengan dependensi minimal dan siklus pemeliharaan yang tenang.
         </p>
       </div>
@@ -49,10 +49,10 @@ export default function Services() {
               <div className="text-[12px] font-mono text-[#b4b8b4] dark:text-[#858c96] mb-4">
                 [{c.num}]
               </div>
-              <h3 className="text-xl font-editorial text-[#2c2c2c] dark:text-[#f3f4f6] mb-3">
+              <h3 className="text-xl font-editorial text-[#2c2c2c] dark:text-white mb-3">
                 {c.title}
               </h3>
-              <p className="text-[15px] text-[#444141] dark:text-[#c9ccd1] leading-relaxed">
+              <p className="text-[15px] text-[#444141] dark:text-[#d1d5db] leading-relaxed">
                 {c.desc}
               </p>
             </div>
