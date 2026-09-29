@@ -63,7 +63,10 @@ export default function Ecosystem() {
               className="text-[14px] text-[#41a1cf] font-medium hover:underline inline-flex items-center gap-1"
             >
               <span>Explore Platform</span>
-              <span>↗</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M7 17L17 7" />
+                <path d="M7 7h10v10" />
+              </svg>
             </a>
           </div>
         </div>
@@ -111,7 +114,10 @@ export default function Ecosystem() {
               className="text-[14px] text-[#41a1cf] font-medium hover:underline inline-flex items-center gap-1"
             >
               <span>Consult Engineering</span>
-              <span>→</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M5 12h14" />
+                <path d="m12 5 7 7-7 7" />
+              </svg>
             </a>
           </div>
         </div>

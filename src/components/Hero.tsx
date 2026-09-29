@@ -80,7 +80,10 @@ export default function Hero() {
               className="px-4 sm:px-5 py-2 sm:py-2.5 rounded-[8px] bg-[#41a1cf] md:bg-transparent border border-[#41a1cf] text-white md:text-[#41a1cf] dark:md:text-[#52b4e5] text-[13px] sm:text-[14px] font-sans font-medium hover:bg-[#41a1cf] hover:text-white transition-all flex items-center gap-2"
             >
               <span>Explore Capabilities</span>
-              <span>→</span>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M5 12h14" />
+                <path d="m12 5 7 7-7 7" />
+              </svg>
             </Link>
             <Link
               href="#portfolio"

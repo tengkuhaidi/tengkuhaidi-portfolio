@@ -97,10 +97,13 @@ export default function PortfolioSection() {
                 href={activeProject.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm text-[#41a1cf] hover:underline inline-flex items-center gap-1.5 font-medium"
+                className="text-sm text-[#41a1cf] hover:underline inline-flex items-center gap-1 font-medium"
               >
                 <span>Launch Platform</span>
-                <span className="text-xs">↗</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M7 17L17 7" />
+                  <path d="M7 7h10v10" />
+                </svg>
               </a>
             </div>
           )}

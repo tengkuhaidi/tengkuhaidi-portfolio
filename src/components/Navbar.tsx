@@ -69,7 +69,10 @@ export default function Navbar() {
               className="flex items-center gap-1 text-[#41a1cf] hover:opacity-80 transition-opacity font-medium"
             >
               <span>Legalizin</span>
-              <span className="text-[11px]">↗</span>
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M7 17L17 7" />
+                <path d="M7 7h10v10" />
+              </svg>
             </a>
           </div>
 
@@ -83,7 +86,10 @@ export default function Navbar() {
               className="px-3.5 py-1.5 rounded-full border border-[#41a1cf] text-[#41a1cf] dark:text-[#52b4e5] text-[13px] font-medium hover:bg-[#41a1cf] hover:text-white transition-all flex items-center gap-1.5"
             >
               <span>Start Discussion</span>
-              <span className="text-[10px]">→</span>
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M5 12h14" />
+                <path d="m12 5 7 7-7 7" />
+              </svg>
             </a>
           </div>
 
@@ -116,7 +122,10 @@ export default function Navbar() {
             className="px-4 py-2 rounded-full bg-black/45 dark:bg-black/60 backdrop-blur-md border border-white/20 text-white text-[13px] font-sans font-medium flex items-center gap-1.5 shadow-[0_2px_8px_rgba(0,0,0,0.2)] active:scale-95 transition-transform"
           >
             <span>Start Discussion</span>
-            <span className="text-[11px] opacity-80">→</span>
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="opacity-80">
+              <path d="M5 12h14" />
+              <path d="m12 5 7 7-7 7" />
+            </svg>
           </a>
 
           {/* Right: Glass hamburger button */}
@@ -164,7 +173,10 @@ export default function Navbar() {
             className="px-4 py-2 rounded-full bg-[#171717] dark:bg-white text-white dark:text-[#171717] text-[13px] font-sans font-medium flex items-center gap-1.5 shadow-sm active:scale-95 transition-transform"
           >
             <span>Start Discussion</span>
-            <span className="text-[11px]">→</span>
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M5 12h14" />
+              <path d="m12 5 7 7-7 7" />
+            </svg>
           </a>
 
           {/* Right Close Button */}
@@ -224,7 +236,10 @@ export default function Navbar() {
             }`}
           >
             <span>Legalizin</span>
-            <span className="text-2xl">↗</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M7 17L17 7" />
+              <path d="M7 7h10v10" />
+            </svg>
           </a>
         </div>
 
