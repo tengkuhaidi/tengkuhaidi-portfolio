@@ -1,69 +1,83 @@
-import Image from "next/image";
+import Navbar from '@/components/Navbar';
+import Hero from '@/components/Hero';
+import Ecosystem from '@/components/Ecosystem';
+import Services from '@/components/Services';
+import PortfolioSection from '@/components/PortfolioSection';
+import AboutCompany from '@/components/AboutCompany';
+import Footer from '@/components/Footer';
+
+export const metadata = {
+  metadataBase: new URL('https://digitasolusindo.com'),
+  title: 'PT Digitas Solusi Indonesia | Technology Venture & Systems Holding',
+  description: 'Studio rekayasa perangkat lunak dan holding venture di Jakarta Selatan. Menghadirkan ekosistem LegalTech Legalizin.com, arsitektur Next.js modern, dan sistem ERP internal terintegrasi.',
+  alternates: {
+    canonical: 'https://digitasolusindo.com',
+  },
+  openGraph: {
+    title: 'PT Digitas Solusi Indonesia | Systems Holding & Technology Studio',
+    description: 'Studio rekayasa perangkat lunak dan holding teknologi terpadu di Indonesia. Mengoperasikan ekosistem LegalTech Legalizin.com dan sistem enterprise handal.',
+    url: 'https://digitasolusindo.com',
+    siteName: 'PT Digitas Solusi Indonesia',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'PT Digitas Solusi Indonesia'
+      }
+    ],
+    locale: 'id_ID',
+    type: 'website',
+  }
+};
 
 export default function Home() {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'PT Digitas Solusi Indonesia',
+    url: 'https://digitasolusindo.com',
+    logo: 'https://digitasolusindo.com/logo-digitas.png',
+    description: 'Technology venture and systems engineering holding in South Jakarta, Indonesia.',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: 'Alamanda Tower Lt. 2 Unit H 1, Jl. TB. Simatupang No. 23-24, Cilandak Barat',
+      addressLocality: 'Jakarta Selatan',
+      addressRegion: 'DKI Jakarta',
+      postalCode: '12430',
+      addressCountry: 'ID'
+    },
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: '+62-812-3524-7820',
+      contactType: 'customer service',
+      email: 'info@digitasolusindo.com',
+      availableLanguage: ['Indonesian', 'English']
+    },
+    subOrganization: [
+      {
+        '@type': 'Organization',
+        name: 'Legalizin',
+        url: 'https://legalizin.com'
+      }
+    ]
+  };
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+    <main className="min-h-screen bg-neutral-950 text-neutral-100 selection:bg-blue-500 selection:text-white antialiased">
+      {/* Schema.org Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
+      <Navbar />
+      <Hero />
+      <Ecosystem />
+      <Services />
+      <PortfolioSection />
+      <AboutCompany />
+      <Footer />
+    </main>
   );
 }
