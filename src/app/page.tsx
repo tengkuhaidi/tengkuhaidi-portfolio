@@ -1,6 +1,7 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import Ecosystem from '@/components/Ecosystem';
+import CapabilitiesStory from '@/components/CapabilitiesStory';
 import Services from '@/components/Services';
 import PortfolioSection from '@/components/PortfolioSection';
 import AboutCompany from '@/components/AboutCompany';
@@ -9,13 +10,13 @@ import Footer from '@/components/Footer';
 export const metadata = {
   metadataBase: new URL('https://digitasolusindo.com'),
   title: 'PT Digitas Solusi Indonesia | Studio Rekayasa & Holding Sistem',
-  description: 'Studio rekayasa sistem dan holding teknologi di Jakarta Selatan. Penaung Legalizin.com, arsitektur web modern, dan sistem digital terpercaya.',
+  description: 'Studio rekayasa sistem dan holding teknologi di Jakarta Selatan. Penaung Legalizin.com, implementasi AI bisnis otonom, arsitektur web modern, dan sistem digital terpercaya.',
   alternates: {
     canonical: 'https://digitasolusindo.com',
   },
   openGraph: {
     title: 'PT Digitas Solusi Indonesia | Studio Rekayasa & Holding Sistem',
-    description: 'Studio rekayasa perangkat lunak dan holding teknologi di Indonesia. Penaung ekosistem LegalTech Legalizin.com.',
+    description: 'Studio rekayasa perangkat lunak dan holding teknologi di Indonesia. Penaung ekosistem LegalTech Legalizin.com dan implementasi AI bisnis otonom.',
     url: 'https://digitasolusindo.com',
     siteName: 'PT Digitas Solusi Indonesia',
     locale: 'id_ID',
@@ -64,6 +65,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Ecosystem />
+      <CapabilitiesStory />
       <Services />
       <PortfolioSection />
       <AboutCompany />
