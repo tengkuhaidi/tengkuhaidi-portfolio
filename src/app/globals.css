@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+@custom-variant dark (&:is(.dark, .dark *));
 
 @font-face {
   font-family: 'ppmondwest';
@@ -47,11 +47,9 @@
   --text-main: #2c2c2c;
   --text-sub: #444141;
   --text-muted: #646464;
-  --nav-bg: rgba(255, 255, 255, 0.85);
-  --nav-border: rgba(222, 226, 222, 0.9);
 }
 
-[data-theme='dark'], .dark {
+.dark {
   --canvas-bg: #0c0d0e;
   --card-bg: #141517;
   --card-subtle-bg: #1a1c1e;
@@ -59,8 +57,6 @@
   --text-main: #f3f4f6;
   --text-sub: #c9ccd1;
   --text-muted: #858c96;
-  --nav-bg: rgba(20, 21, 23, 0.85);
-  --nav-border: rgba(36, 39, 43, 0.9);
 }
 
 body {
