@@ -16,13 +16,13 @@ export default function PortfolioSection() {
       {/* Section Header */}
       <div className="max-w-2xl mb-12">
         <div className="text-[13px] font-mono text-[#646464] dark:text-[#a0a5ad] mb-2 tracking-tight">
-          03 / Selected Systems &amp; Production Architecture
+          Work
         </div>
-        <h2 className="text-3xl sm:text-4xl font-editorial text-[#2c2c2c] dark:text-white leading-tight mb-4">
-          Proprietary platforms and custom enterprise systems in active production.
+        <h2 className="text-3xl sm:text-4xl font-editorial text-[#2c2c2c] dark:text-white leading-tight mb-3">
+          Selected Systems &amp; Work
         </h2>
         <p className="text-[16px] text-[#444141] dark:text-[#d1d5db] leading-relaxed">
-          A showcase of mission-critical software architectures engineered, deployed, and stewarded by our in-house engineering team.
+          Production software and platforms built in-house.
         </p>
       </div>
 
