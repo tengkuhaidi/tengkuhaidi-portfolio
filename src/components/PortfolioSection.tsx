@@ -3,7 +3,6 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { portfolioProjects } from '@/data/portfolio';
-import { ArrowLeft, ArrowRight, ExternalLink } from 'lucide-react';
 
 export default function PortfolioSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -16,144 +15,138 @@ export default function PortfolioSection() {
     setCurrentIndex((prev) => (prev === portfolioProjects.length - 1 ? 0 : prev + 1));
   };
 
-  const currentProject = portfolioProjects[currentIndex];
-
   return (
-    <section id="portfolio" className="py-20 md:py-28 px-4 sm:px-6 max-w-[1240px] mx-auto border-t border-[#dee2de] dark:border-[#24272b] transition-colors">
+    <section id="portfolio" className="relative w-full py-20 lg:py-28 overflow-hidden border-t border-[#dee2de] dark:border-[#24272b] transition-colors">
       
-      {/* Top Header Row (Portfolio 12 Layout: Category Pill, Big Title with Underline, Summary & Actions) */}
-      <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
-        <div className="max-w-2xl">
-          <p className="text-[13px] font-mono text-[#41a1cf] tracking-wider uppercase mb-2">
-            Selected Work
+      {/* 1:1 Shadcn Portfolio-12 Header: Center-aligned, uppercase tracker, Underlined keyword, clean button */}
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mb-12 sm:mb-16">
+        <div className="space-y-4 text-center max-w-3xl mx-auto">
+          <p className="text-[#41a1cf] text-sm font-medium tracking-wider uppercase font-mono">
+            Our portfolio
           </p>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-editorial text-[#2c2c2c] dark:text-white leading-[1.1] tracking-[-0.035em]">
-            Transforming systems into{' '}
-            <span className="relative inline-block text-[#41a1cf]">
-              impact
-              <span className="absolute bottom-0 left-0 h-[2px] w-full bg-[#41a1cf]" aria-hidden="true" />
-            </span>
+
+          <h2 className="relative inline-block text-3xl sm:text-4xl lg:text-5xl font-editorial text-[#2c2c2c] dark:text-white leading-tight tracking-[-0.03em]">
+            Transforming{' '}
+            <span className="relative inline-block">
+              Ideas
+              <span className="absolute bottom-1 left-0 -z-1 h-1 w-full rounded-full bg-gradient-to-r from-[#41a1cf] to-transparent" aria-hidden="true" />
+            </span>{' '}
+            into Impact
           </h2>
-          <p className="text-[15px] sm:text-[16px] text-[#444141] dark:text-[#d1d5db] font-sans leading-relaxed mt-3">
-            Proprietary platforms, automated multi-agent architectures, and mission-critical enterprise systems in active production.
+
+          <p className="text-[#444141] dark:text-[#d1d5db] text-base sm:text-lg leading-relaxed font-sans">
+            Step into our portfolio and discover how we build scalable software systems and automated operations for modern businesses.
           </p>
-        </div>
 
-        {/* Carousel Arrow Controls */}
-        <div className="flex items-center gap-3">
-          <button
-            onClick={prevSlide}
-            aria-label="Previous Project"
-            className="w-11 h-11 rounded-full border border-[#dee2de] dark:border-[#24272b] bg-[#ffffff] dark:bg-[#141517] text-[#2c2c2c] dark:text-white flex items-center justify-center hover:border-[#41a1cf] hover:text-[#41a1cf] transition-all cursor-pointer shadow-sm"
-          >
-            <ArrowLeft className="w-5 h-5" />
-          </button>
-          <button
-            onClick={nextSlide}
-            aria-label="Next Project"
-            className="w-11 h-11 rounded-full border border-[#dee2de] dark:border-[#24272b] bg-[#ffffff] dark:bg-[#141517] text-[#2c2c2c] dark:text-white flex items-center justify-center hover:border-[#41a1cf] hover:text-[#41a1cf] transition-all cursor-pointer shadow-sm"
-          >
-            <ArrowRight className="w-5 h-5" />
-          </button>
+          <div className="pt-2">
+            <a
+              href="https://wa.me/6281235247820"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center px-6 py-2.5 rounded-lg bg-[#282834] dark:bg-white text-white dark:text-[#171717] text-sm font-medium hover:opacity-90 transition-opacity"
+            >
+              Start Discussion
+            </a>
+          </div>
         </div>
       </div>
 
-      {/* Main Focus Showcase Card (Shadcn Portfolio-12 Active Item) */}
-      <div className="relative rounded-[24px] bg-[#ffffff] dark:bg-[#141517] border border-[#dee2de] dark:border-[#24272b] p-6 sm:p-10 shadow-[0_8px_32px_rgba(0,0,0,0.04)] dark:shadow-[0_8px_32px_rgba(0,0,0,0.5)] transition-all overflow-hidden mb-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          
-          {/* Left / Center Featured Image */}
-          <div className="lg:col-span-7 relative aspect-[16/10] w-full rounded-[16px] overflow-hidden bg-neutral-100 dark:bg-neutral-800 border border-[#dee2de] dark:border-[#24272b]">
-            <Image
-              src={currentProject.image}
-              alt={currentProject.title}
-              fill
-              priority
-              className="object-cover object-top transition-transform duration-700 ease-out"
-            />
-            <div className="absolute top-4 left-4">
-              <span className="px-3 py-1 rounded-full text-[12px] font-mono bg-[#ffffff]/90 dark:bg-[#141517]/90 backdrop-blur-md border border-[#dee2de] dark:border-[#24272b] text-[#2c2c2c] dark:text-white">
-                {currentProject.category}
-              </span>
-            </div>
-          </div>
+      {/* 1:1 Shadcn Portfolio-12 3D Horizontal Carousel Track */}
+      <div className="relative w-full">
+        <div className="w-full overflow-hidden px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-center gap-4 sm:gap-6 py-4">
+            
+            {/* Show surrounding slides around currentIndex */}
+            {[-1, 0, 1].map((offset) => {
+              const projectIdx = (currentIndex + offset + portfolioProjects.length) % portfolioProjects.length;
+              const project = portfolioProjects[projectIdx];
+              const isCenter = offset === 0;
 
-          {/* Right Narrative Information */}
-          <div className="lg:col-span-5 flex flex-col justify-between h-full space-y-6">
-            <div>
-              <div className="text-[13px] font-mono text-[#646464] dark:text-[#a0a5ad] mb-2">
-                {currentProject.client} • {currentProject.year}
-              </div>
-              <h3 className="text-2xl sm:text-3xl font-editorial text-[#2c2c2c] dark:text-white leading-tight mb-4">
-                {currentProject.title}
-              </h3>
-              <p className="text-[15px] sm:text-[16px] text-[#444141] dark:text-[#d1d5db] font-sans leading-relaxed">
-                {currentProject.description}
-              </p>
-            </div>
-
-            <div className="pt-6 border-t border-[#dee2de] dark:border-[#24272b] flex items-center justify-between">
-              {currentProject.url ? (
-                <a
-                  href={currentProject.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-5 py-2.5 rounded-[8px] border border-[#41a1cf] text-[#41a1cf] dark:text-[#52b4e5] text-[14px] font-sans font-medium hover:bg-[#41a1cf] hover:text-white transition-all inline-flex items-center gap-2"
+              return (
+                <div
+                  key={project.id + offset}
+                  onClick={() => {
+                    if (offset === -1) prevSlide();
+                    if (offset === 1) nextSlide();
+                  }}
+                  className={`relative shrink-0 cursor-pointer transition-all duration-500 ease-out select-none ${
+                    isCenter
+                      ? 'w-[85vw] max-w-[560px] sm:max-w-[640px] z-20 scale-100 opacity-100'
+                      : 'hidden sm:block w-[40vw] max-w-[340px] z-10 scale-90 opacity-40 hover:opacity-75 blur-[0.5px]'
+                  }`}
                 >
-                  <span>Launch Platform</span>
-                  <ExternalLink className="w-4 h-4" />
-                </a>
-              ) : (
-                <span className="text-[13px] font-mono text-[#646464] dark:text-[#a0a5ad]">
-                  Internal Enterprise Deployment
-                </span>
-              )}
+                  {/* Card with image and caption underneath */}
+                  <div className="relative pb-28 sm:pb-24">
+                    
+                    {/* Clean Rounded Image (Zero Badges) */}
+                    <div className="relative aspect-[16/10] w-full overflow-hidden rounded-xl bg-neutral-100 dark:bg-neutral-800 shadow-[0_4px_24px_rgba(0,0,0,0.08)] dark:shadow-[0_4px_24px_rgba(0,0,0,0.6)] border border-[#dee2de] dark:border-[#24272b]">
+                      <Image
+                        src={project.image}
+                        alt={project.title}
+                        fill
+                        priority={isCenter}
+                        className="object-cover object-top"
+                      />
+                      {!isCenter && (
+                        <div className="absolute inset-0 bg-black/20 hover:bg-black/10 transition-colors" />
+                      )}
+                    </div>
 
-              <span className="text-[13px] font-mono text-[#646464] dark:text-[#a0a5ad]">
-                {currentIndex + 1} of {portfolioProjects.length}
-              </span>
-            </div>
+                    {/* Clean Centered Text Caption underneath the active item (1:1 with Portfolio-12) */}
+                    {isCenter && (
+                      <div className="absolute bottom-0 left-0 w-full space-y-1.5 text-center px-4 pt-4">
+                        <h3 className="text-xl sm:text-2xl font-editorial font-semibold text-[#2c2c2c] dark:text-white">
+                          {project.title}
+                        </h3>
+                        <p className="text-xs sm:text-sm text-[#646464] dark:text-[#a0a5ad] max-w-md mx-auto leading-relaxed font-sans line-clamp-2">
+                          {project.description}
+                        </p>
+                        {project.url && (
+                          <div className="pt-1">
+                            <a
+                              href={project.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-xs text-[#41a1cf] hover:underline inline-flex items-center gap-1 font-medium"
+                            >
+                              <span>Launch Platform</span>
+                              <span>↗</span>
+                            </a>
+                          </div>
+                        )}
+                      </div>
+                    )}
+
+                  </div>
+                </div>
+              );
+            })}
+
           </div>
-
         </div>
-      </div>
 
-      {/* Thumbnail Navigation Strip (Portfolio 12 Carousel Items Preview) */}
-      <div className="grid grid-cols-3 sm:grid-cols-6 lg:grid-cols-9 gap-3">
-        {portfolioProjects.map((p, idx) => (
-          <button
-            key={p.id}
-            onClick={() => setCurrentIndex(idx)}
-            className={`relative aspect-[16/10] rounded-[10px] overflow-hidden border transition-all cursor-pointer ${
-              idx === currentIndex
-                ? 'border-[#41a1cf] ring-2 ring-[#41a1cf]/30 scale-105 z-10'
-                : 'border-[#dee2de] dark:border-[#24272b] opacity-60 hover:opacity-100 hover:border-neutral-400 dark:hover:border-neutral-600'
-            }`}
-          >
-            <Image
-              src={p.image}
-              alt={p.title}
-              fill
-              className="object-cover object-top"
+        {/* 1:1 Shadcn Portfolio-12 Pagination Dots */}
+        <div className="mt-8 flex justify-center space-x-2">
+          {portfolioProjects.map((_, idx) => (
+            <button
+              key={idx}
+              onClick={() => setCurrentIndex(idx)}
+              aria-label={`Go to project ${idx + 1}`}
+              className={`h-2.5 rounded-full transition-all duration-300 cursor-pointer ${
+                idx === currentIndex
+                  ? 'w-6 bg-[#41a1cf] scale-110'
+                  : 'w-2.5 bg-[#dee2de] dark:bg-neutral-800 hover:bg-[#b4b8b4] dark:hover:bg-neutral-700'
+              }`}
             />
-          </button>
-        ))}
-      </div>
+          ))}
+        </div>
 
-      {/* Pagination Dot Indicators */}
-      <div className="flex items-center justify-center gap-2 mt-6">
-        {portfolioProjects.map((_, idx) => (
-          <button
-            key={idx}
-            onClick={() => setCurrentIndex(idx)}
-            aria-label={`Go to slide ${idx + 1}`}
-            className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
-              idx === currentIndex
-                ? 'w-8 bg-[#41a1cf]'
-                : 'w-2 bg-[#dee2de] dark:bg-neutral-800 hover:bg-[#b4b8b4]'
-            }`}
-          />
-        ))}
+        {/* 1:1 Shadcn Portfolio-12 Counter ("1 of 9") */}
+        <div className="mt-4 text-center">
+          <span className="text-xs sm:text-sm font-mono text-[#646464] dark:text-[#a0a5ad]">
+            {currentIndex + 1} of {portfolioProjects.length}
+          </span>
+        </div>
       </div>
 
     </section>
