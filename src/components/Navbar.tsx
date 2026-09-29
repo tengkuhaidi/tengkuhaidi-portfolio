@@ -10,24 +10,16 @@ export default function Navbar() {
     <header className="fixed top-4 left-0 right-0 z-50 flex justify-center px-4 pointer-events-none">
       <nav className="pointer-events-auto flex items-center justify-between gap-3 sm:gap-6 px-3.5 py-2 rounded-full border border-[#dee2de] dark:border-[#24272b] bg-[#fefffc]/85 dark:bg-[#0c0d0e]/85 backdrop-blur-md shadow-[0_2px_12px_rgba(0,0,0,0.04)] transition-colors">
         
-        {/* Brand Logo only (clean standalone icon, dark/light adaptive) */}
-        <Link href="/" aria-label="Digitas Home" className="flex items-center pr-3 border-r border-[#dee2de] dark:border-neutral-800">
+        {/* Brand Icon Only (No Text, clean symbol icon) */}
+        <Link href="/" aria-label="Home" className="flex items-center pr-3 border-r border-[#dee2de] dark:border-neutral-800">
           <div className="relative w-7 h-7 flex items-center justify-center">
-            {/* Light Mode Logo */}
             <Image
-              src="/logo-digitas.png"
-              alt="PT Digitas Solusi Indonesia"
-              width={28}
-              height={28}
-              className="rounded-full object-contain dark:hidden"
-            />
-            {/* Dark Mode Logo */}
-            <Image
-              src="/logo-digitas-dark.png"
-              alt="PT Digitas Solusi Indonesia"
-              width={28}
-              height={28}
-              className="rounded-full object-contain hidden dark:block"
+              src="/favicon.png"
+              alt="Digitas Solusi Indonesia"
+              width={26}
+              height={26}
+              className="object-contain"
+              priority
             />
           </div>
         </Link>
