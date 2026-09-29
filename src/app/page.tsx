@@ -9,17 +9,17 @@ import Footer from '@/components/Footer';
 
 export const metadata = {
   metadataBase: new URL('https://digitasolusindo.com'),
-  title: 'PT Digitas Solusi Indonesia | Studio Rekayasa & Holding Sistem',
-  description: 'Studio rekayasa sistem dan holding teknologi di Jakarta Selatan. Penaung Legalizin.com, implementasi AI bisnis otonom, arsitektur web modern, dan sistem digital terpercaya.',
+  title: 'PT Digitas Solusi Indonesia | Applied Systems Studio & Technology Holding',
+  description: 'Applied software engineering studio and technology holding based in South Jakarta. Parent company of Legalizin.com, autonomous enterprise AI workflows, and resilient software systems.',
   alternates: {
     canonical: 'https://digitasolusindo.com',
   },
   openGraph: {
-    title: 'PT Digitas Solusi Indonesia | Studio Rekayasa & Holding Sistem',
-    description: 'Studio rekayasa perangkat lunak dan holding teknologi di Indonesia. Penaung ekosistem LegalTech Legalizin.com dan implementasi AI bisnis otonom.',
+    title: 'PT Digitas Solusi Indonesia | Applied Systems Studio & Technology Holding',
+    description: 'Applied software engineering studio and technology holding based in South Jakarta. Parent company of Legalizin.com, autonomous enterprise AI workflows, and resilient software systems.',
     url: 'https://digitasolusindo.com',
     siteName: 'PT Digitas Solusi Indonesia',
-    locale: 'id_ID',
+    locale: 'en_US',
     type: 'website',
   }
 };
@@ -45,7 +45,7 @@ export default function Home() {
       telephone: '+62-812-3524-7820',
       contactType: 'customer service',
       email: 'info@digitasolusindo.com',
-      availableLanguage: ['Indonesian', 'English']
+      availableLanguage: ['English', 'Indonesian']
     },
     subOrganization: [
       {

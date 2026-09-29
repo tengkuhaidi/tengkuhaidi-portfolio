@@ -2,126 +2,125 @@ export interface PortfolioProject {
   id: string;
   title: string;
   description: string;
-  category: 'ecosystem' | 'system' | 'website';
+  category: 'All' | 'Ecosystem' | 'Enterprise Systems' | 'Corporate Web';
   categoryLabel: string;
   industry: string;
   image: string;
-  gallery?: { src: string; label: string }[];
-  technologies: string[];
+  client: string;
+  year: string;
   url?: string;
   highlight?: boolean;
-  metrics?: string;
 }
+
+export type ProjectCategory = 'All' | 'Ecosystem' | 'Enterprise Systems' | 'Corporate Web';
+
+export const categories: ProjectCategory[] = ['All', 'Ecosystem', 'Enterprise Systems', 'Corporate Web'];
 
 export const portfolioProjects: PortfolioProject[] = [
   {
     id: 'legalizin',
-    title: 'Legalizin.com',
-    description: 'Pilar utama LegalTech ekosistem Digitas. Platform legalitas usaha terpadu dengan headless CMS WordPress, auto-indexing Google, sistem perizinan OSS RBA, dan 1.500+ katalog KBLI interaktif.',
-    category: 'ecosystem',
+    title: 'Legalizin.com Platform',
+    description: 'Flagship legal technology platform handling nationwide corporate incorporation, AHU SABH annual reporting, KBLI cross-reference tools, and instant programmatic Google search indexing.',
+    category: 'Ecosystem',
     categoryLabel: 'Holding Ecosystem',
     industry: 'LegalTech & Corporate Services',
     image: '/portfolio/web-legalizin.png',
-    technologies: ['Next.js 16', 'TypeScript', 'Tailwind CSS', 'WordPress REST API', 'Google Indexing API'],
+    client: 'PT Digitas Solusi Indonesia',
+    year: '2024 — Present',
     url: 'https://legalizin.com',
     highlight: true,
-    metrics: '1.600+ URLs Terindeks & Otomasi 8x Harian'
   },
   {
     id: 'hris-enterprise',
-    title: 'Enterprise HRIS & Payroll System',
-    description: 'Sistem manajemen SDM komprehensif mencakup absensi multi-cabang, kalkulasi PPh 21 TER otomatis, overtime approval, reimbursement slip, dan portal mandiri karyawan.',
-    category: 'system',
+    title: 'Enterprise HRIS & Biometric Payroll',
+    description: 'Comprehensive human capital management engine: multi-branch biometric attendance synchronization, automated PPh 21 TER tax calculations, overtime workflows, and employee self-service portals.',
+    category: 'Enterprise Systems',
     categoryLabel: 'Enterprise System',
     industry: 'Human Capital Management',
     image: '/portfolio/hris-dashboard.png',
-    gallery: [
-      { src: '/portfolio/hris-dashboard.png', label: 'Dashboard Eksekutif' },
-      { src: '/portfolio/hris-directory.png', label: 'Direktori Karyawan' },
-      { src: '/portfolio/hris-payroll.png', label: 'Sistem Penggajian & PPh 21' },
-      { src: '/portfolio/hris-overtime.png', label: 'Alur Lembur (Overtime)' },
-      { src: '/portfolio/hris-reimbursement.png', label: 'Reimbursement Klaim' }
-    ],
-    technologies: ['Laravel', 'Vue.js', 'MySQL', 'Tailwind CSS'],
+    client: 'Corporate Client',
+    year: '2024',
     highlight: true,
-    metrics: 'Otomasi Penggajian & Kepatuhan Pajak'
   },
   {
     id: 'fixed-asset',
     title: 'Fixed Asset & Depreciation Engine',
-    description: 'Sistem pelacakan dan depresiasi aktiva tetap korporasi berdasarkan standar PSAK dan perpajakan fiskal, dilengkapi barcode tracking dan penjadwalan pemeliharaan aset.',
-    category: 'system',
+    description: 'Sovereign asset valuation platform calculating asset depreciation under Indonesian PSAK financial standards and tax fiscal laws, featuring barcode physical tracking and audit lifecycles.',
+    category: 'Enterprise Systems',
     categoryLabel: 'Financial System',
     industry: 'Asset & Wealth Management',
     image: '/portfolio/fixed_asset-cat-system.png',
-    technologies: ['Laravel', 'React', 'PostgreSQL', 'Tailwind CSS'],
+    client: 'Holding Enterprise',
+    year: '2023',
     highlight: true,
-    metrics: 'Audit Aset Terintegrasi PSAK'
   },
   {
     id: 'dokumen-tracking',
-    title: 'Corporate Document Tracking System',
-    description: 'Platform manajemen alur dokumen hukum dan perizinan instansi dengan audit trail digital, validasi tanda tangan elektronik, dan pelacakan status berkas real-time.',
-    category: 'system',
+    title: 'Corporate Legal Document Tracking',
+    description: 'End-to-end legal workflow engine with granular cryptographic audit trails, digital sign-off validations, and real-time ministry submission status tracking.',
+    category: 'Enterprise Systems',
     categoryLabel: 'Workflow Engine',
     industry: 'Enterprise Compliance',
     image: '/portfolio/dokumen_tracking-cat-system.png',
-    technologies: ['Laravel', 'Vue.js', 'MySQL', 'REST API'],
-    metrics: 'Zero Lost Documents Workflow'
+    client: 'Legalizin Partner Network',
+    year: '2024',
   },
   {
     id: 'gisli',
     title: 'GISLI.org Global Initiative',
-    description: 'Portal internasional studi global dan inisiatif edukasi dengan infrastruktur multi-bahasa dan navigasi konten akademis modern.',
-    category: 'website',
+    description: 'International global studies portal and research publication platform architected with headless CMS infrastructure and regional content delivery caching.',
+    category: 'Corporate Web',
     categoryLabel: 'Global Portal',
     industry: 'Education & Global Non-Profit',
     image: '/portfolio/gisli.org-cat-website.png',
-    technologies: ['WordPress Headless', 'PHP', 'MySQL'],
+    client: 'GISLI Initiative',
+    year: '2023',
     url: 'https://gisli.org',
-    metrics: 'Skalabilitas Audiens Lintas Negara'
   },
   {
     id: 'drakamulia',
     title: 'Draka Mulia Industrial',
-    description: 'Website profil korporat produsen dan manufaktur industri cat dengan katalog spesifikasi teknis dan optimasi konversi inquiry B2B.',
-    category: 'website',
+    description: 'Industrial paint manufacturing corporate portal featuring technical product specifications, laboratory safety data sheets, and high-conversion B2B inquiry routing.',
+    category: 'Corporate Web',
     categoryLabel: 'Corporate B2B',
     industry: 'Industrial Manufacturing',
     image: '/portfolio/drakamulia-cat-website.png',
-    technologies: ['Next.js', 'Tailwind CSS', 'Vercel'],
-    metrics: 'Inquiry Lead Generation B2B'
+    client: 'PT Draka Mulia Mandiri',
+    year: '2023',
   },
   {
     id: 'kembar-poetri',
     title: 'Kembar Poetri Gemilang',
-    description: 'Situs web kontraktor umum dan pengadaan alat berat dengan portofolio proyek konstruksi dan kepatuhan SBUJK terverifikasi.',
-    category: 'website',
+    description: 'General contractor and heavy machinery procurement infrastructure portal showcasing verified civil engineering projects and corporate construction credentials.',
+    category: 'Corporate Web',
     categoryLabel: 'Corporate Web',
     industry: 'Construction & Engineering',
     image: '/portfolio/kembar-poetri.png',
-    technologies: ['Next.js', 'React', 'Tailwind CSS'],
+    client: 'PT Kembar Poetri Gemilang',
+    year: '2023',
     url: 'https://kembarpoetrigemilang.com'
   },
   {
     id: 'echoffice',
     title: 'Echoffice Coworking & Hub',
-    description: 'Platform sewa kantor bersama dan virtual office dengan pemetaan zonasi, virtual tour 360, dan reservasi ruang rapat instan.',
-    category: 'website',
+    description: 'Commercial real estate and virtual office booking portal featuring interactive zoning maps, 360-degree virtual space tours, and instant meeting room reservations.',
+    category: 'Corporate Web',
     categoryLabel: 'Commercial Web',
     industry: 'Commercial Real Estate',
     image: '/portfolio/echoffice-cat-website.png',
-    technologies: ['React', 'Node.js', 'Tailwind CSS']
+    client: 'Echoffice Indonesia',
+    year: '2023',
   },
   {
     id: 'biatravel',
     title: 'Bia Tour & Travel',
-    description: 'Portal pemesanan paket wisata domestik dan internasional dengan jadwal armada dan sistem reservasi online terintegrasi.',
-    category: 'website',
+    description: 'Hospitality and international tour booking engine with live fleet management schedules, automated itinerary generation, and digital invoicing.',
+    category: 'Corporate Web',
     categoryLabel: 'Booking Engine',
     industry: 'Travel & Hospitality',
     image: '/portfolio/biatravel-cat-website.png',
-    technologies: ['PHP', 'MySQL', 'JavaScript'],
+    client: 'PT Bia Tour & Travel',
+    year: '2022',
     url: 'https://biatravel.com'
   }
 ];

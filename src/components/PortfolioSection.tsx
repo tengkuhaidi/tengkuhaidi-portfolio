@@ -2,124 +2,101 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { portfolioProjects } from '@/data/portfolio';
+import { portfolioProjects, categories, ProjectCategory } from '@/data/portfolio';
 
 export default function PortfolioSection() {
-  const [filter, setFilter] = useState<'all' | 'ecosystem' | 'system' | 'website'>('all');
+  const [activeCategory, setActiveCategory] = useState<ProjectCategory>('All');
 
-  const items = filter === 'all'
+  const filteredProjects = activeCategory === 'All'
     ? portfolioProjects
-    : portfolioProjects.filter(p => p.category === filter);
+    : portfolioProjects.filter((p) => p.category === activeCategory);
 
   return (
-    <section id="portfolio" className="py-20 md:py-28 px-4 sm:px-6 max-w-[1200px] mx-auto border-t border-[#dee2de] dark:border-[#24272b]">
-      <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
-        <div className="max-w-2xl">
-          <div className="text-[13px] font-mono text-[#646464] dark:text-[#a0a5ad] mb-2 tracking-tight">
-            03 / Portofolio &amp; Sistem
-          </div>
-          <h2 className="text-3xl sm:text-4xl font-editorial text-[#2c2c2c] dark:text-white leading-tight mb-3">
-            Dokumentasi sistem dan karya yang telah selesai dibangun.
-          </h2>
-          <p className="text-[16px] text-[#444141] dark:text-[#d1d5db] leading-relaxed">
-            Arsip karya terpilih yang mencakup platform internal perusahaan, sistem penggajian, dan website korporat berkinerja tinggi.
-          </p>
+    <section id="portfolio" className="py-20 md:py-28 px-4 sm:px-6 max-w-[1240px] mx-auto border-t border-[#dee2de] dark:border-[#24272b]">
+      {/* Section Header */}
+      <div className="max-w-2xl mb-12">
+        <div className="text-[13px] font-mono text-[#646464] dark:text-[#a0a5ad] mb-2 tracking-tight">
+          03 / Selected Systems &amp; Production Architecture
         </div>
-
-        {/* Filter Buttons */}
-        <div className="flex flex-wrap gap-2 self-start md:self-auto">
-          <button
-            onClick={() => setFilter('all')}
-            className={`px-3 py-1.5 rounded-[8px] text-[13px] font-medium transition-all ${
-              filter === 'all'
-                ? 'bg-[#1f1f29] dark:bg-white text-white dark:text-[#171717]'
-                : 'bg-white dark:bg-[#141517] border border-[#dee2de] dark:border-[#24272b] text-[#444141] dark:text-[#d1d5db] hover:text-[#171717] dark:hover:text-white'
-            }`}
-          >
-            Semua ({portfolioProjects.length})
-          </button>
-          <button
-            onClick={() => setFilter('ecosystem')}
-            className={`px-3 py-1.5 rounded-[8px] text-[13px] font-medium transition-all ${
-              filter === 'ecosystem'
-                ? 'bg-[#1f1f29] dark:bg-white text-white dark:text-[#171717]'
-                : 'bg-white dark:bg-[#141517] border border-[#dee2de] dark:border-[#24272b] text-[#444141] dark:text-[#d1d5db] hover:text-[#171717] dark:hover:text-white'
-            }`}
-          >
-            Ekosistem
-          </button>
-          <button
-            onClick={() => setFilter('system')}
-            className={`px-3 py-1.5 rounded-[8px] text-[13px] font-medium transition-all ${
-              filter === 'system'
-                ? 'bg-[#1f1f29] dark:bg-white text-white dark:text-[#171717]'
-                : 'bg-white dark:bg-[#141517] border border-[#dee2de] dark:border-[#24272b] text-[#444141] dark:text-[#d1d5db] hover:text-[#171717] dark:hover:text-white'
-            }`}
-          >
-            Sistem Kustom / ERP
-          </button>
-          <button
-            onClick={() => setFilter('website')}
-            className={`px-3 py-1.5 rounded-[8px] text-[13px] font-medium transition-all ${
-              filter === 'website'
-                ? 'bg-[#1f1f29] dark:bg-white text-white dark:text-[#171717]'
-                : 'bg-white dark:bg-[#141517] border border-[#dee2de] dark:border-[#24272b] text-[#444141] dark:text-[#d1d5db] hover:text-[#171717] dark:hover:text-white'
-            }`}
-          >
-            Platform Web
-          </button>
-        </div>
+        <h2 className="text-3xl sm:text-4xl font-editorial text-[#2c2c2c] dark:text-white leading-tight mb-4">
+          Proprietary platforms and custom enterprise systems in active production.
+        </h2>
+        <p className="text-[16px] text-[#444141] dark:text-[#d1d5db] leading-relaxed">
+          A showcase of mission-critical software architectures engineered, deployed, and stewarded by our in-house engineering team.
+        </p>
       </div>
 
-      {/* Grid: Mist borders, Paper surfaces */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {items.map((item) => (
+      {/* Filter Tabs */}
+      <div className="flex flex-wrap items-center gap-2 mb-12">
+        {categories.map((cat) => (
+          <button
+            key={cat}
+            onClick={() => setActiveCategory(cat)}
+            className={`px-4 py-1.5 rounded-full text-[13px] font-sans transition-all cursor-pointer ${
+              activeCategory === cat
+                ? 'bg-[#282834] text-white dark:bg-white dark:text-[#171717] font-medium shadow-sm'
+                : 'bg-transparent text-[#444141] dark:text-[#d1d5db] border border-[#dee2de] dark:border-[#24272b] hover:border-neutral-400 dark:hover:border-neutral-600'
+            }`}
+          >
+            {cat === 'All' ? 'All Systems' : cat}
+          </button>
+        ))}
+      </div>
+
+      {/* Portfolio Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {filteredProjects.map((project) => (
           <div
-            key={item.id}
-            className="rounded-[16px] bg-[#ffffff] dark:bg-[#141517] border border-[#dee2de] dark:border-[#24272b] overflow-hidden flex flex-col justify-between shadow-[0_1px_1px_rgba(0,0,0,0.04)] hover:shadow-[0_4px_6px_rgba(0,0,0,0.06)] transition-all"
+            key={project.id}
+            className="group rounded-[18px] bg-[#ffffff] dark:bg-[#141517] border border-[#dee2de] dark:border-[#24272b] overflow-hidden shadow-[0_1px_3px_rgba(0,0,0,0.04)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.08)] dark:hover:shadow-[0_4px_20px_rgba(0,0,0,0.6)] transition-all flex flex-col justify-between"
           >
             <div>
-              {/* Media Container */}
-              <div className="aspect-[16/10] bg-[#f9faf7] dark:bg-[#1a1c1e] relative border-b border-[#dee2de] dark:border-[#24272b]">
+              {/* Image Preview Container */}
+              <div className="relative aspect-[16/10] w-full bg-neutral-100 dark:bg-neutral-800 overflow-hidden border-b border-[#dee2de] dark:border-[#24272b]">
                 <Image
-                  src={item.image}
-                  alt={item.title}
+                  src={project.image}
+                  alt={project.title}
                   fill
-                  className="object-cover object-top"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="object-cover object-top group-hover:scale-105 transition-transform duration-500 ease-out"
                 />
+                <div className="absolute top-3 left-3">
+                  <span className="px-2.5 py-1 rounded-full text-[11px] font-mono bg-[#ffffff]/90 dark:bg-[#141517]/90 backdrop-blur-sm border border-[#dee2de] dark:border-[#24272b] text-[#2c2c2c] dark:text-white">
+                    {project.category}
+                  </span>
+                </div>
               </div>
 
-              {/* Text Meta */}
-              <div className="p-5">
-                <div className="flex items-center justify-between text-[11px] font-mono text-[#646464] dark:text-[#a0a5ad] mb-2 uppercase">
-                  <span>{item.categoryLabel}</span>
-                  <span>{item.industry}</span>
+              {/* Card Body */}
+              <div className="p-6">
+                <div className="text-[12px] font-mono text-[#646464] dark:text-[#a0a5ad] mb-1">
+                  {project.client} • {project.year}
                 </div>
-                <h3 className="text-lg font-editorial text-[#2c2c2c] dark:text-white mb-2">
-                  {item.title}
+                <h3 className="text-xl font-editorial text-[#2c2c2c] dark:text-white mb-2 group-hover:text-[#41a1cf] transition-colors">
+                  {project.title}
                 </h3>
-                <p className="text-[13px] text-[#444141] dark:text-[#d1d5db] leading-relaxed line-clamp-3 mb-2">
-                  {item.description}
+                <p className="text-[14px] text-[#444141] dark:text-[#d1d5db] leading-relaxed font-sans line-clamp-3">
+                  {project.description}
                 </p>
               </div>
             </div>
 
-            {/* Footer Action (Clean without redundant tech labels) */}
-            <div className="px-5 pb-5 pt-3 border-t border-[#dee2de] dark:border-[#24272b] flex items-center justify-between text-[12px] font-mono text-[#646464] dark:text-[#a0a5ad]">
-              <span>{item.industry}</span>
-              {item.url ? (
+            {/* Clean Card Footer */}
+            <div className="p-6 pt-0 flex items-center justify-between">
+              {project.url ? (
                 <a
-                  href={item.url}
+                  href={project.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#41a1cf] hover:underline flex items-center gap-1 font-medium text-[13px]"
+                  className="text-[13px] font-medium text-[#41a1cf] hover:underline inline-flex items-center gap-1"
                 >
-                  <span>Buka Platform</span>
+                  <span>Launch Live Platform</span>
                   <span>↗</span>
                 </a>
               ) : (
-                <span className="text-[#b4b8b4] dark:text-[#646464]">Sistem Internal</span>
+                <span className="text-[13px] font-mono text-[#646464] dark:text-[#a0a5ad]">
+                  Internal Enterprise Deployment
+                </span>
               )}
             </div>
           </div>

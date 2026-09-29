@@ -16,38 +16,38 @@ interface Stage {
 
 const stages: Stage[] = [
   {
-    id: 'sistem-terisolasi',
+    id: 'isolated-systems',
     step: '01 / 05',
-    title: 'Sistem Terisolasi (Isolated Systems)',
-    figTitle: 'Fragmentasi operasional sebelum integrasi cerdas',
+    title: 'Isolated Systems & Operational Drag',
+    figTitle: 'Operational fragmentation prior to autonomous orchestration',
     figNum: 'Fig. 1',
     description: [
-      'Sebagian besar perusahaan modern menggunakan berbagai platform terpisah: CRM, spreadsheet penggajian, database inventaris, dan kanal chat.',
-      'Sistem-sistem ini bekerja di silo masing-masing. Manusia harus menjadi jembatan manual, menghabiskan ratusan jam kerja hanya untuk rekap data dan pengecekan silang.'
+      'Modern businesses typically run on disconnected islands of software: CRMs, payroll spreadsheets, legacy inventory databases, and manual customer support channels.',
+      'Because these systems cannot coordinate with each other, humans are forced to become manual bridges—wasting hundreds of hours each month re-entering data and managing cross-checks.'
     ],
     activeField: 'Coding',
     nodes: [
-      { label: 'Website & App', x: 20, y: 25, active: true },
+      { label: 'Web & Mobile App', x: 20, y: 25, active: true },
       { label: 'HRIS & Payroll', x: 80, y: 25, active: true },
-      { label: 'Database Inventaris', x: 20, y: 75, active: true },
+      { label: 'Inventory DB', x: 20, y: 75, active: true },
       { label: 'Customer Support', x: 80, y: 75, active: true },
       { label: 'Manual Human Bridge', x: 50, y: 50, active: false, isCore: true }
     ],
     connections: [],
   },
   {
-    id: 'arsitektur-modern',
+    id: 'foundational-architecture',
     step: '02 / 05',
-    title: 'Fondasi Arsitektur Web & Database',
-    figTitle: 'Membangun pipeline data terpusat (RSC & API)',
+    title: 'Foundational Web Architecture & Data Pipelines',
+    figTitle: 'Consolidating data through high-throughput APIs & Next.js 16',
     figNum: 'Fig. 2',
     description: [
-      'Langkah pertama rekayasa kami adalah membersihkan fondasi teknis: membangun aplikasi Next.js 16 performa tinggi, database PostgreSQL terstruktur, dan REST API yang bersih.',
-      'Menghilangkan spreadsheet rapuh dengan sistem internal terpadu yang memiliki audit trail digital dan keamanan tingkat perbankan.'
+      'Our first engineering imperative is establishing an unshakeable digital foundation: high-performance Next.js 16 web engines, strictly typed PostgreSQL schemas, and clean REST APIs.',
+      'We replace fragile spreadsheets with unified internal platforms featuring complete cryptographic audit trails and bank-grade data integrity.'
     ],
     activeField: 'Customer Support',
     nodes: [
-      { label: 'Next.js 16 Web', x: 20, y: 25, active: true },
+      { label: 'Next.js 16 Edge', x: 20, y: 25, active: true },
       { label: 'PostgreSQL DB', x: 80, y: 25, active: true },
       { label: 'REST API Gateway', x: 50, y: 50, active: true, isCore: true },
       { label: 'Legalizin Engine', x: 20, y: 75, active: true },
@@ -63,20 +63,20 @@ const stages: Stage[] = [
   {
     id: 'ai-implementation',
     step: '03 / 05',
-    title: 'Implementasi AI untuk Bisnis (Autonomous Workflow)',
-    figTitle: 'Menyematkan autonomous agent coordinator dalam alur kerja',
+    title: 'Applied AI for Business & Autonomous Agents',
+    figTitle: 'Embedding autonomous coordinator agents into operational workflows',
     figNum: 'Fig. 3',
     description: [
-      'Kami merancang dan menerapkan sistem AI operasional yang nyata: agentic workflow yang mampu membaca dokumen legal, memverifikasi kesesuaian KBLI, hingga mengeksekusi indexing search engine secara mandiri.',
-      'Bukan chatbot kosmetik mainan. Ini adalah AI yang memegang akses API internal untuk mengeksekusi tugas administratif berulang tanpa intervensi manual.'
+      'We engineer pragmatic, reliable AI systems: autonomous agentic workflows capable of verifying regulatory legal frameworks, cross-referencing KBLI codes, and pushing instant search engine indexing.',
+      'Never cosmetic toys or hallucinating chatbots. These are deterministic AI agents granted authorized internal API credentials to execute repetitive corporate tasks with zero human latency.'
     ],
     activeField: 'Marketing',
     nodes: [
       { label: 'Legal Review Agent', x: 20, y: 20, active: true },
-      { label: 'Indexing & SEO Agent', x: 80, y: 20, active: true },
+      { label: 'SEO & Indexing Agent', x: 80, y: 20, active: true },
       { label: 'Central Coordinator AI', x: 50, y: 50, active: true, isCore: true },
-      { label: 'Financial & Invoice Agent', x: 20, y: 80, active: true },
-      { label: 'CRM & WA Bot Agent', x: 80, y: 80, active: true }
+      { label: 'Financial & Invoicing', x: 20, y: 80, active: true },
+      { label: 'CRM & Bot Worker', x: 80, y: 80, active: true }
     ],
     connections: [
       { from: 2, to: 0, active: true },
@@ -88,22 +88,22 @@ const stages: Stage[] = [
     ],
   },
   {
-    id: 'koordinasi-antar-divisi',
+    id: 'multi-agent-orchestration',
     step: '04 / 05',
-    title: 'Orkestrasi Lintas Divisi (Multi-Agent Swarm)',
-    figTitle: 'Sistem yang berkoordinasi secara mandiri 24/7',
+    title: 'Cross-Department Multi-Agent Orchestration',
+    figTitle: 'Continuous self-coordinating business operations 24/7',
     figNum: 'Fig. 4',
     description: [
-      'Ketika setiap modul bisnis telah terhubung dengan agen cerdas, koordinasi antar divisi berjalan otomatis: prospek masuk dari web langsung diteruskan ke sistem legalitas, kwitansi invoice diterbitkan, dan jadwal notaris dipesan.',
-      'Bisnis Anda tetap berjalan, melayani, dan menghasilkan nilai bahkan saat seluruh tim sedang beristirahat.'
+      'Once each departmental module is powered by an autonomous agent, cross-organizational coordination becomes seamless: incoming leads trigger automatic legal feasibility checks, draft authentic deeds, dispatch invoices, and notify stakeholders.',
+      'Your business continues to transact, deliver, and expand value even while the executive team is offline.'
     ],
     activeField: 'Sales',
     nodes: [
-      { label: 'Divisi Pemasaran', x: 25, y: 20, active: true },
-      { label: 'Divisi Legalitas', x: 75, y: 20, active: true },
+      { label: 'Growth & Marketing', x: 25, y: 20, active: true },
+      { label: 'Legal & Compliance', x: 75, y: 20, active: true },
       { label: 'Multi-Agent Mesh', x: 50, y: 50, active: true, isCore: true },
-      { label: 'Divisi Keuangan', x: 25, y: 80, active: true },
-      { label: 'Divisi Operasional', x: 75, y: 80, active: true }
+      { label: 'Treasury & Finance', x: 25, y: 80, active: true },
+      { label: 'Fulfillment & Ops', x: 75, y: 80, active: true }
     ],
     connections: [
       { from: 2, to: 0, active: true },
@@ -117,14 +117,14 @@ const stages: Stage[] = [
     ],
   },
   {
-    id: 'automasi-organisasi',
+    id: 'automating-organizations',
     step: '05 / 05',
-    title: 'Automasi Organisasi Penuh (Automating Organizations)',
-    figTitle: 'Sistem terpadu berkinerja tinggi, efisien, dan tenang',
+    title: 'Automating Organizations (The Calm Enterprise)',
+    figTitle: 'Autonomous, resilient, and super-optimized business engines',
     figNum: 'Fig. 5',
     description: [
-      'Inilah visi tertinggi rekayasa teknologi Digitas Solusi Indonesia: mengubah beban operasional yang melelahkan menjadi ekosistem digital mandiri yang tangguh, terukur, dan tenang.',
-      'Founder dan pimpinan dapat memfokuskan energi pada keputusan strategis, sementara seluruh mesin digital bekerja di latar belakang dengan kepatuhan penuh.'
+      'This is the highest engineering doctrine of Digitas Solusi Indonesia: converting exhausting operational toil into a self-sustaining, high-velocity digital asset.',
+      'Founders and leadership regain total focus for strategic breakthroughs, while software and AI super-optimizers quietly execute everyday corporate reality.'
     ],
     activeField: 'multiple fields',
     nodes: [
@@ -132,8 +132,8 @@ const stages: Stage[] = [
       { label: 'LegalTech (Legalizin)', x: 20, y: 20, active: true },
       { label: 'Enterprise Systems', x: 80, y: 20, active: true },
       { label: 'Instant Indexing Engine', x: 20, y: 80, active: true },
-      { label: 'Autonomous Financials', x: 80, y: 80, active: true },
-      { label: 'AI Business Operations', x: 50, y: 15, active: true }
+      { label: 'Automated Finance', x: 80, y: 80, active: true },
+      { label: 'AI Operations Mesh', x: 50, y: 15, active: true }
     ],
     connections: [
       { from: 0, to: 1, active: true },
@@ -183,22 +183,22 @@ export default function CapabilitiesStory() {
         {/* Editorial Top Headline with Floating Badges (1:1 with General Intelligence) */}
         <div className="max-w-3xl mb-4 sm:mb-8 pt-6 sm:pt-2">
           <div className="text-[13px] font-mono text-[#646464] dark:text-[#a0a5ad] mb-3 tracking-tight">
-            02 / Kapabilitas &amp; Rekayasa Sistem
+            02 / Capabilities &amp; Systems Engineering
           </div>
 
           <h2 className="text-2xl sm:text-3xl md:text-[38px] font-editorial text-[#2c2c2c] dark:text-white leading-[1.2] tracking-[-0.035em]">
-            Sistem spesialis telah membuktikan hasil nyata di{' '}
+            Existing specialized systems have shown success across{' '}
             <span className="relative inline-block px-2 py-0.5 border-b border-[#dee2de] dark:border-neutral-700 text-[#41a1cf]">
-              berbagai bidang
+              isolated domains
             </span>
-            , namun sebagian besar masih terisolasi.{' '}
+            , but they remain disconnected.{' '}
             <span className="text-[#646464] dark:text-[#a0a5ad] font-sans text-xl sm:text-2xl md:text-3xl block mt-1">
-              Bisnis Anda membutuhkan koordinator cerdas dan sistem yang terpadu.
+              Your enterprise needs an intelligent coordinator and unified architecture.
             </span>
           </h2>
         </div>
 
-        {/* Dynamic Split Content (Narrative Left + Interactive Lottie/SVG Diagram Right) */}
+        {/* Dynamic Split Content (Narrative Left + Interactive SVG Diagram Right) */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center flex-1 pb-4">
           
           {/* Left Column: Stage Narrative & Progress Indicators */}
@@ -242,12 +242,12 @@ export default function CapabilitiesStory() {
 
             {/* Service Highlight Badge */}
             <div className="pt-6 border-t border-[#dee2de] dark:border-[#24272b] flex items-center justify-between text-[12px] font-mono text-[#646464] dark:text-[#a0a5ad]">
-              <span className="text-[#41a1cf]">● Layanan Aktif: Rekayasa Full-Stack &amp; AI</span>
-              <span className="text-neutral-400 dark:text-neutral-600">Scroll untuk lanjut ↓</span>
+              <span className="text-[#41a1cf]">● Live Focus: Applied AI &amp; Full-Stack Engineering</span>
+              <span className="text-neutral-400 dark:text-neutral-600">Scroll to advance ↓</span>
             </div>
           </div>
 
-          {/* Right Column: Lottie/SVG Diagram Card (Fig Frame Style) */}
+          {/* Right Column: SVG Diagram Card (Fig Frame Style) */}
           <div className="lg:col-span-7 flex flex-col items-center justify-center">
             <div className="w-full aspect-[16/10] max-w-[620px] rounded-[24px] bg-[#ffffff] dark:bg-[#141517] border border-[#dee2de] dark:border-[#24272b] p-6 shadow-[0_4px_24px_rgba(0,0,0,0.06)] dark:shadow-[0_4px_24px_rgba(0,0,0,0.5)] relative overflow-hidden flex flex-col justify-between">
               
@@ -325,7 +325,7 @@ export default function CapabilitiesStory() {
                   {currentStage.figNum} {currentStage.figTitle}
                 </span>
                 <span className="text-[#41a1cf] text-[11px]">
-                  Status: Terkoneksi &amp; Aktif
+                  Engine Status: Active &amp; Synchronized
                 </span>
               </div>
             </div>

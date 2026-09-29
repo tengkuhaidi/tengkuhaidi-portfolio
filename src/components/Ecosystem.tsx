@@ -4,62 +4,86 @@ import Image from 'next/image';
 export default function Ecosystem() {
   return (
     <section id="ecosystem" className="py-20 md:py-28 px-4 sm:px-6 max-w-[1200px] mx-auto border-t border-[#dee2de] dark:border-[#24272b]">
-      {/* Editorial Header */}
-      <div className="max-w-2xl mb-14">
+      {/* Editorial Section Header */}
+      <div className="max-w-2xl mb-12">
         <div className="text-[13px] font-mono text-[#646464] dark:text-[#a0a5ad] mb-2 tracking-tight">
-          01 / Ekosistem Holding
+          01 / Corporate Ecosystem &amp; Holdings
         </div>
         <h2 className="text-3xl sm:text-4xl font-editorial text-[#2c2c2c] dark:text-white leading-tight mb-4">
-          Bukan sekadar agensi software, kami membangun dan memiliki platform sendiri.
+          More than an agency: an incubator of autonomous operational ventures.
         </h2>
         <p className="text-[16px] text-[#444141] dark:text-[#d1d5db] leading-relaxed">
-          PT Digitas Solusi Indonesia menggabungkan keahlian rekayasa kode dengan pemahaman mendalam tentang kepatuhan hukum dan transaksi korporasi di Indonesia.
+          Digitas Solusi Indonesia develops, funds, and operates proprietary software engines that serve nationwide corporate workflows and high-volume legal ecosystems.
         </p>
       </div>
 
-      {/* Two-Column Literary Split: 6 + 6 */}
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
-        {/* Left: Explanatory Context */}
-        <div className="md:col-span-5 space-y-6">
-          <div className="p-7 rounded-[16px] bg-[#ffffff] dark:bg-[#141517] border border-[#dee2de] dark:border-[#24272b] shadow-[0_1px_1px_rgba(0,0,0,0.04)]">
-            <h3 className="text-xl font-editorial text-[#2c2c2c] dark:text-white mb-3">Legalizin (Legal-Tech)</h3>
-            <p className="text-[14px] text-[#444141] dark:text-[#d1d5db] leading-relaxed">
-              Layanan legalitas dan perizinan berusaha OSS RBA untuk PT, CV, PMA, hingga pendaftaran Hak Merek. Dirancang untuk memberikan transparansi total kepada para founder di Jabodetabek dan seluruh Indonesia dengan proses yang terukur dan legalitas terverifikasi.
+      {/* Featured Ecosystem Cards */}
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+        
+        {/* Main Pillar: Legalizin */}
+        <div className="lg:col-span-7 rounded-[20px] bg-[#ffffff] dark:bg-[#141517] border border-[#dee2de] dark:border-[#24272b] p-8 md:p-10 shadow-[0_1px_2px_rgba(0,0,0,0.04)] flex flex-col justify-between">
+          <div>
+            <div className="flex items-center justify-between mb-6">
+              <span className="px-3 py-1 rounded-full text-[12px] font-mono border border-[#41a1cf] text-[#41a1cf]">
+                Core Venture Flagship
+              </span>
+              <span className="text-[13px] font-mono text-[#646464] dark:text-[#a0a5ad]">
+                2024 — Present
+              </span>
+            </div>
+
+            <h3 className="text-2xl sm:text-3xl font-editorial text-[#2c2c2c] dark:text-white mb-4">
+              Legalizin
+            </h3>
+
+            <p className="text-[15px] text-[#444141] dark:text-[#d1d5db] leading-relaxed mb-6 font-sans">
+              Indonesia&apos;s leading digital platform for corporate legality, notary deeds, PT PMA incorporation, and automated licensing. Designed as a headless microservices architecture that handles high-traffic legal operations without manual friction.
             </p>
           </div>
 
-          <div className="p-7 rounded-[16px] bg-[#ffffff] dark:bg-[#141517] border border-[#dee2de] dark:border-[#24272b] shadow-[0_1px_1px_rgba(0,0,0,0.04)]">
-            <h3 className="text-xl font-editorial text-[#2c2c2c] dark:text-white mb-3">Internal Automation Engines</h3>
-            <p className="text-[14px] text-[#444141] dark:text-[#d1d5db] leading-relaxed">
-              Kami mengembangkan otomasi bot internal, pipeline pengindeksan instan Google Search Console, serta integrasi sistem penagihan mandiri untuk operasional bisnis tanpa friksi.
-            </p>
-          </div>
-        </div>
-
-        {/* Right: Visual Proof / Showcase in Mist bordered card */}
-        <div className="md:col-span-7 rounded-[16px] bg-[#ffffff] dark:bg-[#141517] border border-[#dee2de] dark:border-[#24272b] p-3 shadow-[0_1px_1px_rgba(0,0,0,0.04)]">
-          <div className="rounded-[12px] overflow-hidden border border-[#dee2de] dark:border-[#24272b] bg-[#f9faf7] dark:bg-[#1a1c1e] aspect-[16/10] relative">
-            <Image
-              src="/portfolio/web-legalizin.png"
-              alt="Platform Legalizin.com"
-              fill
-              className="object-cover object-top"
-              sizes="(max-width: 768px) 100vw, 55vw"
-            />
-          </div>
-          <div className="px-3 pt-3 pb-1 flex items-center justify-between text-[12px] font-mono text-[#646464] dark:text-[#a0a5ad]">
-            <span>Fig. 1 Tampilan Antarmuka Legalizin.com</span>
+          <div className="pt-6 border-t border-[#dee2de] dark:border-[#24272b] flex items-center justify-between">
+            <span className="text-[13px] text-[#646464] dark:text-[#a0a5ad] font-mono">
+              Status: Active • Scaling
+            </span>
             <a
               href="https://legalizin.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#41a1cf] hover:underline flex items-center gap-1 font-medium"
+              className="text-[14px] text-[#41a1cf] font-medium hover:underline inline-flex items-center gap-1"
             >
-              <span>Buka Platform</span>
+              <span>Visit Platform</span>
               <span>↗</span>
             </a>
           </div>
         </div>
+
+        {/* Supporting Pillar: Internal R&D Engines */}
+        <div className="lg:col-span-5 rounded-[20px] bg-[#ffffff] dark:bg-[#141517] border border-[#dee2de] dark:border-[#24272b] p-8 md:p-10 shadow-[0_1px_2px_rgba(0,0,0,0.04)] flex flex-col justify-between">
+          <div>
+            <div className="flex items-center justify-between mb-6">
+              <span className="px-3 py-1 rounded-full text-[12px] font-mono border border-neutral-300 dark:border-neutral-700 text-[#444141] dark:text-[#a0a5ad]">
+                Proprietary Tooling
+              </span>
+              <span className="text-[13px] font-mono text-[#646464] dark:text-[#a0a5ad]">
+                Continuous Integration
+              </span>
+            </div>
+
+            <h3 className="text-2xl font-editorial text-[#2c2c2c] dark:text-white mb-4">
+              Autonomous Systems &amp; Micro-Apps
+            </h3>
+
+            <p className="text-[15px] text-[#444141] dark:text-[#d1d5db] leading-relaxed font-sans mb-6">
+              A private network of purpose-built micro-applications: KBLI 2025 cross-reference search, real-time Google Indexing push workers, autonomous SEO syndication, and self-hosted automated financial dispatch.
+            </p>
+          </div>
+
+          <div className="pt-6 border-t border-[#dee2de] dark:border-[#24272b] flex items-center justify-between text-[13px] font-mono text-[#646464] dark:text-[#a0a5ad]">
+            <span>Fully Orchestrated</span>
+            <span>24/7 Uptime</span>
+          </div>
+        </div>
+
       </div>
     </section>
   );
