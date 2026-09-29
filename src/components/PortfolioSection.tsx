@@ -97,14 +97,14 @@ export default function PortfolioSection() {
 
       {/* Interactive Carousel Track with Mobile Swipe Support */}
       <div 
-        className="relative w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 touch-pan-y"
+        className="relative w-full max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 touch-pan-y"
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
       >
         
         {/* 3D Sliding Strip */}
-        <div className="flex items-center justify-center gap-4 sm:gap-6 py-2">
+        <div className="flex items-center justify-center gap-3 sm:gap-6 py-2">
           {[-1, 0, 1].map((offset) => {
             const projectIdx = (currentIndex + offset + portfolioProjects.length) % portfolioProjects.length;
             const project = portfolioProjects[projectIdx];
@@ -119,18 +119,18 @@ export default function PortfolioSection() {
                 }}
                 className={`relative shrink-0 cursor-pointer transition-all duration-500 ease-out select-none ${
                   isCenter
-                    ? 'w-[90vw] max-w-[620px] sm:max-w-[700px] z-20 scale-100 opacity-100'
-                    : 'hidden sm:block w-[35vw] max-w-[320px] z-10 scale-90 opacity-35 hover:opacity-70'
+                    ? 'w-[95vw] max-w-[780px] lg:max-w-[900px] z-20 scale-100 opacity-100'
+                    : 'hidden sm:block w-[28vw] max-w-[320px] z-10 scale-90 opacity-35 hover:opacity-70'
                 }`}
               >
-                {/* Image Card (Zero Badges) */}
-                <div className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl bg-neutral-100 dark:bg-neutral-800 shadow-[0_8px_32px_rgba(0,0,0,0.08)] dark:shadow-[0_8px_32px_rgba(0,0,0,0.6)] border border-[#dee2de] dark:border-[#24272b]">
+                {/* Image Card: Exact 1920x869 Aspect Ratio with Zero Cropping */}
+                <div className="relative aspect-[1920/869] w-full overflow-hidden rounded-xl sm:rounded-2xl bg-neutral-100 dark:bg-neutral-800 shadow-[0_8px_32px_rgba(0,0,0,0.08)] dark:shadow-[0_8px_32px_rgba(0,0,0,0.6)] border border-[#dee2de] dark:border-[#24272b]">
                   <Image
                     src={project.image}
                     alt={project.title}
                     fill
                     priority={isCenter}
-                    className="object-cover object-top"
+                    className="object-contain w-full h-full"
                   />
                   {!isCenter && (
                     <div className="absolute inset-0 bg-black/25 hover:bg-black/10 transition-colors" />
