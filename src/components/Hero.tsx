@@ -16,13 +16,13 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative w-full min-h-[92vh] sm:min-h-screen flex flex-col justify-between overflow-hidden bg-[var(--canvas-bg)]">
+    <section className="relative w-full min-h-[92vh] sm:min-h-screen flex flex-col justify-between overflow-hidden bg-[#171717]">
       
       {/* 
         Full-Bleed Edge-to-Edge Parallax Canvas Background
       */}
       <div 
-        className="absolute inset-0 w-full h-[120%] -top-[10%] pointer-events-none will-change-transform"
+        className="absolute inset-0 w-full h-[125%] -top-[12%] pointer-events-none will-change-transform z-0"
         style={{
           transform: `translate3d(0, ${scrollY * 0.35}px, 0)`,
         }}
@@ -34,8 +34,8 @@ export default function Hero() {
           priority
           className="object-cover object-center w-full h-full"
         />
-        {/* Atmospheric gradient overlay transitioning solidly into canvas bg at bottom */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/10 via-70% to-[var(--canvas-bg)] opacity-95 transition-colors" />
+        {/* Soft gradient wash that lets the painting shine through */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent via-60% to-[var(--canvas-bg)] opacity-90 transition-colors" />
       </div>
 
       {/* Top Spacer for Floating Navbar */}
@@ -92,12 +92,12 @@ export default function Hero() {
       </div>
 
       {/* Bottom Horizon Indicator */}
-      <div className="relative z-10 w-full max-w-[1240px] mx-auto px-4 sm:px-6 pb-8 pt-12 flex items-center justify-between text-[12px] font-mono text-[#2c2c2c] dark:text-white/80">
+      <div className="relative z-10 w-full max-w-[1240px] mx-auto px-4 sm:px-6 pb-8 pt-12 flex items-center justify-between text-[12px] font-mono text-white/90">
         <div className="flex items-center gap-2">
           <span className="inline-block w-2 h-2 rounded-full bg-[#41a1cf] animate-pulse" />
           <span>Autonomous Systems: Online</span>
         </div>
-        <span className="hidden sm:inline text-[#646464] dark:text-white/60">Scroll to read the blueprint ↓</span>
+        <span className="hidden sm:inline text-white/70">Scroll to read the blueprint ↓</span>
       </div>
 
     </section>
