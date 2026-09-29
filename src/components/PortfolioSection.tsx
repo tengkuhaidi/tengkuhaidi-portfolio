@@ -141,7 +141,7 @@ export default function PortfolioSection() {
           })}
         </div>
 
-        {/* Mobile Swipe Hint and Arrow Controls */}
+        {/* Mobile Arrow Controls (Clean, zero text) */}
         <div className="flex sm:hidden items-center justify-between px-2 pt-3">
           <button
             onClick={prevSlide}
@@ -152,10 +152,6 @@ export default function PortfolioSection() {
               <path d="m15 18-6-6 6-6" />
             </svg>
           </button>
-          
-          <span className="text-[11px] font-mono text-[#646464] dark:text-[#a0a5ad] flex items-center gap-1">
-            <span>Swipe or click arrows</span>
-          </span>
 
           <button
             onClick={nextSlide}
@@ -171,7 +167,7 @@ export default function PortfolioSection() {
         {/* Dedicated Caption Block Below Center Card (Clean spacing, zero overlap) */}
         <div className="mt-6 sm:mt-8 text-center space-y-2 max-w-xl mx-auto px-4">
           <div className="text-[12px] font-mono text-[#41a1cf]">
-            {activeProject.client} • {activeProject.year}
+            {activeProject.client}
           </div>
           <h3 className="text-xl sm:text-2xl md:text-3xl font-editorial font-semibold text-[#2c2c2c] dark:text-white leading-tight">
             {activeProject.title}
