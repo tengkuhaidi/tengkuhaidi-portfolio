@@ -32,10 +32,12 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="fixed top-4 left-0 right-0 z-50 flex justify-center px-4 pointer-events-none">
-        <nav className="pointer-events-auto flex items-center justify-between gap-3 sm:gap-6 px-3.5 py-2 rounded-full border border-[#dee2de] dark:border-[#24272b] bg-[#fefffc]/85 dark:bg-[#0c0d0e]/85 backdrop-blur-md shadow-[0_2px_12px_rgba(0,0,0,0.04)] transition-colors">
+      <header className="fixed top-4 left-0 right-0 z-50 flex justify-center px-3 sm:px-4 pointer-events-none">
+        
+        {/* Desktop Navbar (Pill style) */}
+        <nav className="hidden md:flex pointer-events-auto items-center justify-between gap-6 px-3.5 py-2 rounded-full border border-[#dee2de] dark:border-[#24272b] bg-[#fefffc]/85 dark:bg-[#0c0d0e]/85 backdrop-blur-md shadow-[0_2px_12px_rgba(0,0,0,0.04)] transition-colors">
           
-          {/* Brand Icon Only (No Text, clean symbol icon) */}
+          {/* Brand Icon Only */}
           <Link href="/" aria-label="Home" className="flex items-center pr-3 border-r border-[#dee2de] dark:border-neutral-800">
             <div className="relative w-7 h-7 flex items-center justify-center">
               <Image
@@ -50,7 +52,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Navigation Links */}
-          <div className="hidden md:flex items-center gap-5 text-[14px] text-[#444141] dark:text-[#d1d5db]">
+          <div className="flex items-center gap-5 text-[14px] text-[#444141] dark:text-[#d1d5db]">
             {navLinks.slice(1).map((link) => (
               <Link
                 key={link.label}
@@ -71,41 +73,65 @@ export default function Navbar() {
             </a>
           </div>
 
-          {/* Right Actions: Theme Toggle, CTA & Mobile Hamburger */}
+          {/* Desktop Actions */}
           <div className="flex items-center gap-2 pl-1">
             <ThemeToggle />
-            
-            {/* Desktop CTA */}
             <a
               href={WA_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden sm:flex px-3.5 py-1.5 rounded-full border border-[#41a1cf] text-[#41a1cf] dark:text-[#52b4e5] text-[13px] font-medium hover:bg-[#41a1cf] hover:text-white transition-all items-center gap-1.5"
+              className="px-3.5 py-1.5 rounded-full border border-[#41a1cf] text-[#41a1cf] dark:text-[#52b4e5] text-[13px] font-medium hover:bg-[#41a1cf] hover:text-white transition-all flex items-center gap-1.5"
             >
               <span>Start Discussion</span>
               <span className="text-[10px]">→</span>
             </a>
-
-            {/* Mobile Menu Hamburger Button */}
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="flex md:hidden flex-col justify-center items-center w-8 h-8 rounded-full border border-[#dee2de] dark:border-[#24272b] bg-white/50 dark:bg-neutral-900/50 backdrop-blur-sm focus:outline-none cursor-pointer"
-              aria-label="Toggle mobile menu"
-            >
-              <span
-                className={`block w-4 h-0.5 rounded-full bg-[#2c2c2c] dark:bg-white transition-all duration-300 ease-in-out ${
-                  isOpen ? 'rotate-45 translate-y-1' : '-translate-y-0.5'
-                }`}
-              />
-              <span
-                className={`block w-4 h-0.5 rounded-full bg-[#2c2c2c] dark:bg-white transition-all duration-300 ease-in-out ${
-                  isOpen ? '-rotate-45 -translate-y-0.5' : 'translate-y-0.5'
-                }`}
-              />
-            </button>
           </div>
 
         </nav>
+
+        {/* Mobile Navbar: Floating 3-part elements 1:1 like General Intelligence Company */}
+        <div className="flex md:hidden pointer-events-auto items-center justify-between w-full max-w-[440px] px-1">
+          
+          {/* Left: Glass icon button */}
+          <Link
+            href="/"
+            aria-label="Home"
+            className="w-10 h-10 rounded-xl backdrop-blur-md bg-black/25 dark:bg-white/10 border border-white/20 flex items-center justify-center shadow-[0_2px_8px_rgba(0,0,0,0.15)] active:scale-95 transition-transform"
+          >
+            <Image
+              src="/favicon.png"
+              alt="Digitas Logo"
+              width={22}
+              height={22}
+              className="object-contain"
+              priority
+            />
+          </Link>
+
+          {/* Center: Dark Pill CTA Button */}
+          <a
+            href={WA_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-4 py-2 rounded-full bg-black/45 dark:bg-black/60 backdrop-blur-md border border-white/20 text-white text-[13px] font-sans font-medium flex items-center gap-1.5 shadow-[0_2px_8px_rgba(0,0,0,0.2)] active:scale-95 transition-transform"
+          >
+            <span>Start Discussion</span>
+            <span className="text-[11px] opacity-80">→</span>
+          </a>
+
+          {/* Right: Glass hamburger button */}
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="w-10 h-10 rounded-xl backdrop-blur-md bg-black/25 dark:bg-white/10 border border-white/20 flex flex-col justify-center items-center gap-[4px] focus:outline-none cursor-pointer shadow-[0_2px_8px_rgba(0,0,0,0.15)] active:scale-95 transition-transform"
+            aria-label="Toggle menu"
+          >
+            <span className="block w-4 h-[1.75px] rounded-full bg-white" />
+            <span className="block w-4 h-[1.75px] rounded-full bg-white" />
+            <span className="block w-4 h-[1.75px] rounded-full bg-white" />
+          </button>
+
+        </div>
+
       </header>
 
       {/* Fullscreen Mobile Navigation Overlay (1:1 General Intelligence Company style) */}
@@ -119,12 +145,12 @@ export default function Navbar() {
         {/* Top Bar: Icon Mark, Dark Pill CTA, Close X */}
         <div className="flex items-center justify-between w-full pt-2">
           {/* Left Brand Mark */}
-          <div className="w-8 h-8 flex items-center justify-center">
+          <div className="w-10 h-10 rounded-xl backdrop-blur-sm bg-neutral-100 dark:bg-neutral-800/80 border border-[#dee2de] dark:border-[#24272b] flex items-center justify-center">
             <Image
               src="/favicon.png"
               alt="Digitas Logo"
-              width={26}
-              height={26}
+              width={24}
+              height={24}
               className="object-contain"
             />
           </div>
@@ -145,7 +171,7 @@ export default function Navbar() {
           <button
             onClick={() => setIsOpen(false)}
             aria-label="Close menu"
-            className="w-9 h-9 rounded-full border border-[#dee2de] dark:border-[#24272b] flex items-center justify-center text-[#2c2c2c] dark:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
+            className="w-10 h-10 rounded-xl border border-[#dee2de] dark:border-[#24272b] flex items-center justify-center text-[#2c2c2c] dark:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
