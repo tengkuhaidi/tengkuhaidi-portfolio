@@ -1,17 +1,17 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowRight, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="fixed top-5 left-0 right-0 z-50 flex justify-center px-4">
-      {/* Frosted Navigation Pill - Exactly from General Intelligence spec */}
-      <div className="w-full max-w-4xl bg-white/75 backdrop-blur-md border border-[#dee2de] rounded-full px-5 py-2.5 shadow-[0_2px_6px_rgba(0,0,0,0.06)] flex items-center justify-between transition-all">
+    <header className="fixed top-5 sm:top-8 left-0 right-0 z-50 flex justify-center px-4">
+      {/* Frosted Navigation Pill */}
+      <div className="w-full max-w-4xl bg-white/80 backdrop-blur-xl border border-white/70 rounded-full px-5 py-2.5 shadow-[0_4px_20px_rgba(0,0,0,0.06)] flex items-center justify-between transition-all">
         {/* Brand */}
         <Link href="/" className="flex items-center gap-2.5 group">
           <Image
@@ -27,7 +27,7 @@ export default function Navbar() {
           </span>
         </Link>
 
-        {/* Center Links (af / sans, 15px, weight 500) */}
+        {/* Center Links */}
         <nav className="hidden md:flex items-center gap-7 text-[15px] font-medium text-[#444141]">
           <Link href="#ecosystem" className="hover:text-[#171717] transition-colors">
             Ekosistem
@@ -44,23 +44,22 @@ export default function Navbar() {
         </nav>
 
         {/* Outlined Action Buttons */}
-        <div className="hidden md:flex items-center gap-3">
+        <div className="hidden md:flex items-center gap-2.5">
           <a
             href="https://legalizin.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-[8px] border border-[#dee2de] text-[13px] font-medium text-[#444141] hover:text-[#171717] hover:border-[#b4b8b4] transition-all bg-[#ffffff]"
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-[8px] border border-[#dee2de] text-[13px] font-medium text-[#444141] hover:text-[#171717] hover:border-[#b4b8b4] transition-all bg-white/70"
           >
             <span>Legalizin</span>
             <span className="text-[10px] font-mono text-[#41a1cf]">↗</span>
           </a>
 
-          {/* Primary Outlined CTA Button - Signal Blue border (#41a1cf), transparent bg */}
           <a
             href="https://wa.me/6281235247820"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-[8px] border border-[#41a1cf] text-[14px] font-medium text-[#41a1cf] hover:bg-[#41a1cf]/5 transition-all group"
+            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-[8px] border border-[#41a1cf] text-[14px] font-medium text-[#41a1cf] hover:bg-[#41a1cf]/10 transition-all group bg-white/50"
           >
             <span>Mulai Diskusi</span>
             <span className="inline-flex items-center justify-center size-4 rounded-full border border-[#41a1cf]/60 text-[10px] group-hover:translate-x-0.5 transition-transform">
@@ -81,7 +80,7 @@ export default function Navbar() {
 
       {/* Mobile Drawer */}
       {mobileOpen && (
-        <div className="md:hidden absolute top-16 left-4 right-4 bg-white border border-[#dee2de] rounded-2xl p-5 shadow-lg space-y-4">
+        <div className="md:hidden absolute top-16 left-4 right-4 bg-white/95 backdrop-blur-xl border border-[#dee2de] rounded-2xl p-5 shadow-2xl space-y-4">
           <Link
             href="#ecosystem"
             onClick={() => setMobileOpen(false)}
