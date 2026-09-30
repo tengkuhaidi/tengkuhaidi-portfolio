@@ -7,23 +7,23 @@ import TextReveal, { RevealBlock } from './TextReveal';
 const capabilities = [
   {
     num: '01',
-    title: 'Go-Digital Strategy & Web Platform Engineering',
-    desc: 'Helping conventional businesses transition online with high-speed web platforms, e-commerce systems, and client portals built on Next.js with zero downtime and strict reliability.'
+    title: 'Web Platform & Portal Engineering',
+    desc: 'High-speed Next.js web applications, client dashboards, and secure API backends. Built with TypeScript and Tailwind, optimized for sub-second page loads and zero server crashes.'
   },
   {
     num: '02',
-    title: 'Technical SEO, SEM & Organic Growth Automation',
-    desc: 'Programmatic search distribution and indexing pipelines connecting directly to Google Indexing API. Optimizing corporate visibility, conversion funnels, and high-intent local rankings.'
+    title: 'Programmatic SEO & Organic Lead Acquisition',
+    desc: 'Automated search publishing engines hooked directly to Google Indexing API. Targeting hundreds of high-intent commercial keywords that drive daily inquiries without burning ad budget.'
   },
   {
     num: '03',
-    title: 'Cloud Infrastructure, DevOps & Containerization',
-    desc: 'Deep fluency in Docker, Linux servers, CI/CD automated deployments, reverse proxies, and secure microservices. Ensuring business platforms stay resilient, backed up, and scalable.'
+    title: 'Linux Infrastructure & DevOps',
+    desc: 'Dockerized microservices, Nginx reverse proxies, automated SSL certificates, and CI/CD pipelines on bare-metal or cloud servers. Kept secure, backed up, and monitored.'
   },
   {
     num: '04',
-    title: 'Custom ERP, AI Workflows & Applied R&D',
-    desc: 'Replacing chaotic spreadsheets with custom internal platforms: payroll systems, multi-agent AI verification bots, visitor access control (VMS), and corporate deed/asset trackers.'
+    title: 'Custom ERP, AI Agents & Internal Tools',
+    desc: 'Replacing clunky spreadsheets with tailored operational software: automated WhatsApp CS bots, document parsing engines, physical visitor logs (VMS), and accounting trackers.'
   }
 ];
 
@@ -64,7 +64,7 @@ export default function Services() {
       ref={sectionRef}
       className="relative w-full py-24 md:py-32 px-4 sm:px-6 overflow-hidden border-t border-[#dee2de] dark:border-[#24272b] transition-colors"
     >
-      {/* Parallax Background with Pixelated Retro Anime Aesthetic */}
+      {/* Parallax Background */}
       <div
         ref={bgRef}
         className="absolute inset-0 w-full h-[135%] -top-[18%] pointer-events-none will-change-transform z-0"
@@ -83,35 +83,35 @@ export default function Services() {
           }}
         />
 
-        {/* Ambient Gradient Overlay tuned for aesthetic sunflower visibility & sharp card contrast */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#f8faf9]/70 via-[#f8faf9]/55 to-[#f8faf9]/75 dark:from-[#0c0d0e]/75 dark:via-[#0c0d0e]/60 dark:to-[#0c0d0e]/80 transition-colors" />
+        {/* Ambient Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#f8faf9]/75 via-[#f8faf9]/60 to-[#f8faf9]/80 dark:from-[#0c0d0e]/75 dark:via-[#0c0d0e]/60 dark:to-[#0c0d0e]/80 transition-colors" />
       </div>
 
       {/* Main Content Container */}
       <div className="relative z-10 max-w-[1240px] mx-auto">
         
-        {/* Section Header with Staggered Text Animations */}
+        {/* Section Header */}
         <div className="max-w-3xl mb-14">
           <RevealBlock delay={0.05} yOffset={10}>
             <p className="text-[13px] font-mono text-[#006699] dark:text-[#41a1cf] font-semibold tracking-wider uppercase mb-3 drop-shadow-sm">
-              03 / Services &amp; Capabilities
+              03 / Services &amp; Delivery
             </p>
           </RevealBlock>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-editorial text-[#171717] dark:text-white leading-[1.15] mb-4 drop-shadow-[0_1px_2px_rgba(255,255,255,0.8)] dark:drop-shadow-none">
+          <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-editorial text-[#171717] dark:text-white leading-[1.15] mb-4">
             <TextReveal delay={0.1} stagger={0.045} duration={0.55}>
-              How I help companies modernize and scale.
+              Technical execution for growing businesses.
             </TextReveal>
           </h2>
 
           <RevealBlock delay={0.25} duration={0.65} yOffset={14}>
-            <p className="text-[15px] sm:text-[16px] text-[#1f2937] dark:text-[#d1d5db] font-sans leading-relaxed max-w-2xl font-medium">
-              Bridging strategic digital marketing, high-performance web engineering, and enterprise backend systems to eliminate technical bottlenecks.
+            <p className="text-[15px] sm:text-[16px] text-[#374151] dark:text-[#d1d5db] font-sans leading-relaxed max-w-2xl font-medium">
+              I handle the entire technical delivery personally: no junior subcontractors, no endless scoping meetings, and no unmaintainable code.
             </p>
           </RevealBlock>
         </div>
 
-        {/* 2x2 Services Cards with Glassmorphism / Frosted Backdrop */}
+        {/* 2x2 Services Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
           {capabilities.map((c, i) => (
             <RevealBlock
@@ -121,7 +121,7 @@ export default function Services() {
               yOffset={20}
               className="flex"
             >
-              <div className="w-full p-8 rounded-[22px] bg-[#ffffff]/90 dark:bg-[#141517]/90 backdrop-blur-md border border-[#ffffff]/60 dark:border-[#24272b]/90 shadow-[0_8px_32px_rgba(0,0,0,0.06)] dark:shadow-[0_8px_32px_rgba(0,0,0,0.5)] hover:border-[#41a1cf]/60 hover:shadow-[0_12px_40px_rgba(0,0,0,0.1)] transition-all duration-300 flex flex-col justify-between group">
+              <div className="w-full p-8 rounded-[22px] bg-[#ffffff]/92 dark:bg-[#141517]/92 backdrop-blur-md border border-[#ffffff]/60 dark:border-[#24272b]/90 shadow-[0_8px_32px_rgba(0,0,0,0.06)] dark:shadow-[0_8px_32px_rgba(0,0,0,0.5)] hover:border-[#41a1cf]/60 hover:shadow-[0_12px_40px_rgba(0,0,0,0.1)] transition-all duration-300 flex flex-col justify-between group">
                 <div>
                   <div className="flex items-center justify-between mb-4">
                     <span className="text-[12px] font-mono text-[#41a1cf] font-semibold tracking-wider">
@@ -142,9 +142,9 @@ export default function Services() {
                 </div>
 
                 <div className="pt-6 mt-6 border-t border-[#dee2de]/60 dark:border-[#24272b]/60 flex items-center justify-between text-[12px] font-mono text-[#646464] dark:text-[#a0a5ad]">
-                  <span>Core Expertise</span>
+                  <span>Scope of Work</span>
                   <span className="text-[#41a1cf] opacity-0 group-hover:opacity-100 transition-opacity inline-flex items-center gap-1 font-medium">
-                    Available for Contract
+                    Discuss Project
                     <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                       <path d="M5 12h14" />
                       <path d="m12 5 7 7-7 7" />

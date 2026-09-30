@@ -15,28 +15,28 @@ const stages: Stage[] = [
   {
     id: 'isolated-systems',
     step: '01 / 05',
-    title: 'Isolated Systems',
-    summary: 'Most companies run on disconnected tools: CRMs, payroll sheets, and manual chats. Teams waste hours bridging data between systems by hand.',
+    title: 'Disconnected tools & manual handoffs',
+    summary: 'Most businesses run on WhatsApp chats, messy Google Sheets, and half-used commercial SaaS. Staff burn dozens of hours copying data between browser tabs.',
     nodes: [
-      { label: 'Web & App', x: 20, y: 25, active: true },
-      { label: 'Payroll', x: 80, y: 25, active: true },
+      { label: 'Web Form', x: 20, y: 25, active: true },
+      { label: 'Payroll Sheet', x: 80, y: 25, active: true },
       { label: 'Inventory', x: 20, y: 75, active: true },
-      { label: 'Support', x: 80, y: 75, active: true },
-      { label: 'Manual Work', x: 50, y: 50, active: false, isCore: true }
+      { label: 'WhatsApp', x: 80, y: 75, active: true },
+      { label: 'Manual Copy', x: 50, y: 50, active: false, isCore: true }
     ],
     connections: [],
   },
   {
     id: 'foundational-architecture',
     step: '02 / 05',
-    title: 'Unified Architecture',
-    summary: 'We build structured data foundations: Next.js 16, typed databases, and clear APIs. Fragile spreadsheets are replaced with audited internal software.',
+    title: 'Single source of truth & structured APIs',
+    summary: 'I replace fragile spreadsheets with custom PostgreSQL schemas, secure REST/gRPC endpoints, and Next.js interfaces tailored to your exact business rules.',
     nodes: [
-      { label: 'Web Edge', x: 20, y: 25, active: true },
-      { label: 'Database', x: 80, y: 25, active: true },
+      { label: 'Next.js App', x: 20, y: 25, active: true },
+      { label: 'Postgres DB', x: 80, y: 25, active: true },
       { label: 'API Gateway', x: 50, y: 50, active: true, isCore: true },
-      { label: 'Core System', x: 20, y: 75, active: true },
-      { label: 'Billing', x: 80, y: 75, active: true }
+      { label: 'Admin Portal', x: 20, y: 75, active: true },
+      { label: 'Invoicing', x: 80, y: 75, active: true }
     ],
     connections: [
       { from: 2, to: 0, active: true },
@@ -48,14 +48,14 @@ const stages: Stage[] = [
   {
     id: 'ai-implementation',
     step: '03 / 05',
-    title: 'Autonomous AI Agents',
-    summary: 'Practical AI connected directly to company APIs. Agents handle document verification, regulatory checks, and search indexing automatically.',
+    title: 'Applied AI on real company data',
+    summary: 'No toy chat interfaces. I hook LLMs directly to your operational database to parse incoming documents, verify compliance regulations, and answer customers on WhatsApp 24/7.',
     nodes: [
-      { label: 'Legal Agent', x: 20, y: 20, active: true },
-      { label: 'SEO Agent', x: 80, y: 20, active: true },
-      { label: 'Coordinator', x: 50, y: 50, active: true, isCore: true },
-      { label: 'Invoice Agent', x: 20, y: 80, active: true },
-      { label: 'Support Bot', x: 80, y: 80, active: true }
+      { label: 'Doc Parser', x: 20, y: 20, active: true },
+      { label: 'Search Index', x: 80, y: 20, active: true },
+      { label: 'Agent Engine', x: 50, y: 50, active: true, isCore: true },
+      { label: 'Invoice Gen', x: 20, y: 80, active: true },
+      { label: 'WhatsApp CS', x: 80, y: 80, active: true }
     ],
     connections: [
       { from: 2, to: 0, active: true },
@@ -69,14 +69,14 @@ const stages: Stage[] = [
   {
     id: 'multi-agent-orchestration',
     step: '04 / 05',
-    title: 'Cross-Team Coordination',
-    summary: 'Agents coordinate between departments around the clock: incoming inquiries trigger compliance checks, generate invoices, and alert team leads.',
+    title: 'Automated background execution',
+    summary: 'When a new lead arrives via Google search, the system validates the business type, provisions draft legal documents, issues an invoice, and alerts your sales manager.',
     nodes: [
-      { label: 'Marketing', x: 25, y: 20, active: true },
-      { label: 'Compliance', x: 75, y: 20, active: true },
-      { label: 'Agent Mesh', x: 50, y: 50, active: true, isCore: true },
-      { label: 'Finance', x: 25, y: 80, active: true },
-      { label: 'Operations', x: 75, y: 80, active: true }
+      { label: 'Search Traffic', x: 25, y: 20, active: true },
+      { label: 'Rule Engine', x: 75, y: 20, active: true },
+      { label: 'Event Bus', x: 50, y: 50, active: true, isCore: true },
+      { label: 'Accounting', x: 25, y: 80, active: true },
+      { label: 'Fulfillment', x: 75, y: 80, active: true }
     ],
     connections: [
       { from: 2, to: 0, active: true },
@@ -92,14 +92,14 @@ const stages: Stage[] = [
   {
     id: 'automating-organizations',
     step: '05 / 05',
-    title: 'Automated Operations',
-    summary: 'Routine execution runs autonomously in the background. Founders focus on strategic decisions while systems handle daily workflows.',
+    title: 'Scalable operations without linear hiring',
+    summary: 'Your core team spends time closing high-value deals and managing key relationships, while the software infrastructure runs daily administrative execution quietly in the background.',
     nodes: [
-      { label: 'Central Core', x: 50, y: 50, active: true, isCore: true },
-      { label: 'Legalizin', x: 20, y: 20, active: true },
-      { label: 'ERP Systems', x: 80, y: 20, active: true },
-      { label: 'Auto Indexing', x: 20, y: 80, active: true },
-      { label: 'Finance Mesh', x: 80, y: 80, active: true },
+      { label: 'Command Hub', x: 50, y: 50, active: true, isCore: true },
+      { label: 'Web Platform', x: 20, y: 20, active: true },
+      { label: 'Internal ERP', x: 80, y: 20, active: true },
+      { label: 'Google Indexer', x: 20, y: 80, active: true },
+      { label: 'Billing Engine', x: 80, y: 80, active: true },
       { label: 'Operations', x: 50, y: 15, active: true }
     ],
     connections: [
@@ -148,15 +148,12 @@ export default function CapabilitiesStory() {
         
         {/* Header */}
         <div className="max-w-3xl mb-4 sm:mb-8 pt-6 sm:pt-2">
-          <div className="text-[13px] font-mono text-[#646464] dark:text-[#a0a5ad] mb-3 tracking-tight">
-            02 / Capabilities
+          <div className="text-[13px] font-mono text-[#006699] dark:text-[#41a1cf] mb-3 tracking-tight font-medium">
+            02 / Systems Roadmap
           </div>
 
-          <h2 className="text-2xl sm:text-3xl md:text-[38px] font-editorial text-[#2c2c2c] dark:text-white leading-[1.2] tracking-[-0.035em]">
-            Specialized tools work well in isolation.{' '}
-            <span className="text-[#646464] dark:text-[#a0a5ad] font-sans text-xl sm:text-2xl md:text-3xl block mt-1">
-              Your business needs a coordinator.
-            </span>
+          <h2 className="text-2xl sm:text-3xl md:text-[38px] font-editorial text-[#171717] dark:text-white leading-[1.2] tracking-tight">
+            How I untangle company operations and automate workflows.
           </h2>
         </div>
 
@@ -193,13 +190,13 @@ export default function CapabilitiesStory() {
                 {currentStage.title}
               </h3>
 
-              <p className="text-[15px] text-[#444141] dark:text-[#d1d5db] leading-relaxed font-sans">
+              <p className="text-[15px] text-[#374151] dark:text-[#c9ccd1] leading-relaxed font-sans">
                 {currentStage.summary}
               </p>
             </div>
 
             <div className="pt-6 border-t border-[#dee2de] dark:border-[#24272b] text-[12px] font-mono text-[#646464] dark:text-[#a0a5ad]">
-              <span>Scroll to view workflow ↓</span>
+              <span>Scroll down to step through ↓</span>
             </div>
           </div>
 
@@ -239,7 +236,7 @@ export default function CapabilitiesStory() {
                     >
                       {node.isCore && (
                         <circle
-                          r="7"
+                          r="8"
                           fill="none"
                           stroke="#41a1cf"
                           strokeWidth="0.5"
@@ -247,14 +244,14 @@ export default function CapabilitiesStory() {
                         />
                       )}
                       <circle
-                        r={node.isCore ? '4.5' : '3'}
+                        r={node.isCore ? 5 : 3.5}
                         fill={node.isCore ? '#41a1cf' : '#282834'}
                         className="dark:fill-[#41a1cf] transition-colors"
                       />
                       <text
-                        y={node.y > 50 ? 7 : -6}
+                        y={node.y > 50 ? 8 : -6}
                         textAnchor="middle"
-                        className="text-[3.2px] font-mono fill-[#2c2c2c] dark:fill-white font-medium"
+                        className="text-[3.4px] font-mono fill-[#171717] dark:fill-white font-medium"
                       >
                         {node.label}
                       </text>
