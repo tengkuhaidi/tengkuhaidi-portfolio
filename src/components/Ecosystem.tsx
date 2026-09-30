@@ -13,31 +13,31 @@ interface MetricImpact {
 
 const metrics: MetricImpact[] = [
   {
-    label: 'Organic Traffic & Instant Indexing',
+    label: 'Organic Search Visibility & Inbound Leads',
     metric: '100+',
-    sub: 'Commercial Keywords in Top 5',
-    detail: 'Automated publishing engine pushes directly to Google Indexing API within seconds of release, beating traditional 3-week crawl delays.',
+    sub: 'Commercial Keywords in Top Google Positions',
+    detail: 'Built an automated organic distribution engine that gets corporate services indexed within hours instead of weeks, capturing business owners searching for company formation.',
     barPct: 92,
   },
   {
-    label: 'WhatsApp CS Response Latency',
+    label: 'Customer Support Response Time',
     metric: '< 5s',
-    sub: '24/7 Automated Response Time',
-    detail: 'Autonomous LLM agent parses complex OSS RBA perizinan rules instantly on WhatsApp, eliminating missed inquiries outside business hours.',
+    sub: 'Instant 24/7 Consultation on WhatsApp',
+    detail: 'Deployed an automated customer service assistant that answers licensing inquiries, explains government regulations, and qualifies leads around the clock.',
     barPct: 98,
   },
   {
-    label: 'Operational Back-Office Overhead',
+    label: 'Operational Administrative Overhead',
     metric: '-65%',
-    sub: 'Reduction in Administrative Drag',
-    detail: 'Automated notary deed generation, KBLI 2025 cross-checking, and automatic invoice provisioning replaced 3 manual admin spreadsheets.',
+    sub: 'Reduction in Manual Data Work',
+    detail: 'Automated legal document preparation, regulatory compliance checks, and client billing, replacing repetitive spreadsheet coordination across the team.',
     barPct: 85,
   },
   {
-    label: 'Web Performance & Core Web Vitals',
-    metric: '98/100',
-    sub: 'PageSpeed Performance Score',
-    detail: 'Headless Next.js App Router decoupled from WordPress backend with sub-500ms TTFB across Indonesian commercial ISPs.',
+    label: 'Platform Speed & Uptime',
+    metric: '99.9%',
+    sub: 'High Availability & Fast Page Loads',
+    detail: 'Modern decoupled web architecture that loads in milliseconds nationwide, ensuring visitors never hit a broken page or slow checkout.',
     barPct: 96,
   }
 ];
@@ -58,21 +58,21 @@ export default function Ecosystem() {
 
         <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-editorial text-[#171717] dark:text-white leading-[1.15] mb-4">
           <TextReveal delay={0.1} stagger={0.045} duration={0.55}>
-            Legalizin.com — Co-Founding &amp; Engineering Indonesia&apos;s Corporate Legality Platform.
+            Legalizin.com — Co-Founding &amp; Scaling a Digital Legality Platform.
           </TextReveal>
         </h2>
 
         <RevealBlock delay={0.25} duration={0.65} yOffset={14}>
           <p className="text-[15px] sm:text-[16px] text-[#374151] dark:text-[#c9ccd1] font-sans leading-relaxed max-w-2xl font-normal">
-            How I architected the technology from day one: Next.js headless architecture, automated search ranking pipelines, and autonomous AI agents handling customer sales conversations around the clock.
+            How I helped launch and scale Legalizin from day one: building a high-speed web portal, driving customer acquisition through organic search, and automating operations with AI customer support.
           </p>
         </RevealBlock>
       </div>
 
-      {/* Grid: 3 Real Delivery Pillars */}
+      {/* Grid: 3 Pillars */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch mb-12">
         
-        {/* Pillar 1: Full-Stack Architecture */}
+        {/* Pillar 1: Modern Platform */}
         <RevealBlock delay={0.3} duration={0.65} yOffset={20} className="flex">
           <div className="w-full rounded-[22px] bg-[#ffffff] dark:bg-[#141517] border border-[#dee2de] dark:border-[#24272b] p-7 md:p-8 shadow-[0_4px_24px_rgba(0,0,0,0.03)] dark:shadow-[0_4px_24px_rgba(0,0,0,0.4)] flex flex-col justify-between">
             <div>
@@ -80,19 +80,19 @@ export default function Ecosystem() {
                 [PILLAR 01]
               </div>
               <h3 className="text-xl sm:text-2xl font-editorial text-[#171717] dark:text-white mb-3">
-                Decoupled Headless Stack &amp; Linux Cloud
+                Modern Web Platform &amp; Cloud Infra
               </h3>
               <p className="text-[14px] text-[#4b5563] dark:text-[#9ca3af] leading-relaxed font-sans mb-6">
-                Next.js App Router front-end consuming headless WordPress REST endpoints. Containerized with Docker and Nginx reverse proxy on bare-metal Linux with sub-500ms edge caching.
+                Built a high-performance web platform on modern cloud infrastructure. Designed for lightning-fast browsing on any mobile device and rock-solid uptime during traffic spikes.
               </p>
               <ul className="space-y-2 text-[13px] text-[#646464] dark:text-[#a0a5ad] font-sans">
                 <li className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#41a1cf] shrink-0" />
-                  <span>Next.js 16 Server Components &amp; dynamic SSR</span>
+                  <span>Sub-second page speeds across mobile networks</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#41a1cf] shrink-0" />
-                  <span>Automated GitHub Actions CI/CD to Vercel and VPS</span>
+                  <span>Automated backups, monitoring, and cloud security</span>
                 </li>
               </ul>
             </div>
@@ -102,7 +102,7 @@ export default function Ecosystem() {
           </div>
         </RevealBlock>
 
-        {/* Pillar 2: Search Growth */}
+        {/* Pillar 2: Digital Marketing & Organic SEO */}
         <RevealBlock delay={0.38} duration={0.65} yOffset={20} className="flex">
           <div className="w-full rounded-[22px] bg-[#ffffff] dark:bg-[#141517] border border-[#dee2de] dark:border-[#24272b] p-7 md:p-8 shadow-[0_4px_24px_rgba(0,0,0,0.03)] dark:shadow-[0_4px_24px_rgba(0,0,0,0.4)] flex flex-col justify-between">
             <div>
@@ -110,29 +110,29 @@ export default function Ecosystem() {
                 [PILLAR 02]
               </div>
               <h3 className="text-xl sm:text-2xl font-editorial text-[#171717] dark:text-white mb-3">
-                Automated Programmatic SEO Engine
+                Organic Search &amp; Digital Acquisition
               </h3>
               <p className="text-[14px] text-[#4b5563] dark:text-[#9ca3af] leading-relaxed font-sans mb-6">
-                Built an automated publishing pipeline with Google Instant Indexing API integration. Systematic KBLI 2025 regulatory breakdowns that capture high-intent founders searching for incorporation rules.
+                Engineered an automated organic search engine covering corporate business codes and establishment rules. Generates steady inbound inquiries every day without relying solely on paid ads.
               </p>
               <ul className="space-y-2 text-[13px] text-[#646464] dark:text-[#a0a5ad] font-sans">
                 <li className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#41a1cf] shrink-0" />
-                  <span>Direct Google Indexing API push on every publish</span>
+                  <span>Automated search engine indexing and ranking updates</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#41a1cf] shrink-0" />
-                  <span>Custom interactive KBLI directory driving organic leads</span>
+                  <span>Interactive online tools that turn visitors into leads</span>
                 </li>
               </ul>
             </div>
             <div className="pt-5 mt-6 border-t border-[#dee2de] dark:border-[#24272b] text-[12px] font-mono text-[#646464] dark:text-[#a0a5ad]">
-              Customer Acquisition
+              Customer Growth
             </div>
           </div>
         </RevealBlock>
 
-        {/* Pillar 3: AI CS Bot */}
+        {/* Pillar 3: Automated WhatsApp Operations */}
         <RevealBlock delay={0.46} duration={0.65} yOffset={20} className="flex">
           <div className="w-full rounded-[22px] bg-[#ffffff] dark:bg-[#141517] border border-[#dee2de] dark:border-[#24272b] p-7 md:p-8 shadow-[0_4px_24px_rgba(0,0,0,0.03)] dark:shadow-[0_4px_24px_rgba(0,0,0,0.4)] flex flex-col justify-between">
             <div>
@@ -140,24 +140,24 @@ export default function Ecosystem() {
                 [PILLAR 03]
               </div>
               <h3 className="text-xl sm:text-2xl font-editorial text-[#171717] dark:text-white mb-3">
-                Autonomous WhatsApp CS &amp; Outreach
+                24/7 AI Customer Support &amp; Follow-up
               </h3>
               <p className="text-[14px] text-[#4b5563] dark:text-[#9ca3af] leading-relaxed font-sans mb-6">
-                Autonomous agent (&ldquo;Putra&rdquo;) operating on WhatsApp. Answers legal questions, explains OSS RBA requirements, quotes prices accurately, and handles outbound B2B lead follow-ups daily.
+                Implemented an automated customer service assistant on WhatsApp that provides instant consultation, explains complex legal requirements, and conducts automated business outreach.
               </p>
               <ul className="space-y-2 text-[13px] text-[#646464] dark:text-[#a0a5ad] font-sans">
                 <li className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#41a1cf] shrink-0" />
-                  <span>Zero-delay WhatsApp customer service 24/7</span>
+                  <span>Instant responses on WhatsApp even outside work hours</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#41a1cf] shrink-0" />
-                  <span>Integrated local business prospecting engine</span>
+                  <span>Automated follow-ups that increase deal closing rates</span>
                 </li>
               </ul>
             </div>
             <div className="pt-5 mt-6 border-t border-[#dee2de] dark:border-[#24272b] text-[12px] font-mono text-[#646464] dark:text-[#a0a5ad]">
-              Automated Operations
+              Automated Support
             </div>
           </div>
         </RevealBlock>
@@ -174,7 +174,7 @@ export default function Ecosystem() {
                 Business Impact &amp; Measurement
               </span>
               <h3 className="text-2xl sm:text-3xl font-editorial text-[#171717] dark:text-white">
-                Concrete results from replacing manual work with software.
+                Tangible business results from replacing manual work with modern software.
               </h3>
             </div>
             <p className="text-[13px] font-mono text-[#646464] dark:text-[#a0a5ad]">
@@ -233,7 +233,7 @@ export default function Ecosystem() {
               </div>
 
               <div className="flex items-center justify-between text-[10px] font-mono text-[#9ca3af] mt-2">
-                <span>Legacy Manual Baseline</span>
+                <span>Manual Baseline</span>
                 <span>Automated Scale</span>
               </div>
             </div>

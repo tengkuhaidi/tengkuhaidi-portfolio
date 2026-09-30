@@ -30,18 +30,18 @@ export default function Home() {
     '@type': 'Person',
     name: 'Tengku Hidayat Haidi',
     url: 'https://tengkuhaidi-portfolio.vercel.app',
-    jobTitle: 'Independent Systems Consultant & Full-Stack Architect',
-    description: 'Senior technology consultant helping businesses modernize operations, build resilient web platforms, automate multi-agent workflows, and execute technical SEO / SEM growth.',
+    jobTitle: 'Independent Technology Consultant & Systems Architect',
+    description: 'Independent technology consultant helping businesses modernize digital platforms, secure cloud infrastructure, and grow customer acquisition through organic search and paid digital marketing.',
     sameAs: [
       'https://github.com/tengkuhaidi',
       'https://www.linkedin.com/in/tengkuhaidi/'
     ],
     knowsAbout: [
-      'Full-Stack Architecture & Next.js Platforms',
-      'Cloud DevOps & Infrastructure Automation',
-      'Enterprise Software Systems (ERP, VMS, Asset Tracking)',
-      'Autonomous Multi-Agent AI Workflows',
-      'Technical SEO, SEM & Organic Growth Automation',
+      'Modern Digital Platforms & Web Applications',
+      'Secure Cloud Infrastructure & Operations',
+      'Enterprise Software & Business Automation',
+      'Applied AI Workflows & WhatsApp CS Automation',
+      'Organic Search Growth, SEM & Digital Marketing',
       'Digital Transformation Consulting for Growing Companies'
     ]
   };

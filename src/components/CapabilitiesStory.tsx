@@ -15,11 +15,11 @@ const stages: Stage[] = [
   {
     id: 'isolated-systems',
     step: '01 / 05',
-    title: 'Disconnected tools & manual handoffs',
-    summary: 'Most businesses run on WhatsApp chats, messy Google Sheets, and half-used commercial SaaS. Staff burn dozens of hours copying data between browser tabs.',
+    title: 'Scattered tools & manual data re-entry',
+    summary: 'Most growing companies run on disconnected software: WhatsApp chats, disorganized spreadsheets, and multiple SaaS dashboards. Staff waste hours manually moving data between screens.',
     nodes: [
-      { label: 'Web Form', x: 20, y: 25, active: true },
-      { label: 'Payroll Sheet', x: 80, y: 25, active: true },
+      { label: 'Web Leads', x: 20, y: 25, active: true },
+      { label: 'Spreadsheets', x: 80, y: 25, active: true },
       { label: 'Inventory', x: 20, y: 75, active: true },
       { label: 'WhatsApp', x: 80, y: 75, active: true },
       { label: 'Manual Copy', x: 50, y: 50, active: false, isCore: true }
@@ -29,14 +29,14 @@ const stages: Stage[] = [
   {
     id: 'foundational-architecture',
     step: '02 / 05',
-    title: 'Single source of truth & structured APIs',
-    summary: 'I replace fragile spreadsheets with custom PostgreSQL schemas, secure REST/gRPC endpoints, and Next.js interfaces tailored to your exact business rules.',
+    title: 'Centralized database & clean API structure',
+    summary: 'I replace fragile spreadsheets with a unified relational database, secure business logic, and custom interfaces tailored to your actual daily workflows.',
     nodes: [
-      { label: 'Next.js App', x: 20, y: 25, active: true },
-      { label: 'Postgres DB', x: 80, y: 25, active: true },
-      { label: 'API Gateway', x: 50, y: 50, active: true, isCore: true },
-      { label: 'Admin Portal', x: 20, y: 75, active: true },
-      { label: 'Invoicing', x: 80, y: 75, active: true }
+      { label: 'Web Portal', x: 20, y: 25, active: true },
+      { label: 'Central DB', x: 80, y: 25, active: true },
+      { label: 'API Layer', x: 50, y: 50, active: true, isCore: true },
+      { label: 'Admin Panel', x: 20, y: 75, active: true },
+      { label: 'Billing System', x: 80, y: 75, active: true }
     ],
     connections: [
       { from: 2, to: 0, active: true },
@@ -48,12 +48,12 @@ const stages: Stage[] = [
   {
     id: 'ai-implementation',
     step: '03 / 05',
-    title: 'Applied AI on real company data',
-    summary: 'No toy chat interfaces. I hook LLMs directly to your operational database to parse incoming documents, verify compliance regulations, and answer customers on WhatsApp 24/7.',
+    title: 'Practical automation on real company data',
+    summary: 'No toy chat widgets. Automated systems connected directly to your internal records: instant customer inquiries on WhatsApp, automatic compliance checks, and faster client onboarding.',
     nodes: [
       { label: 'Doc Parser', x: 20, y: 20, active: true },
-      { label: 'Search Index', x: 80, y: 20, active: true },
-      { label: 'Agent Engine', x: 50, y: 50, active: true, isCore: true },
+      { label: 'Search Traffic', x: 80, y: 20, active: true },
+      { label: 'Automations', x: 50, y: 50, active: true, isCore: true },
       { label: 'Invoice Gen', x: 20, y: 80, active: true },
       { label: 'WhatsApp CS', x: 80, y: 80, active: true }
     ],
@@ -69,14 +69,14 @@ const stages: Stage[] = [
   {
     id: 'multi-agent-orchestration',
     step: '04 / 05',
-    title: 'Automated background execution',
-    summary: 'When a new lead arrives via Google search, the system validates the business type, provisions draft legal documents, issues an invoice, and alerts your sales manager.',
+    title: 'Connected workflows across marketing & sales',
+    summary: 'When a new client reaches out through Google or social channels, the system validates requirements, prepares initial quotes, schedules follow-ups, and notifies your sales team immediately.',
     nodes: [
-      { label: 'Search Traffic', x: 25, y: 20, active: true },
-      { label: 'Rule Engine', x: 75, y: 20, active: true },
-      { label: 'Event Bus', x: 50, y: 50, active: true, isCore: true },
-      { label: 'Accounting', x: 25, y: 80, active: true },
-      { label: 'Fulfillment', x: 75, y: 80, active: true }
+      { label: 'Organic SEO', x: 25, y: 20, active: true },
+      { label: 'Lead Scoring', x: 75, y: 20, active: true },
+      { label: 'Workflow Hub', x: 50, y: 50, active: true, isCore: true },
+      { label: 'Finance Sync', x: 25, y: 80, active: true },
+      { label: 'Client Delivery', x: 75, y: 80, active: true }
     ],
     connections: [
       { from: 2, to: 0, active: true },
@@ -92,13 +92,13 @@ const stages: Stage[] = [
   {
     id: 'automating-organizations',
     step: '05 / 05',
-    title: 'Scalable operations without linear hiring',
-    summary: 'Your core team spends time closing high-value deals and managing key relationships, while the software infrastructure runs daily administrative execution quietly in the background.',
+    title: 'Scaling company revenue without endless hiring',
+    summary: 'Your core team focuses on closing deals and high-touch client service, while background software handles data synchronization, organic search growth, and daily administration.',
     nodes: [
       { label: 'Command Hub', x: 50, y: 50, active: true, isCore: true },
       { label: 'Web Platform', x: 20, y: 20, active: true },
       { label: 'Internal ERP', x: 80, y: 20, active: true },
-      { label: 'Google Indexer', x: 20, y: 80, active: true },
+      { label: 'Search Traffic', x: 20, y: 80, active: true },
       { label: 'Billing Engine', x: 80, y: 80, active: true },
       { label: 'Operations', x: 50, y: 15, active: true }
     ],

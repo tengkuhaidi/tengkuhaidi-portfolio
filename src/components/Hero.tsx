@@ -11,7 +11,7 @@ export default function Hero() {
       <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
         <img
           src="/images/spring-hero.avif"
-          alt="Engineering Landscape"
+          alt="Landscape"
           className="object-cover object-center w-full h-full"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/20 via-55% to-[var(--canvas-bg)] opacity-95 transition-colors" />
@@ -30,11 +30,11 @@ export default function Hero() {
           </div>
 
           <h1 className="text-3xl sm:text-5xl font-editorial text-[#171717] dark:text-white leading-[1.1] tracking-[-0.03em] mb-4">
-            I build software systems and run search growth for companies.
+            Helping companies modernize their tech and grow customer acquisition.
           </h1>
 
           <p className="text-[15px] sm:text-[17px] text-[#374151] dark:text-[#c9ccd1] leading-relaxed mb-8 font-sans">
-            Independent contractor handling end-to-end delivery: Next.js web applications, Linux server infrastructure, custom ERP tools, and programmatic SEO pipelines that bring in paying customers.
+            Independent technology consultant for growing businesses: building modern digital platforms, setting up secure cloud infrastructure, and running organic and paid digital marketing that brings in real revenue.
           </p>
 
           <div className="grid grid-cols-2 gap-2.5 sm:flex sm:flex-wrap sm:items-center sm:gap-3">
@@ -63,7 +63,7 @@ export default function Hero() {
       <div className="relative z-10 w-full max-w-[1240px] mx-auto px-4 sm:px-6 pb-6 pt-4 flex items-center justify-between text-[12px] font-mono text-white/90">
         <div className="flex items-center gap-2">
           <span className="inline-block w-2 h-2 rounded-full bg-[#3fb950]" />
-          <span>Open for client projects &amp; technical contracts</span>
+          <span>Available for Technology Consulting &amp; Advisory</span>
         </div>
         <span className="text-white/70">Scroll ↓</span>
       </div>

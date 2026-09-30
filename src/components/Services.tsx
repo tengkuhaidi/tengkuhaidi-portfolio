@@ -7,23 +7,23 @@ import TextReveal, { RevealBlock } from './TextReveal';
 const capabilities = [
   {
     num: '01',
-    title: 'Web Platform & Portal Engineering',
-    desc: 'High-speed Next.js web applications, client dashboards, and secure API backends. Built with TypeScript and Tailwind, optimized for sub-second page loads and zero server crashes.'
+    title: 'Modern Digital Platforms & Web Apps',
+    desc: 'High-speed business websites, customer portals, and internal tools designed for seamless mobile browsing, strong data privacy, and reliable uptime.'
   },
   {
     num: '02',
-    title: 'Programmatic SEO & Organic Lead Acquisition',
-    desc: 'Automated search publishing engines hooked directly to Google Indexing API. Targeting hundreds of high-intent commercial keywords that drive daily inquiries without burning ad budget.'
+    title: 'Organic Search & Inbound Acquisition',
+    desc: 'Programmatic search engine strategies that rank corporate services on Google. Capturing prospective clients actively searching to buy without burning endless ad budgets.'
   },
   {
     num: '03',
-    title: 'Linux Infrastructure & DevOps',
-    desc: 'Dockerized microservices, Nginx reverse proxies, automated SSL certificates, and CI/CD pipelines on bare-metal or cloud servers. Kept secure, backed up, and monitored.'
+    title: 'Secure Cloud Infrastructure & Operations',
+    desc: 'Setting up and maintaining dependable modern cloud infrastructure, secure databases, automated backups, and encrypted network routing so your software stays online 24/7.'
   },
   {
     num: '04',
-    title: 'Custom ERP, AI Agents & Internal Tools',
-    desc: 'Replacing clunky spreadsheets with tailored operational software: automated WhatsApp CS bots, document parsing engines, physical visitor logs (VMS), and accounting trackers.'
+    title: 'Automated Operations & AI Workflows',
+    desc: 'Eliminating manual administrative bottlenecks with custom software: 24/7 WhatsApp customer service assistants, automated document verification, and central billing.'
   }
 ];
 
@@ -100,13 +100,13 @@ export default function Services() {
 
           <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-editorial text-[#171717] dark:text-white leading-[1.15] mb-4">
             <TextReveal delay={0.1} stagger={0.045} duration={0.55}>
-              Technical execution for growing businesses.
+              How I help companies modernize and scale.
             </TextReveal>
           </h2>
 
           <RevealBlock delay={0.25} duration={0.65} yOffset={14}>
             <p className="text-[15px] sm:text-[16px] text-[#374151] dark:text-[#d1d5db] font-sans leading-relaxed max-w-2xl font-medium">
-              I handle the entire technical delivery personally: no junior subcontractors, no endless scoping meetings, and no unmaintainable code.
+              Direct technical execution with business clarity: modern digital infrastructure and organic client acquisition designed for long-term growth.
             </p>
           </RevealBlock>
         </div>

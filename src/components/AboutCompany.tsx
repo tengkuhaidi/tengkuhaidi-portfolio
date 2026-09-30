@@ -10,7 +10,7 @@ export default function AboutCompany() {
             04 / Background
           </div>
           <h2 className="text-3xl sm:text-4xl font-editorial text-[#171717] dark:text-white leading-tight mb-4">
-            Engineering background with direct commercial focus.
+            Technology consulting with direct commercial focus.
           </h2>
           <p className="text-[15px] text-[#374151] dark:text-[#c9ccd1] leading-relaxed font-sans">
             I work directly with founders and business owners. No middlemen, no account managers, and no junior staff handling your production code.
@@ -20,19 +20,19 @@ export default function AboutCompany() {
         <div className="lg:col-span-7 space-y-6">
           <div className="p-6 rounded-[16px] bg-[#ffffff] dark:bg-[#141517] border border-[#dee2de] dark:border-[#24272b]">
             <h3 className="text-lg font-editorial text-[#171717] dark:text-white mb-2">
-              From bare metal servers to customer acquisition
+              From secure infrastructure to customer acquisition
             </h3>
             <p className="text-[14px] text-[#4b5563] dark:text-[#9ca3af] leading-relaxed font-sans">
-              Most developers don&apos;t care how your company makes money, and most growth marketers don&apos;t know what a reverse proxy does. I bridge both sides: configuring reliable Linux servers and databases, building fast Next.js platforms, and setting up programmatic SEO pipelines that generate real sales leads.
+              Most developers only focus on code without understanding how a business generates revenue, while marketers rarely understand server reliability. I bridge both sides: building fast, modern digital platforms on dependable cloud infrastructure while setting up organic search pipelines and digital marketing that attract real buyers.
             </p>
           </div>
 
           <div className="p-6 rounded-[16px] bg-[#ffffff] dark:bg-[#141517] border border-[#dee2de] dark:border-[#24272b]">
             <h3 className="text-lg font-editorial text-[#171717] dark:text-white mb-2">
-              Tested under real operating pressure
+              Proven in real-world business operations
             </h3>
             <p className="text-[14px] text-[#4b5563] dark:text-[#9ca3af] leading-relaxed font-sans">
-              I don&apos;t just consult on slides. As co-founder and tech lead at Legalizin.com, I maintain real-time government compliance connections, 24/7 WhatsApp AI customer bots, and daily automated search indexing. Everything I recommend to clients is software I already run and monitor in production.
+              I don&apos;t just advise on theory. As co-founder and tech lead at Legalizin.com, I run automated search distribution, 24/7 WhatsApp AI customer service bots, and real-time government compliance workflows daily. Everything I recommend to clients comes from systems that are already working and proven in market.
             </p>
           </div>
         </div>

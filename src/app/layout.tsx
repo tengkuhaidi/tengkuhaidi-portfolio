@@ -13,18 +13,17 @@ const siteUrl = "https://tengkuhaidi-portfolio.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Tengku Hidayat Haidi | Independent Systems Engineer & Technology Consultant",
+  title: "Tengku Hidayat Haidi | Independent Technology Consultant & Systems Architect",
   description:
-    "Personal engineering portfolio of Tengku Hidayat Haidi. Consulting software engineer and full-stack systems architect helping companies go digital, automate operations, and scale search visibility.",
+    "Personal portfolio of Tengku Hidayat Haidi. Independent technology consultant helping companies modernize their digital platforms, secure cloud infrastructure, and grow customer acquisition through organic search and paid digital marketing.",
   keywords: [
     "Tengku Hidayat Haidi",
-    "Independent Software Consultant Jakarta",
-    "Full-Stack Systems Engineer",
-    "Digital Transformation Freelance",
-    "Next.js Systems Architecture",
-    "DevOps and Cloud Infrastructure",
-    "Technical SEO and SEM Automation",
-    "Custom Enterprise Systems"
+    "Independent Technology Consultant Jakarta",
+    "Digital Transformation Consultant",
+    "Modern Digital Platforms",
+    "Cloud Infrastructure Consulting",
+    "Organic Search and Digital Marketing",
+    "Business Automation"
   ],
   authors: [{ name: "Tengku Hidayat Haidi", url: siteUrl }],
   creator: "Tengku Hidayat Haidi",
@@ -38,9 +37,9 @@ export const metadata: Metadata = {
     canonical: siteUrl,
   },
   openGraph: {
-    title: "Tengku Hidayat Haidi | Independent Systems Engineer & Technology Consultant",
+    title: "Tengku Hidayat Haidi | Independent Technology Consultant & Systems Architect",
     description:
-      "Consulting software engineer and full-stack systems architect helping companies go digital, automate operations, and scale search visibility.",
+      "Independent technology consultant helping companies modernize their digital platforms, secure cloud infrastructure, and grow customer acquisition through organic search and paid digital marketing.",
     url: siteUrl,
     siteName: "Tengku Hidayat Haidi",
     images: [
@@ -48,7 +47,7 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Tengku Hidayat Haidi — Software systems, infrastructure & digital transformation",
+        alt: "Tengku Hidayat Haidi — Modern digital platforms, cloud infrastructure & organic search growth",
       },
     ],
     locale: "id_ID",
@@ -56,9 +55,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tengku Hidayat Haidi | Independent Systems Engineer & Technology Consultant",
+    title: "Tengku Hidayat Haidi | Independent Technology Consultant & Systems Architect",
     description:
-      "Consulting software engineer and full-stack systems architect helping companies go digital, automate operations, and scale search visibility.",
+      "Independent technology consultant helping companies modernize their digital platforms, secure cloud infrastructure, and grow customer acquisition through organic search and paid digital marketing.",
     images: ["/og-image.png"],
   },
   robots: {
@@ -90,26 +89,26 @@ const jsonLd = {
       "@id": "https://tengkuhaidi-portfolio.vercel.app/#person",
       name: "Tengku Hidayat Haidi",
       url: "https://tengkuhaidi-portfolio.vercel.app",
-      jobTitle: "Independent Systems Engineer & Growth Consultant",
+      jobTitle: "Independent Technology Consultant & Systems Architect",
       email: "tengkuhaidi@gmail.com",
-      telephone: "+6287825174624",
+      telephone: "+628****4624",
       address: {
         "@type": "PostalAddress",
         addressLocality: "Jakarta",
         addressCountry: "Indonesia"
       },
       description:
-        "Full-stack software consultant and systems engineer based in Jakarta, Indonesia. Helping companies go digital, build custom software ecosystems, and execute technical SEO / SEM.",
+        "Independent technology consultant based in Jakarta, Indonesia. Helping companies modernize their digital platforms, secure cloud infrastructure, and grow customer acquisition through organic search and paid digital marketing.",
       sameAs: [
         "https://github.com/tengkuhaidi",
         "https://www.linkedin.com/in/tengkuhaidi/"
       ],
       knowsAbout: [
-        "Full-Stack Web Engineering",
-        "Cloud Infrastructure & DevOps",
-        "Autonomous AI Workflows",
-        "Enterprise ERP & VMS Systems",
-        "Technical SEO Architecture"
+        "Modern Digital Platforms",
+        "Cloud Infrastructure & Security",
+        "Organic Search Growth & Digital Marketing",
+        "Business Process Automation",
+        "Applied AI Workflows"
       ],
     },
     {
