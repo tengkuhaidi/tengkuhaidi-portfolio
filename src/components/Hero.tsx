@@ -37,22 +37,22 @@ export default function Hero() {
             Independent contractor handling end-to-end delivery: Next.js web applications, Linux server infrastructure, custom ERP tools, and programmatic SEO pipelines that bring in paying customers.
           </p>
 
-          <div className="flex flex-wrap items-center gap-3">
+          <div className="grid grid-cols-2 gap-2.5 sm:flex sm:flex-wrap sm:items-center sm:gap-3">
             <Link
               href="#case-study"
-              className="px-5 py-2.5 rounded-[8px] bg-[#171717] dark:bg-white text-white dark:text-[#171717] text-[14px] font-sans font-medium hover:opacity-90 transition-all flex items-center gap-2 active:scale-95"
+              className="w-full sm:w-auto px-3.5 sm:px-5 py-2.5 rounded-[8px] bg-[#171717] dark:bg-white text-white dark:text-[#171717] text-[13px] sm:text-[14px] font-sans font-medium hover:opacity-90 transition-all flex items-center justify-center gap-1.5 sm:gap-2 active:scale-95 text-center whitespace-nowrap"
             >
-              <span>View Case Study</span>
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <span>Case Study</span>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="shrink-0">
                 <path d="M5 12h14" />
                 <path d="m12 5 7 7-7 7" />
               </svg>
             </Link>
             <Link
               href="#portfolio"
-              className="px-5 py-2.5 rounded-[8px] border border-[#dee2de] dark:border-[#24272b] text-[#171717] dark:text-white text-[14px] font-sans font-medium hover:bg-black/5 dark:hover:bg-white/5 transition-colors"
+              className="w-full sm:w-auto px-3.5 sm:px-5 py-2.5 rounded-[8px] border border-[#dee2de] dark:border-[#24272b] text-[#171717] dark:text-white text-[13px] sm:text-[14px] font-sans font-medium hover:bg-black/5 dark:hover:bg-white/5 transition-colors text-center flex items-center justify-center whitespace-nowrap"
             >
-              Shipped Projects
+              <span>Projects</span>
             </Link>
           </div>
 
