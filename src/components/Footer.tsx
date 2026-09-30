@@ -4,7 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const WA_URL = "https://wa.me/6281235247820?text=Halo%20Tengku%2C%20saya%20ingin%20berdiskusi%20mengenai%20kebutuhan%20teknologi%2C%20sistem%20software%2C%20dan%20growth%20digital%20untuk%20perusahaan.";
+const WA_URL = "https://wa.me/6287825174624?text=Halo%20Tengku%2C%20saya%20ingin%20berdiskusi%20mengenai%20kebutuhan%20teknologi%2C%20sistem%20software%2C%20dan%20growth%20digital%20untuk%20perusahaan.";
 
 export default function Footer() {
   return (
@@ -60,6 +60,16 @@ export default function Footer() {
                 </svg>
               </a>
               <a
+                href="mailto:tengkuhaidi@gmail.com"
+                className="px-6 py-3 sm:py-2.5 rounded-[10px] border border-[#dee2de] dark:border-[#24272b] text-[#282834] dark:text-white text-[14px] font-sans font-medium hover:bg-neutral-50 dark:hover:bg-neutral-800 active:scale-95 transition-all text-center flex items-center justify-center gap-2"
+              >
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="opacity-70">
+                  <rect width="20" height="16" x="2" y="4" rx="2" />
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                </svg>
+                <span>tengkuhaidi@gmail.com</span>
+              </a>
+              <a
                 href="https://github.com/tengkuhaidi"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -69,7 +79,7 @@ export default function Footer() {
                   <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
                   <path d="M9 18c-4.51 2-5-2-7-2" />
                 </svg>
-                <span>GitHub @tengkuhaidi</span>
+                <span>GitHub</span>
               </a>
             </div>
 
@@ -94,18 +104,6 @@ export default function Footer() {
               <Link href="#about" className="hover:text-black dark:hover:text-white transition-colors">
                 About
               </Link>
-              <a
-                href="https://legalizin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#41a1cf] hover:underline inline-flex items-center gap-1 font-medium"
-              >
-                <span>Legalizin.com</span>
-                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M7 17L17 7" />
-                  <path d="M7 7h10v10" />
-                </svg>
-              </a>
             </div>
 
             <div className="flex items-center gap-2 text-center">
@@ -140,7 +138,7 @@ export default function Footer() {
         {/* Bottom Floating Bar */}
         <div className="absolute bottom-0 left-0 right-0 z-20 max-w-[1240px] mx-auto px-4 sm:px-6 pb-4 sm:pb-6 flex flex-col sm:flex-row items-center justify-between text-white/90 text-[11px] sm:text-[13px] font-mono gap-1 text-center sm:text-left">
           <div>
-            © {new Date().getFullYear()} Tengku Hidayat Haidi
+            © {new Date().getFullYear()} Tengku Hidayat Haidi — Jakarta, Indonesia
           </div>
           <div className="text-white/60 text-[11px] sm:text-[12px]">
             Systems Architecture &amp; Growth Consulting

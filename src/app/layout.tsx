@@ -91,8 +91,15 @@ const jsonLd = {
       name: "Tengku Hidayat Haidi",
       url: "https://tengkuhaidi-portfolio.vercel.app",
       jobTitle: "Independent Systems Engineer & Growth Consultant",
+      email: "tengkuhaidi@gmail.com",
+      telephone: "+6287825174624",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Jakarta",
+        addressCountry: "Indonesia"
+      },
       description:
-        "Full-stack software consultant and systems engineer helping companies build sovereign platforms, automate administrative drag, and execute technical SEO / SEM.",
+        "Full-stack software consultant and systems engineer based in Jakarta, Indonesia. Helping companies go digital, build custom software ecosystems, and execute technical SEO / SEM.",
       sameAs: [
         "https://github.com/tengkuhaidi",
         "https://www.linkedin.com/in/tengkuhaidi/"
@@ -110,7 +117,7 @@ const jsonLd = {
       "@id": "https://tengkuhaidi-portfolio.vercel.app/#website",
       url: "https://tengkuhaidi-portfolio.vercel.app",
       name: "Tengku Hidayat Haidi — Portfolio",
-      description: "Official portfolio and engineering showcase of Tengku Hidayat Haidi",
+      description: "Official portfolio and engineering showcase of Tengku Hidayat Haidi — Jakarta, Indonesia",
       inLanguage: "en-US",
     },
   ],

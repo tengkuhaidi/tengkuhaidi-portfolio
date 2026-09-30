@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import ThemeToggle from './ThemeToggle';
 
-const WA_URL = "https://wa.me/6281235247820?text=Halo%20Tengku%2C%20saya%20ingin%20berdiskusi%20mengenai%20kebutuhan%20teknologi%2C%20sistem%20software%2C%20dan%20growth%20digital%20untuk%20perusahaan.";
+const WA_URL = "https://wa.me/6287825174624?text=Halo%20Tengku%2C%20saya%20ingin%20berdiskusi%20mengenai%20kebutuhan%20teknologi%2C%20sistem%20software%2C%20dan%20growth%20digital%20untuk%20perusahaan.";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -56,18 +56,6 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
-            <a
-              href="https://legalizin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1 text-[#41a1cf] hover:opacity-80 transition-opacity font-medium"
-            >
-              <span>Legalizin</span>
-              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M7 17L17 7" />
-                <path d="M7 7h10v10" />
-              </svg>
-            </a>
           </div>
 
           {/* Desktop Actions */}
@@ -185,7 +173,7 @@ export default function Navbar() {
 
         {/* Center: Stacked Large Serif Menu Links with Stagger Animation */}
         <div className="flex flex-col items-center justify-center space-y-4 my-auto">
-          {navLinks.map((item, idx) => (
+          {navLinks.slice(1).map((item, idx) => (
             <Link
               key={item.label}
               href={item.href}
@@ -202,26 +190,6 @@ export default function Navbar() {
               {item.label}
             </Link>
           ))}
-          <a
-            href="https://legalizin.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => setIsOpen(false)}
-            style={{
-              transitionDelay: isOpen ? `${navLinks.length * 60 + 100}ms` : '0ms'
-            }}
-            className={`text-4xl sm:text-5xl font-editorial font-medium tracking-tight text-[#41a1cf] hover:opacity-80 transition-all duration-300 transform flex items-center gap-2 ${
-              isOpen
-                ? 'opacity-100 translate-y-0 blur-0'
-                : 'opacity-0 translate-y-6 blur-sm'
-            }`}
-          >
-            <span>Legalizin</span>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M7 17L17 7" />
-              <path d="M7 7h10v10" />
-            </svg>
-          </a>
         </div>
 
         {/* Bottom Bar: Social Icons & Copyright */}
@@ -237,6 +205,18 @@ export default function Navbar() {
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+              </svg>
+            </a>
+
+            {/* Email Icon */}
+            <a
+              href="mailto:tengkuhaidi@gmail.com"
+              aria-label="Email Tengku Hidayat Haidi"
+              className="w-10 h-10 rounded-lg border border-[#dee2de] dark:border-[#24272b] flex items-center justify-center text-[#2c2c2c] dark:text-white hover:border-[#41a1cf] transition-colors"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <rect width="20" height="16" x="2" y="4" rx="2" />
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
               </svg>
             </a>
 
