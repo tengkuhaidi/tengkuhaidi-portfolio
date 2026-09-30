@@ -29,24 +29,33 @@ const capabilities = [
 
 export default function Services() {
   const sectionRef = useRef<HTMLElement | null>(null);
-  const [scrollY, setScrollY] = useState(0);
+  const bgRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     let ticking = false;
+
+    const updateParallax = () => {
+      if (sectionRef.current && bgRef.current) {
+        const rect = sectionRef.current.getBoundingClientRect();
+        // Only compute when near viewport
+        if (rect.bottom > -250 && rect.top < window.innerHeight + 250) {
+          const offset = (window.innerHeight - rect.top) * 0.14;
+          bgRef.current.style.transform = `translate3d(0, ${offset.toFixed(1)}px, 0)`;
+        }
+      }
+      ticking = false;
+    };
+
     const handleScroll = () => {
       if (!ticking) {
-        window.requestAnimationFrame(() => {
-          if (sectionRef.current) {
-            const rect = sectionRef.current.getBoundingClientRect();
-            setScrollY(window.innerHeight - rect.top);
-          }
-          ticking = false;
-        });
+        window.requestAnimationFrame(updateParallax);
         ticking = true;
       }
     };
+
     window.addEventListener('scroll', handleScroll, { passive: true });
-    handleScroll();
+    updateParallax();
+
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -58,9 +67,10 @@ export default function Services() {
     >
       {/* Parallax Background with Pixelated Retro Anime Aesthetic */}
       <div
-        className="absolute inset-0 w-full h-[140%] -top-[20%] pointer-events-none will-change-transform z-0"
+        ref={bgRef}
+        className="absolute inset-0 w-full h-[135%] -top-[18%] pointer-events-none will-change-transform z-0"
         style={{
-          transform: `translate3d(0, ${Math.max(0, scrollY) * 0.2}px, 0)`,
+          transform: 'translate3d(0, 0px, 0)',
         }}
       >
         <Image
