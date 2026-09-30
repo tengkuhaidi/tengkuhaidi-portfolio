@@ -1,5 +1,5 @@
 {
-  "name": "digitasolusindo-web",
+  "name": "tengkuhaidi-portfolio",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -26,5 +26,6 @@
     "eslint-config-next": "16.3.6",
     "tailwindcss": "^4",
     "typescript": "^5"
-  }
+  },
+  "description": "Personal Portfolio of Tengku Hidayat Haidi"
 }
