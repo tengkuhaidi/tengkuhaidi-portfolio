@@ -79,11 +79,14 @@ export default function Footer() {
           <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-6 pt-12 sm:pt-16 mt-12 sm:mt-16 border-t border-[#dee2de] dark:border-[#24272b] text-[13px] text-[#646464] dark:text-[#a0a5ad] font-sans">
             
             <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 sm:gap-6">
-              <Link href="#ecosystem" className="hover:text-black dark:hover:text-white transition-colors">
-                Deployments
+              <Link href="#case-study" className="hover:text-black dark:hover:text-white transition-colors">
+                Case Study
               </Link>
               <Link href="#capabilities" className="hover:text-black dark:hover:text-white transition-colors">
-                Disciplines
+                Capabilities
+              </Link>
+              <Link href="#services" className="hover:text-black dark:hover:text-white transition-colors">
+                Services
               </Link>
               <Link href="#portfolio" className="hover:text-black dark:hover:text-white transition-colors">
                 Work &amp; Systems
@@ -106,7 +109,7 @@ export default function Footer() {
             </div>
 
             <div className="flex items-center gap-2 text-center">
-              <span>Tengku Hidayat Haidi — Independent Engineering Consultant</span>
+              <span>Tengku Hidayat Haidi — Technology Consultant &amp; Engineer</span>
             </div>
 
           </div>

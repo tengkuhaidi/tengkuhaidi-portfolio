@@ -24,9 +24,10 @@ export default function Navbar() {
 
   const navLinks = [
     { label: 'Home', href: '#' },
-    { label: 'Ecosystem', href: '#ecosystem' },
+    { label: 'Case Study', href: '#case-study' },
     { label: 'Capabilities', href: '#capabilities' },
-    { label: 'Systems & Work', href: '#portfolio' },
+    { label: 'Services', href: '#services' },
+    { label: 'Work', href: '#portfolio' },
     { label: 'About', href: '#about' },
   ];
 

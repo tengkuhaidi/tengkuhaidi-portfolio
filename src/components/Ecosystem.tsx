@@ -5,143 +5,156 @@ import TextReveal, { RevealBlock } from './TextReveal';
 
 export default function Ecosystem() {
   return (
-    <section id="ecosystem" className="py-20 md:py-28 px-4 sm:px-6 max-w-[1240px] mx-auto border-t border-[#dee2de] dark:border-[#24272b] transition-colors">
+    <section id="case-study" className="py-20 md:py-28 px-4 sm:px-6 max-w-[1240px] mx-auto border-t border-[#dee2de] dark:border-[#24272b] transition-colors">
       
       {/* Section Header */}
       <div className="max-w-3xl mb-14">
         <RevealBlock delay={0.05} yOffset={10}>
           <p className="text-[13px] font-mono text-[#41a1cf] tracking-wider uppercase mb-3">
-            01 / Flagship &amp; Client Deployments
+            01 / Flagship Case Study
           </p>
         </RevealBlock>
 
         <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-editorial text-[#2c2c2c] dark:text-white leading-[1.15] mb-4">
           <TextReveal delay={0.1} stagger={0.045} duration={0.55}>
-            What I research, build, and deploy for business.
+            Legalizin.com — End-to-End Modern Tech &amp; AI Implementation.
           </TextReveal>
         </h2>
 
         <RevealBlock delay={0.25} duration={0.65} yOffset={14}>
           <p className="text-[15px] sm:text-[16px] text-[#444141] dark:text-[#d1d5db] font-sans leading-relaxed max-w-2xl">
-            From co-founding high-traffic platforms to architecting custom software infrastructure, I deliver production systems that turn complex operations into automated digital assets.
+            A comprehensive case study of co-founding and engineering Indonesia&apos;s corporate legality platform: combining programmatic SEO/SEM, autonomous multi-agent AI, and 24/7 AI-driven customer support on WhatsApp.
           </p>
         </RevealBlock>
       </div>
 
-      {/* Grid: Flagship Venture vs Custom Enterprise Deployments */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+      {/* Grid: 3 Pillars of Legalizin Case Study */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch mb-8">
         
-        {/* Card 1: Proven Track Record (Legalizin) */}
-        <RevealBlock delay={0.3} duration={0.7} yOffset={24} className="lg:col-span-6 flex">
-          <div className="w-full rounded-[22px] bg-[#ffffff] dark:bg-[#141517] border border-[#dee2de] dark:border-[#24272b] p-8 md:p-10 shadow-[0_4px_24px_rgba(0,0,0,0.03)] dark:shadow-[0_4px_24px_rgba(0,0,0,0.4)] flex flex-col justify-between">
+        {/* Pillar 1: Full-Stack Architecture & Cloud Infra */}
+        <RevealBlock delay={0.3} duration={0.65} yOffset={20} className="flex">
+          <div className="w-full rounded-[22px] bg-[#ffffff] dark:bg-[#141517] border border-[#dee2de] dark:border-[#24272b] p-7 md:p-8 shadow-[0_4px_24px_rgba(0,0,0,0.03)] dark:shadow-[0_4px_24px_rgba(0,0,0,0.4)] flex flex-col justify-between">
             <div>
-              <div className="flex items-center justify-between mb-6 text-[12px] font-mono text-[#646464] dark:text-[#a0a5ad]">
-                <span className="text-[#41a1cf]">Co-Founder &amp; Tech Lead</span>
-                <span>Flagship Platform</span>
+              <div className="text-[12px] font-mono text-[#41a1cf] mb-3">
+                [PILLAR 01]
               </div>
-
-              <h3 className="text-2xl sm:text-3xl font-editorial text-[#2c2c2c] dark:text-white mb-3">
-                <TextReveal delay={0.35} stagger={0.05}>
-                  Legalizin
-                </TextReveal>
+              <h3 className="text-xl sm:text-2xl font-editorial text-[#171717] dark:text-white mb-3">
+                Headless Architecture &amp; Cloud Infra
               </h3>
-
-              <p className="text-[15px] text-[#444141] dark:text-[#d1d5db] leading-relaxed mb-6 font-sans">
-                Co-founded and engineered the end-to-end platform for corporate legality, notary workflows, and business permits. Built with a high-throughput headless architecture, real-time government regulatory integrations, and programmatic search indexing ranking top-tier nationwide.
+              <p className="text-[14px] text-[#444141] dark:text-[#c9ccd1] leading-relaxed font-sans mb-6">
+                Engineered with Next.js App Router decoupled from a headless WordPress content hub, containerized on Linux with Nginx reverse proxy, automated SSL, and sub-second edge cache delivery.
               </p>
-
-              <ul className="space-y-2.5 text-[14px] text-[#646464] dark:text-[#a0a5ad] font-sans mb-8">
+              <ul className="space-y-2 text-[13px] text-[#646464] dark:text-[#a0a5ad] font-sans">
                 <li className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#41a1cf] shrink-0" />
-                  <span>Automated corporate incorporation &amp; notary deed workflows</span>
+                  <span>Next.js Server Components for Core Web Vitals (95+)</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#41a1cf] shrink-0" />
-                  <span>Instant KBLI 2025 regulatory compliance mapping</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#41a1cf] shrink-0" />
-                  <span>Direct API pipelines with zero manual administrative drag</span>
+                  <span>Containerized Linux stack &amp; zero-downtime CI/CD</span>
                 </li>
               </ul>
             </div>
-
-            <div className="pt-6 border-t border-[#dee2de] dark:border-[#24272b] flex items-center justify-between">
-              <span className="text-[13px] font-mono text-[#646464] dark:text-[#a0a5ad]">
-                Nationwide Scale
-              </span>
-              <a
-                href="https://legalizin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[14px] text-[#41a1cf] font-medium hover:underline inline-flex items-center gap-1"
-              >
-                <span>Explore Platform</span>
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M7 17L17 7" />
-                  <path d="M7 7h10v10" />
-                </svg>
-              </a>
+            <div className="pt-5 mt-6 border-t border-[#dee2de] dark:border-[#24272b] text-[12px] font-mono text-[#646464] dark:text-[#a0a5ad]">
+              Sovereign Platform
             </div>
           </div>
         </RevealBlock>
 
-        {/* Card 2: Enterprise Systems, AI & Applied Research */}
-        <RevealBlock delay={0.4} duration={0.7} yOffset={24} className="lg:col-span-6 flex">
-          <div className="w-full rounded-[22px] bg-[#ffffff] dark:bg-[#141517] border border-[#dee2de] dark:border-[#24272b] p-8 md:p-10 shadow-[0_4px_24px_rgba(0,0,0,0.03)] dark:shadow-[0_4px_24px_rgba(0,0,0,0.4)] flex flex-col justify-between">
+        {/* Pillar 2: Technical SEO, SEM & Programmatic Indexing */}
+        <RevealBlock delay={0.38} duration={0.65} yOffset={20} className="flex">
+          <div className="w-full rounded-[22px] bg-[#ffffff] dark:bg-[#141517] border border-[#dee2de] dark:border-[#24272b] p-7 md:p-8 shadow-[0_4px_24px_rgba(0,0,0,0.03)] dark:shadow-[0_4px_24px_rgba(0,0,0,0.4)] flex flex-col justify-between">
             <div>
-              <div className="flex items-center justify-between mb-6 text-[12px] font-mono text-[#646464] dark:text-[#a0a5ad]">
-                <span className="text-[#41a1cf]">Independent Consulting</span>
-                <span>Applied Systems Engineering</span>
+              <div className="text-[12px] font-mono text-[#41a1cf] mb-3">
+                [PILLAR 02]
               </div>
-
-              <h3 className="text-2xl sm:text-3xl font-editorial text-[#2c2c2c] dark:text-white mb-3">
-                <TextReveal delay={0.45} stagger={0.04}>
-                  Custom Enterprise Systems &amp; AI
-                </TextReveal>
+              <h3 className="text-xl sm:text-2xl font-editorial text-[#171717] dark:text-white mb-3">
+                SEO, SEM &amp; Programmatic Indexing
               </h3>
-
-              <p className="text-[15px] text-[#444141] dark:text-[#d1d5db] leading-relaxed mb-6 font-sans">
-                I consult and build directly for established businesses looking to replace fragile third-party tools with high-security, custom digital assets tailored to their exact operational model.
+              <p className="text-[14px] text-[#444141] dark:text-[#c9ccd1] leading-relaxed font-sans mb-6">
+                Automated high-intent KBLI and company establishment search pipelines directly integrated into Google Instant Indexing API, achieving rapid ranking for 100+ high-value commercial keywords.
               </p>
-
-              <ul className="space-y-2.5 text-[14px] text-[#646464] dark:text-[#a0a5ad] font-sans mb-8">
+              <ul className="space-y-2 text-[13px] text-[#646464] dark:text-[#a0a5ad] font-sans">
                 <li className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#41a1cf] shrink-0" />
-                  <span>Autonomous AI agents for document verification &amp; operational routing</span>
+                  <span>Automated Google Indexing API push within seconds</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#41a1cf] shrink-0" />
-                  <span>Custom ERPs, financial tracking, and PSAK asset depreciation engines</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#41a1cf] shrink-0" />
-                  <span>Physical security &amp; visitor management integrations (VMS)</span>
+                  <span>Interactive KBLI 2025 lookup tool driving organic leads</span>
                 </li>
               </ul>
             </div>
+            <div className="pt-5 mt-6 border-t border-[#dee2de] dark:border-[#24272b] text-[12px] font-mono text-[#646464] dark:text-[#a0a5ad]">
+              High-Intent Traffic
+            </div>
+          </div>
+        </RevealBlock>
 
-            <div className="pt-6 border-t border-[#dee2de] dark:border-[#24272b] flex items-center justify-between">
-              <span className="text-[13px] font-mono text-[#646464] dark:text-[#a0a5ad]">
-                Contract &amp; Project-Based
-              </span>
-              <a
-                href="https://wa.me/6281235247820?text=Halo%20Tengku%2C%20saya%20ingin%20berdiskusi%20mengenai%20kebutuhan%20teknologi%2C%20sistem%20software%2C%20dan%20growth%20digital%20untuk%20perusahaan."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[14px] text-[#41a1cf] font-medium hover:underline inline-flex items-center gap-1"
-              >
-                <span>Consult with Me</span>
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M7 17L17 7" />
-                  <path d="M7 7h10v10" />
-                </svg>
-              </a>
+        {/* Pillar 3: Autonomous AI & 24/7 WhatsApp CS Bot */}
+        <RevealBlock delay={0.46} duration={0.65} yOffset={20} className="flex">
+          <div className="w-full rounded-[22px] bg-[#ffffff] dark:bg-[#141517] border border-[#dee2de] dark:border-[#24272b] p-7 md:p-8 shadow-[0_4px_24px_rgba(0,0,0,0.03)] dark:shadow-[0_4px_24px_rgba(0,0,0,0.4)] flex flex-col justify-between">
+            <div>
+              <div className="text-[12px] font-mono text-[#41a1cf] mb-3">
+                [PILLAR 03]
+              </div>
+              <h3 className="text-xl sm:text-2xl font-editorial text-[#171717] dark:text-white mb-3">
+                Autonomous AI &amp; 24/7 WhatsApp CS
+              </h3>
+              <p className="text-[14px] text-[#444141] dark:text-[#c9ccd1] leading-relaxed font-sans mb-6">
+                Deployed autonomous LLM agent infrastructure (&ldquo;Putra&rdquo;) handling 24/7 inbound legal inquiries on WhatsApp, understanding complex perizinan/OSS RBA nuances and outbound lead prospecting.
+              </p>
+              <ul className="space-y-2 text-[13px] text-[#646464] dark:text-[#a0a5ad] font-sans">
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#41a1cf] shrink-0" />
+                  <span>24/7 natural conversational legal CS on WhatsApp</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#41a1cf] shrink-0" />
+                  <span>Scheduled outbound prospecting engine (10 B2B leads/day)</span>
+                </li>
+              </ul>
+            </div>
+            <div className="pt-5 mt-6 border-t border-[#dee2de] dark:border-[#24272b] text-[12px] font-mono text-[#646464] dark:text-[#a0a5ad]">
+              Autonomous Operations
             </div>
           </div>
         </RevealBlock>
 
       </div>
+
+      {/* Featured Banner / Metric Bar */}
+      <RevealBlock delay={0.52} duration={0.7} yOffset={20}>
+        <div className="rounded-[22px] bg-gradient-to-r from-[#081d3d] to-[#0c0d0e] border border-[#dee2de]/20 p-8 md:p-10 text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-[0_12px_40px_rgba(0,0,0,0.2)]">
+          <div className="max-w-xl text-center md:text-left">
+            <span className="text-[12px] font-mono text-[#41a1cf] uppercase tracking-wider block mb-2">
+              Case Study Result
+            </span>
+            <h4 className="text-xl sm:text-2xl font-editorial text-white mb-2">
+              From zero to an automated corporate legality machine.
+            </h4>
+            <p className="text-[14px] text-white/80 font-sans leading-relaxed">
+              Legalizin proves how combining modern software architecture, programmatic organic visibility, and autonomous AI agents can scale a business without linear headcount growth.
+            </p>
+          </div>
+
+          <div className="flex items-center gap-3 shrink-0">
+            <a
+              href="https://legalizin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-5 py-2.5 rounded-[10px] bg-[#41a1cf] text-white text-[13px] font-sans font-medium hover:bg-[#3490bc] transition-all flex items-center gap-2 shadow-md active:scale-95"
+            >
+              <span>Visit Live Platform</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M7 17L17 7" />
+                <path d="M7 7h10v10" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </RevealBlock>
+
     </section>
   );
 }
