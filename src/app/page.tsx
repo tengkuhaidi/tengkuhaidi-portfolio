@@ -8,51 +8,41 @@ import AboutCompany from '@/components/AboutCompany';
 import Footer from '@/components/Footer';
 
 export const metadata = {
-  metadataBase: new URL('https://digitasolusindo.com'),
-  title: 'PT Digitas Solusi Indonesia | Applied Systems Studio & Technology Holding',
-  description: 'Applied software engineering studio and technology holding based in South Jakarta. Parent company of Legalizin.com, autonomous enterprise AI workflows, and resilient software systems.',
+  metadataBase: new URL('https://tengkuhaidi-portfolio.vercel.app'),
+  title: 'Tengku Hidayat Haidi | Independent Systems Consultant, Full-Stack Engineer & Growth Architect',
+  description: 'Independent engineering consultant helping companies scale and go digital. Specializing in enterprise full-stack development, cloud DevOps, custom ERPs, and organic search automation pipelines.',
   alternates: {
-    canonical: 'https://digitasolusindo.com',
+    canonical: 'https://tengkuhaidi-portfolio.vercel.app',
   },
   openGraph: {
-    title: 'PT Digitas Solusi Indonesia | Applied Systems Studio & Technology Holding',
-    description: 'Applied software engineering studio and technology holding based in South Jakarta. Parent company of Legalizin.com, autonomous enterprise AI workflows, and resilient software systems.',
-    url: 'https://digitasolusindo.com',
-    siteName: 'PT Digitas Solusi Indonesia',
+    title: 'Tengku Hidayat Haidi | Independent Systems Consultant & Engineer',
+    description: 'Independent engineering consultant helping companies scale and go digital. Specializing in enterprise full-stack development, cloud DevOps, custom ERPs, and organic search automation pipelines.',
+    url: 'https://tengkuhaidi-portfolio.vercel.app',
+    siteName: 'Tengku Hidayat Haidi',
     locale: 'en_US',
-    type: 'website',
+    type: 'profile',
   }
 };
 
 export default function Home() {
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'PT Digitas Solusi Indonesia',
-    url: 'https://digitasolusindo.com',
-    logo: 'https://digitasolusindo.com/logo-digitas.png',
-    description: 'Technology venture and systems engineering holding in South Jakarta, Indonesia.',
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: 'Alamanda Tower Lt. 2 Unit H 1, Jl. TB. Simatupang No. 23-24, Cilandak Barat',
-      addressLocality: 'Jakarta Selatan',
-      addressRegion: 'DKI Jakarta',
-      postalCode: '12430',
-      addressCountry: 'ID'
-    },
-    contactPoint: {
-      '@type': 'ContactPoint',
-      telephone: '+62-812-3524-7820',
-      contactType: 'customer service',
-      email: 'info@digitasolusindo.com',
-      availableLanguage: ['English', 'Indonesian']
-    },
-    subOrganization: [
-      {
-        '@type': 'Organization',
-        name: 'Legalizin',
-        url: 'https://legalizin.com'
-      }
+    '@type': 'Person',
+    name: 'Tengku Hidayat Haidi',
+    url: 'https://tengkuhaidi-portfolio.vercel.app',
+    jobTitle: 'Independent Systems Consultant & Full-Stack Architect',
+    description: 'Senior technology consultant helping businesses modernize operations, build resilient web platforms, automate multi-agent workflows, and execute technical SEO / SEM growth.',
+    sameAs: [
+      'https://github.com/tengkuhaidi',
+      'https://www.linkedin.com/in/tengkuhaidi/'
+    ],
+    knowsAbout: [
+      'Full-Stack Architecture & Next.js Platforms',
+      'Cloud DevOps & Infrastructure Automation',
+      'Enterprise Software Systems (ERP, VMS, Asset Tracking)',
+      'Autonomous Multi-Agent AI Workflows',
+      'Technical SEO, SEM & Organic Growth Automation',
+      'Digital Transformation Consulting for Growing Companies'
     ]
   };
 

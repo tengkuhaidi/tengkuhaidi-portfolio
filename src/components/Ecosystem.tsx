@@ -11,19 +11,19 @@ export default function Ecosystem() {
       <div className="max-w-3xl mb-14">
         <RevealBlock delay={0.05} yOffset={10}>
           <p className="text-[13px] font-mono text-[#41a1cf] tracking-wider uppercase mb-3">
-            01 / Ecosystem &amp; Enterprise Solutions
+            01 / Flagship &amp; Client Deployments
           </p>
         </RevealBlock>
 
         <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-editorial text-[#2c2c2c] dark:text-white leading-[1.15] mb-4">
           <TextReveal delay={0.1} stagger={0.045} duration={0.55}>
-            What we research, build, and deploy.
+            What I research, build, and deploy for business.
           </TextReveal>
         </h2>
 
         <RevealBlock delay={0.25} duration={0.65} yOffset={14}>
           <p className="text-[15px] sm:text-[16px] text-[#444141] dark:text-[#d1d5db] font-sans leading-relaxed max-w-2xl">
-            From sovereign platforms to custom enterprise infrastructure, we engineer production systems that automate complex corporate operations.
+            From co-founding high-traffic platforms to architecting custom software infrastructure, I deliver production systems that turn complex operations into automated digital assets.
           </p>
         </RevealBlock>
       </div>
@@ -36,8 +36,8 @@ export default function Ecosystem() {
           <div className="w-full rounded-[22px] bg-[#ffffff] dark:bg-[#141517] border border-[#dee2de] dark:border-[#24272b] p-8 md:p-10 shadow-[0_4px_24px_rgba(0,0,0,0.03)] dark:shadow-[0_4px_24px_rgba(0,0,0,0.4)] flex flex-col justify-between">
             <div>
               <div className="flex items-center justify-between mb-6 text-[12px] font-mono text-[#646464] dark:text-[#a0a5ad]">
-                <span className="text-[#41a1cf]">Proven Venture Flagship</span>
-                <span>Proprietary Ecosystem</span>
+                <span className="text-[#41a1cf]">Co-Founder &amp; Tech Lead</span>
+                <span>Flagship Platform</span>
               </div>
 
               <h3 className="text-2xl sm:text-3xl font-editorial text-[#2c2c2c] dark:text-white mb-3">
@@ -47,7 +47,7 @@ export default function Ecosystem() {
               </h3>
 
               <p className="text-[15px] text-[#444141] dark:text-[#d1d5db] leading-relaxed mb-6 font-sans">
-                Our flagship corporate legality and business permit platform. Built with a high-throughput headless architecture, real-time government regulatory integrations, and programmatic search indexing serving enterprise clients nationwide.
+                Co-founded and engineered the end-to-end platform for corporate legality, notary workflows, and business permits. Built with a high-throughput headless architecture, real-time government regulatory integrations, and programmatic search indexing ranking top-tier nationwide.
               </p>
 
               <ul className="space-y-2.5 text-[14px] text-[#646464] dark:text-[#a0a5ad] font-sans mb-8">
@@ -91,8 +91,8 @@ export default function Ecosystem() {
           <div className="w-full rounded-[22px] bg-[#ffffff] dark:bg-[#141517] border border-[#dee2de] dark:border-[#24272b] p-8 md:p-10 shadow-[0_4px_24px_rgba(0,0,0,0.03)] dark:shadow-[0_4px_24px_rgba(0,0,0,0.4)] flex flex-col justify-between">
             <div>
               <div className="flex items-center justify-between mb-6 text-[12px] font-mono text-[#646464] dark:text-[#a0a5ad]">
-                <span className="text-[#41a1cf]">Enterprise Implementation</span>
-                <span>Applied R&amp;D</span>
+                <span className="text-[#41a1cf]">Independent Consulting</span>
+                <span>Applied Systems Engineering</span>
               </div>
 
               <h3 className="text-2xl sm:text-3xl font-editorial text-[#2c2c2c] dark:text-white mb-3">
@@ -102,7 +102,7 @@ export default function Ecosystem() {
               </h3>
 
               <p className="text-[15px] text-[#444141] dark:text-[#d1d5db] leading-relaxed mb-6 font-sans">
-                We research, architect, and deploy dedicated software ecosystems for growing corporations looking to replace disconnected third-party tools with high-security, custom digital assets.
+                I consult and build directly for established businesses looking to replace fragile third-party tools with high-security, custom digital assets tailored to their exact operational model.
               </p>
 
               <ul className="space-y-2.5 text-[14px] text-[#646464] dark:text-[#a0a5ad] font-sans mb-8">
@@ -123,15 +123,15 @@ export default function Ecosystem() {
 
             <div className="pt-6 border-t border-[#dee2de] dark:border-[#24272b] flex items-center justify-between">
               <span className="text-[13px] font-mono text-[#646464] dark:text-[#a0a5ad]">
-                Tailored Architecture
+                Contract &amp; Project-Based
               </span>
               <a
-                href="https://wa.me/6281235247820?text=Halo%20Digitas%2C%20saya%20ingin%20berdiskusi%20mengenai%20pengembangan%20software%20dan%20implementasi%20sistem%20otomasi%20untuk%20perusahaan."
+                href="https://wa.me/6281235247820?text=Halo%20Tengku%2C%20saya%20ingin%20berdiskusi%20mengenai%20kebutuhan%20teknologi%2C%20sistem%20software%2C%20dan%20growth%20digital%20untuk%20perusahaan."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[14px] text-[#41a1cf] font-medium hover:underline inline-flex items-center gap-1"
               >
-                <span>Consult Engineering</span>
+                <span>Consult with Me</span>
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M7 17L17 7" />
                   <path d="M7 7h10v10" />

@@ -9,27 +9,26 @@ const inter = Inter({
   display: "swap",
 });
 
-const siteUrl = "https://digitasolusindo.com";
+const siteUrl = "https://tengkuhaidi-portfolio.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "PT Digitas Solusi Indonesia | Autonomous Systems & Software Studio",
+  title: "Tengku Hidayat Haidi | Independent Systems Engineer & Technology Consultant",
   description:
-    "Engineering holding and software studio in Jakarta Selatan. Architecting sovereign platforms, autonomous AI workflows, and custom enterprise infrastructure. Home of Legalizin.com.",
+    "Personal engineering portfolio of Tengku Hidayat Haidi. Consulting software engineer and full-stack systems architect helping companies go digital, automate operations, and scale search visibility.",
   keywords: [
-    "PT Digitas Solusi Indonesia",
-    "Digitas Solusi Indonesia",
-    "Software Engineering Studio Jakarta",
-    "Venture Studio Indonesia",
-    "Custom Enterprise ERP",
-    "Autonomous AI Agents Indonesia",
-    "Legalizin",
-    "Next.js Enterprise Development",
-    "Visitor Management System Indonesia"
+    "Tengku Hidayat Haidi",
+    "Independent Software Consultant Jakarta",
+    "Full-Stack Systems Engineer",
+    "Digital Transformation Freelance",
+    "Next.js Systems Architecture",
+    "DevOps and Cloud Infrastructure",
+    "Technical SEO and SEM Automation",
+    "Custom Enterprise Systems"
   ],
-  authors: [{ name: "PT Digitas Solusi Indonesia", url: siteUrl }],
-  creator: "PT Digitas Solusi Indonesia",
-  publisher: "PT Digitas Solusi Indonesia",
+  authors: [{ name: "Tengku Hidayat Haidi", url: siteUrl }],
+  creator: "Tengku Hidayat Haidi",
+  publisher: "Tengku Hidayat Haidi",
   formatDetection: {
     email: false,
     address: false,
@@ -39,27 +38,27 @@ export const metadata: Metadata = {
     canonical: siteUrl,
   },
   openGraph: {
-    title: "PT Digitas Solusi Indonesia | Autonomous Systems & Software Studio",
+    title: "Tengku Hidayat Haidi | Independent Systems Engineer & Technology Consultant",
     description:
-      "Engineering holding and software studio in Jakarta Selatan. Architecting sovereign platforms, autonomous AI workflows, and custom enterprise infrastructure.",
+      "Consulting software engineer and full-stack systems architect helping companies go digital, automate operations, and scale search visibility.",
     url: siteUrl,
-    siteName: "PT Digitas Solusi Indonesia",
+    siteName: "Tengku Hidayat Haidi",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "PT Digitas Solusi Indonesia — Software systems that run your business",
+        alt: "Tengku Hidayat Haidi — Software systems, infrastructure & digital transformation",
       },
     ],
     locale: "id_ID",
-    type: "website",
+    type: "profile",
   },
   twitter: {
     card: "summary_large_image",
-    title: "PT Digitas Solusi Indonesia | Autonomous Systems & Software Studio",
+    title: "Tengku Hidayat Haidi | Independent Systems Engineer & Technology Consultant",
     description:
-      "Engineering holding and software studio in Jakarta Selatan. Architecting sovereign platforms, autonomous AI workflows, and custom enterprise infrastructure.",
+      "Consulting software engineer and full-stack systems architect helping companies go digital, automate operations, and scale search visibility.",
     images: ["/og-image.png"],
   },
   robots: {
@@ -87,50 +86,31 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Corporation",
-      "@id": "https://digitasolusindo.com/#organization",
-      name: "PT Digitas Solusi Indonesia",
-      legalName: "PT Digitas Solusi Indonesia",
-      url: "https://digitasolusindo.com",
-      logo: "https://digitasolusindo.com/favicon.png",
-      image: "https://digitasolusindo.com/og-image.png",
+      "@type": "Person",
+      "@id": "https://tengkuhaidi-portfolio.vercel.app/#person",
+      name: "Tengku Hidayat Haidi",
+      url: "https://tengkuhaidi-portfolio.vercel.app",
+      jobTitle: "Independent Systems Engineer & Growth Consultant",
       description:
-        "Engineering holding and software studio in Jakarta Selatan specializing in autonomous systems, custom ERPs, and high-performance digital platforms.",
-      address: {
-        "@type": "PostalAddress",
-        addressLocality: "Jakarta Selatan",
-        addressRegion: "DKI Jakarta",
-        addressCountry: "ID",
-      },
-      areaServed: {
-        "@type": "Country",
-        name: "Indonesia",
-      },
-      owns: [
-        {
-          "@type": "Organization",
-          name: "Legalizin",
-          url: "https://legalizin.com",
-          description: "Digital platform for Indonesian corporate legality and business permits.",
-        },
+        "Full-stack software consultant and systems engineer helping companies build sovereign platforms, automate administrative drag, and execute technical SEO / SEM.",
+      sameAs: [
+        "https://github.com/tengkuhaidi",
+        "https://www.linkedin.com/in/tengkuhaidi/"
       ],
       knowsAbout: [
-        "Software Engineering",
-        "Autonomous AI Agents",
-        "Enterprise ERP Systems",
-        "Headless Architecture",
-        "Search Engine Optimization & Indexing",
+        "Full-Stack Web Engineering",
+        "Cloud Infrastructure & DevOps",
+        "Autonomous AI Workflows",
+        "Enterprise ERP & VMS Systems",
+        "Technical SEO Architecture"
       ],
     },
     {
       "@type": "WebSite",
-      "@id": "https://digitasolusindo.com/#website",
-      url: "https://digitasolusindo.com",
-      name: "PT Digitas Solusi Indonesia",
-      description: "Official portal of PT Digitas Solusi Indonesia",
-      publisher: {
-        "@id": "https://digitasolusindo.com/#organization",
-      },
+      "@id": "https://tengkuhaidi-portfolio.vercel.app/#website",
+      url: "https://tengkuhaidi-portfolio.vercel.app",
+      name: "Tengku Hidayat Haidi — Portfolio",
+      description: "Official portfolio and engineering showcase of Tengku Hidayat Haidi",
       inLanguage: "en-US",
     },
   ],

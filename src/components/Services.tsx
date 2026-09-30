@@ -1,29 +1,29 @@
 'use client';
 
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef, useEffect } from 'react';
 import Image from 'next/image';
 import TextReveal, { RevealBlock } from './TextReveal';
 
 const capabilities = [
   {
     num: '01',
-    title: 'Business AI & Workflow Automation',
-    desc: 'Automating high-friction administrative tasks with intelligent agents. From verifying legal documents to handling compliance checks, eliminating manual overhead with complete accuracy.'
+    title: 'Go-Digital Strategy & Web Platform Engineering',
+    desc: 'Helping conventional businesses transition online with high-speed web platforms, e-commerce systems, and client portals built on Next.js with zero downtime and strict reliability.'
   },
   {
     num: '02',
-    title: 'Modern Web & Platform Engineering',
-    desc: 'Building reliable digital platforms and high-speed web portals designed for heavy traffic, zero downtime, and intuitive user experiences.'
+    title: 'Technical SEO, SEM & Organic Growth Automation',
+    desc: 'Programmatic search distribution and indexing pipelines connecting directly to Google Indexing API. Optimizing corporate visibility, conversion funnels, and high-intent local rankings.'
   },
   {
     num: '03',
-    title: 'Custom Corporate Management Systems',
-    desc: 'Replacing fragile spreadsheets with unified internal platforms for payroll, tax reporting, corporate asset tracking, and multi-branch operations.'
+    title: 'Cloud Infrastructure, DevOps & Containerization',
+    desc: 'Deep fluency in Docker, Linux servers, CI/CD automated deployments, reverse proxies, and secure microservices. Ensuring business platforms stay resilient, backed up, and scalable.'
   },
   {
     num: '04',
-    title: 'Organic Search & Digital Visibility',
-    desc: 'Systematic content distribution and direct search engine indexing pipelines, ensuring critical company offerings and regulatory services reach audiences instantly.'
+    title: 'Custom ERP, AI Workflows & Applied R&D',
+    desc: 'Replacing chaotic spreadsheets with custom internal platforms: payroll systems, multi-agent AI verification bots, visitor access control (VMS), and corporate deed/asset trackers.'
   }
 ];
 
@@ -37,7 +37,6 @@ export default function Services() {
     const updateParallax = () => {
       if (sectionRef.current && bgRef.current) {
         const rect = sectionRef.current.getBoundingClientRect();
-        // Only compute when near viewport
         if (rect.bottom > -250 && rect.top < window.innerHeight + 250) {
           const offset = (window.innerHeight - rect.top) * 0.14;
           bgRef.current.style.transform = `translate3d(0, ${offset.toFixed(1)}px, 0)`;
@@ -75,7 +74,7 @@ export default function Services() {
       >
         <Image
           src="/images/services-sunflower-pixel.webp"
-          alt="Digitas Enterprise Landscape"
+          alt="Engineering Landscape"
           fill
           priority={false}
           className="object-cover object-center w-full h-full scale-105 filter contrast-[1.08] saturate-[1.1] brightness-[0.98] dark:brightness-[0.72]"
@@ -95,19 +94,19 @@ export default function Services() {
         <div className="max-w-3xl mb-14">
           <RevealBlock delay={0.05} yOffset={10}>
             <p className="text-[13px] font-mono text-[#006699] dark:text-[#41a1cf] font-semibold tracking-wider uppercase mb-3 drop-shadow-sm">
-              03 / Services
+              03 / Services &amp; Capabilities
             </p>
           </RevealBlock>
 
           <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-editorial text-[#171717] dark:text-white leading-[1.15] mb-4 drop-shadow-[0_1px_2px_rgba(255,255,255,0.8)] dark:drop-shadow-none">
             <TextReveal delay={0.1} stagger={0.045} duration={0.55}>
-              How we help enterprises scale.
+              How I help companies modernize and scale.
             </TextReveal>
           </h2>
 
           <RevealBlock delay={0.25} duration={0.65} yOffset={14}>
             <p className="text-[15px] sm:text-[16px] text-[#1f2937] dark:text-[#d1d5db] font-sans leading-relaxed max-w-2xl font-medium">
-              Practical software solutions designed to remove operational bottlenecks, improve internal control, and accelerate growth.
+              Bridging strategic digital marketing, high-performance web engineering, and enterprise backend systems to eliminate technical bottlenecks.
             </p>
           </RevealBlock>
         </div>
@@ -143,9 +142,9 @@ export default function Services() {
                 </div>
 
                 <div className="pt-6 mt-6 border-t border-[#dee2de]/60 dark:border-[#24272b]/60 flex items-center justify-between text-[12px] font-mono text-[#646464] dark:text-[#a0a5ad]">
-                  <span>Applied Capability</span>
+                  <span>Core Expertise</span>
                   <span className="text-[#41a1cf] opacity-0 group-hover:opacity-100 transition-opacity inline-flex items-center gap-1 font-medium">
-                    System Ready
+                    Available for Contract
                     <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                       <path d="M5 12h14" />
                       <path d="m12 5 7 7-7 7" />

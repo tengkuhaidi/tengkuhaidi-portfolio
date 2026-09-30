@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/api/'],
       },
     ],
-    sitemap: 'https://digitasolusindo.com/sitemap.xml',
+    sitemap: 'https://tengkuhaidi-portfolio.vercel.app/sitemap.xml',
   };
 }

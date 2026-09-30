@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import ThemeToggle from './ThemeToggle';
 
-const WA_URL = "https://wa.me/6281235247820?text=Halo%20Digitas%2C%20saya%20ingin%20berdiskusi%20mengenai%20pengembangan%20software%20dan%20implementasi%20sistem%20otomasi%20untuk%20perusahaan.";
+const WA_URL = "https://wa.me/6281235247820?text=Halo%20Tengku%2C%20saya%20ingin%20berdiskusi%20mengenai%20kebutuhan%20teknologi%2C%20sistem%20software%2C%20dan%20growth%20digital%20untuk%20perusahaan.";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -38,17 +38,10 @@ export default function Navbar() {
         <nav className="hidden md:flex pointer-events-auto items-center justify-between gap-6 px-3.5 py-2 rounded-full border border-[#dee2de] dark:border-[#24272b] bg-[#fefffc]/85 dark:bg-[#0c0d0e]/85 backdrop-blur-md shadow-[0_2px_12px_rgba(0,0,0,0.04)] transition-colors">
           
           {/* Brand Icon Only */}
-          <Link href="/" aria-label="Home" className="flex items-center pr-3 border-r border-[#dee2de] dark:border-neutral-800">
-            <div className="relative w-7 h-7 flex items-center justify-center">
-              <Image
-                src="/favicon.png"
-                alt="Digitas Solusi Indonesia"
-                width={26}
-                height={26}
-                className="object-contain"
-                priority
-              />
-            </div>
+          <Link href="/" aria-label="Home" className="flex items-center gap-2 pr-3 border-r border-[#dee2de] dark:border-neutral-800">
+            <span className="font-editorial text-[17px] font-medium tracking-tight text-[#171717] dark:text-white">
+              Tengku H.
+            </span>
           </Link>
 
           {/* Desktop Navigation Links */}
@@ -98,20 +91,13 @@ export default function Navbar() {
         {/* Mobile Navbar: Floating 3-part elements 1:1 like General Intelligence Company */}
         <div className="flex md:hidden pointer-events-auto items-center justify-between w-full max-w-[440px] px-1">
           
-          {/* Left: Glass icon button */}
+          {/* Left: Monogram icon button */}
           <Link
             href="/"
             aria-label="Home"
-            className="w-10 h-10 rounded-xl backdrop-blur-md bg-black/25 dark:bg-white/10 border border-white/20 flex items-center justify-center shadow-[0_2px_8px_rgba(0,0,0,0.15)] active:scale-95 transition-transform"
+            className="w-10 h-10 rounded-xl backdrop-blur-md bg-black/25 dark:bg-white/10 border border-white/20 flex items-center justify-center shadow-[0_2px_8px_rgba(0,0,0,0.15)] active:scale-95 transition-transform font-editorial text-[16px] text-white"
           >
-            <Image
-              src="/favicon.png"
-              alt="Digitas Logo"
-              width={22}
-              height={22}
-              className="object-contain"
-              priority
-            />
+            TH
           </Link>
 
           {/* Center: Dark Pill CTA Button */}
@@ -154,14 +140,8 @@ export default function Navbar() {
         {/* Top Bar: Icon Mark, Dark Pill CTA, Close X */}
         <div className="flex items-center justify-between w-full pt-2">
           {/* Left Brand Mark */}
-          <div className="w-10 h-10 rounded-xl backdrop-blur-sm bg-neutral-100 dark:bg-neutral-800/80 border border-[#dee2de] dark:border-[#24272b] flex items-center justify-center">
-            <Image
-              src="/favicon.png"
-              alt="Digitas Logo"
-              width={24}
-              height={24}
-              className="object-contain"
-            />
+          <div className="w-10 h-10 rounded-xl backdrop-blur-sm bg-neutral-100 dark:bg-neutral-800/80 border border-[#dee2de] dark:border-[#24272b] flex items-center justify-center font-editorial text-[16px] text-[#171717] dark:text-white">
+            TH
           </div>
 
           {/* Center Pill Button */}
@@ -259,21 +239,23 @@ export default function Navbar() {
               </svg>
             </a>
 
-            {/* Email Icon Box */}
+            {/* GitHub Profile */}
             <a
-              href="mailto:info@digitasolusindo.com"
-              aria-label="Send Email"
+              href="https://github.com/tengkuhaidi"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub Profile"
               className="w-10 h-10 rounded-lg border border-[#dee2de] dark:border-[#24272b] flex items-center justify-center text-[#2c2c2c] dark:text-white hover:border-[#41a1cf] transition-colors"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <rect width="20" height="16" x="2" y="4" rx="2" />
-                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                <path d="M9 18c-4.51 2-5-2-7-2" />
               </svg>
             </a>
           </div>
 
           <p className="font-mono text-[12px] text-[#646464] dark:text-[#a0a5ad] tracking-tight">
-            © 2026 PT Digitas Solusi Indonesia
+            © {new Date().getFullYear()} Tengku Hidayat Haidi
           </p>
         </div>
 

@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://digitasolusindo.com';
+  const baseUrl = 'https://tengkuhaidi-portfolio.vercel.app';
   const currentDate = new Date().toISOString();
 
   return [

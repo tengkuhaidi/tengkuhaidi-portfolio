@@ -27,7 +27,7 @@ export default function Hero() {
       >
         <Image
           src="/images/spring-hero.avif"
-          alt="Digitas Solusi Indonesia Landscape"
+          alt="Engineering Landscape"
           fill
           priority
           className="object-cover object-center w-full h-full"
@@ -38,14 +38,14 @@ export default function Hero() {
       {/* Top Spacer */}
       <div className="pt-20 sm:pt-32" />
 
-      {/* Mobile Top Header (1:1 General Intelligence Company skyline headline) */}
+      {/* Mobile Top Header */}
       <div className="relative z-10 w-full px-6 flex flex-col items-center text-center md:hidden my-auto pt-4 pb-6">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/30 backdrop-blur-md border border-white/15 text-[11px] font-mono text-white/90 mb-4">
           <span className="w-1.5 h-1.5 rounded-full bg-[#41a1cf] animate-pulse" />
-          <span>Autonomous Systems Active</span>
+          <span>Independent Consultant</span>
         </div>
         <h1 className="text-3xl font-editorial text-white leading-[1.15] tracking-tight max-w-[18ch] drop-shadow-md">
-          Software systems that run your business.
+          Engineering software systems that scale businesses.
         </h1>
       </div>
 
@@ -53,25 +53,21 @@ export default function Hero() {
       <div className="relative z-10 w-full max-w-[1240px] mx-auto px-4 sm:px-6 mb-4 sm:my-auto">
         <div className="max-w-[700px] p-5 sm:p-10 rounded-[20px] sm:rounded-[24px] bg-black/40 md:bg-[#ffffff]/90 dark:md:bg-[#141517]/90 backdrop-blur-[16px] md:backdrop-blur-md border border-white/20 md:border-[#dee2de]/90 dark:md:border-[#24272b] shadow-[0_8px_32px_rgba(0,0,0,0.25)] dark:shadow-[0_8px_32px_rgba(0,0,0,0.5)] transition-all">
           
+          <div className="hidden md:inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#41a1cf]/10 border border-[#41a1cf]/30 text-[12px] font-mono text-[#41a1cf] mb-4">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#41a1cf] animate-pulse" />
+            <span>Tengku Hidayat Haidi — Independent Tech Consultant</span>
+          </div>
+
           <h2 className="hidden md:block text-3xl sm:text-5xl md:text-6xl font-editorial text-[#2c2c2c] dark:text-white leading-[1.08] tracking-[-0.035em] mb-5">
-            Software systems that run your business.
+            Engineering software systems that scale businesses.
           </h2>
 
           <h2 className="block md:hidden text-xl font-editorial text-white leading-tight mb-2.5">
-            Autonomous software for modern enterprises.
+            Independent software &amp; digital growth consultant.
           </h2>
 
           <p className="text-[14px] sm:text-[17px] text-white/90 md:text-[#444141] dark:md:text-[#d1d5db] leading-[1.5] mb-6 sm:mb-8 font-sans">
-            We build platforms like{' '}
-            <a
-              href="https://legalizin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[#41a1cf] hover:underline font-medium"
-            >
-              Legalizin.com
-            </a>
-            , autonomous multi-agent workflows, and internal software systems that remove operational friction.
+            I help companies modernize and go digital end-to-end: architecting production web platforms, managing cloud infrastructure &amp; DevOps, deploying autonomous systems, and driving organic search visibility (SEO/SEM).
           </p>
 
           <div className="flex flex-wrap items-center gap-3">
@@ -79,7 +75,7 @@ export default function Hero() {
               href="#capabilities"
               className="px-4 sm:px-5 py-2 sm:py-2.5 rounded-[8px] bg-[#41a1cf] md:bg-transparent border border-[#41a1cf] text-white md:text-[#41a1cf] dark:md:text-[#52b4e5] text-[13px] sm:text-[14px] font-sans font-medium hover:bg-[#41a1cf] hover:text-white transition-all flex items-center gap-2"
             >
-              <span>Explore Capabilities</span>
+              <span>Explore Disciplines</span>
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M5 12h14" />
                 <path d="m12 5 7 7-7 7" />
@@ -89,7 +85,7 @@ export default function Hero() {
               href="#portfolio"
               className="px-4 sm:px-5 py-2 sm:py-2.5 rounded-[8px] border border-white/30 md:border-[#dee2de] dark:md:border-[#24272b] text-white md:text-[#282834] dark:md:text-white text-[13px] sm:text-[14px] font-sans font-medium hover:bg-white/10 dark:hover:bg-neutral-800 transition-colors"
             >
-              Selected Systems
+              Client Projects &amp; Work
             </Link>
           </div>
 
@@ -100,7 +96,7 @@ export default function Hero() {
       <div className="relative z-10 w-full max-w-[1240px] mx-auto px-4 sm:px-6 pb-6 pt-2 flex items-center justify-between text-[12px] font-mono text-white/80">
         <div className="flex items-center gap-2">
           <span className="inline-block w-2 h-2 rounded-full bg-[#41a1cf] animate-pulse" />
-          <span>Status: Online</span>
+          <span>Available for Strategic Consulting &amp; Contracts</span>
         </div>
         <span className="text-white/70">Scroll ↓</span>
       </div>
