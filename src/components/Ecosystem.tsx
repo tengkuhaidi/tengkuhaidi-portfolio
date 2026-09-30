@@ -23,7 +23,7 @@ export default function Ecosystem() {
 
         <RevealBlock delay={0.25} duration={0.65} yOffset={14}>
           <p className="text-[15px] sm:text-[16px] text-[#444141] dark:text-[#d1d5db] font-sans leading-relaxed max-w-2xl">
-            A comprehensive case study of co-founding and engineering Indonesia&apos;s corporate legality platform: combining programmatic SEO/SEM, autonomous multi-agent AI, and 24/7 AI-driven customer support on WhatsApp.
+            Co-founding and engineering Indonesia&apos;s corporate legality platform from day one: programmatic SEO/SEM pipelines, autonomous multi-agent systems, and 24/7 AI-driven customer support on WhatsApp.
           </p>
         </RevealBlock>
       </div>
