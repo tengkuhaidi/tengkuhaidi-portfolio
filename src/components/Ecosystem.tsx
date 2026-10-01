@@ -46,7 +46,27 @@ export default function Ecosystem() {
   const [activeMetric, setActiveMetric] = useState(0);
 
   return (
-    <section id="case-study" className="py-20 md:py-28 px-4 sm:px-6 max-w-[1240px] mx-auto border-t border-[#dee2de] dark:border-[#24272b] transition-colors">
+    <section id="case-study" className="relative w-full py-24 md:py-32 px-4 sm:px-6 overflow-hidden border-t border-[#dee2de] dark:border-[#24272b] transition-colors">
+      
+      {/* Modern Next.js Ambient Gradients & Subtle Tech Mesh */}
+      <div className="absolute inset-0 pointer-events-none z-0">
+        {/* Primary Radiant Ambient Glow */}
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-gradient-to-tr from-[#006699]/15 via-[#41a1cf]/10 to-indigo-500/10 dark:from-[#41a1cf]/12 dark:via-blue-600/8 dark:to-cyan-400/8 rounded-full blur-[120px] opacity-75" />
+        
+        {/* Secondary Warm / Indigo Corner Accent */}
+        <div className="absolute bottom-10 right-[-10%] w-[500px] h-[450px] bg-gradient-to-bl from-purple-500/10 via-sky-500/10 to-transparent dark:from-indigo-600/10 dark:via-sky-400/5 rounded-full blur-[100px] opacity-60" />
+
+        {/* Minimal Grid Pattern for Modern Tech Depth */}
+        <div 
+          className="absolute inset-0 opacity-[0.035] dark:opacity-[0.05]"
+          style={{
+            backgroundImage: `radial-gradient(currentColor 1px, transparent 1px)`,
+            backgroundSize: '28px 28px',
+          }}
+        />
+      </div>
+
+      <div className="relative z-10 max-w-[1240px] mx-auto">
       
       {/* Section Header */}
       <div className="max-w-3xl mb-14">
@@ -74,7 +94,7 @@ export default function Ecosystem() {
         
         {/* Pillar 1: Modern Platform */}
         <RevealBlock delay={0.3} duration={0.65} yOffset={20} className="flex">
-          <div className="w-full rounded-[22px] bg-[#ffffff] dark:bg-[#141517] border border-[#dee2de] dark:border-[#24272b] p-7 md:p-8 shadow-[0_4px_24px_rgba(0,0,0,0.03)] dark:shadow-[0_4px_24px_rgba(0,0,0,0.4)] flex flex-col justify-between">
+          <div className="w-full rounded-[22px] bg-[#ffffff]/80 dark:bg-[#141517]/80 backdrop-blur-md border border-[#dee2de]/80 dark:border-[#24272b]/80 p-7 md:p-8 shadow-[0_4px_24px_rgba(0,0,0,0.03)] dark:shadow-[0_8px_32px_rgba(0,0,0,0.5)] hover:border-[#41a1cf]/50 transition-all duration-300 flex flex-col justify-between group">
             <div>
               <div className="text-[12px] font-mono text-[#41a1cf] mb-3 font-semibold">
                 [PILLAR 01]
@@ -104,7 +124,7 @@ export default function Ecosystem() {
 
         {/* Pillar 2: Digital Marketing & Organic SEO */}
         <RevealBlock delay={0.38} duration={0.65} yOffset={20} className="flex">
-          <div className="w-full rounded-[22px] bg-[#ffffff] dark:bg-[#141517] border border-[#dee2de] dark:border-[#24272b] p-7 md:p-8 shadow-[0_4px_24px_rgba(0,0,0,0.03)] dark:shadow-[0_4px_24px_rgba(0,0,0,0.4)] flex flex-col justify-between">
+          <div className="w-full rounded-[22px] bg-[#ffffff]/80 dark:bg-[#141517]/80 backdrop-blur-md border border-[#dee2de]/80 dark:border-[#24272b]/80 p-7 md:p-8 shadow-[0_4px_24px_rgba(0,0,0,0.03)] dark:shadow-[0_8px_32px_rgba(0,0,0,0.5)] hover:border-[#41a1cf]/50 transition-all duration-300 flex flex-col justify-between group">
             <div>
               <div className="text-[12px] font-mono text-[#41a1cf] mb-3 font-semibold">
                 [PILLAR 02]
@@ -134,7 +154,7 @@ export default function Ecosystem() {
 
         {/* Pillar 3: Automated WhatsApp Operations */}
         <RevealBlock delay={0.46} duration={0.65} yOffset={20} className="flex">
-          <div className="w-full rounded-[22px] bg-[#ffffff] dark:bg-[#141517] border border-[#dee2de] dark:border-[#24272b] p-7 md:p-8 shadow-[0_4px_24px_rgba(0,0,0,0.03)] dark:shadow-[0_4px_24px_rgba(0,0,0,0.4)] flex flex-col justify-between">
+          <div className="w-full rounded-[22px] bg-[#ffffff]/80 dark:bg-[#141517]/80 backdrop-blur-md border border-[#dee2de]/80 dark:border-[#24272b]/80 p-7 md:p-8 shadow-[0_4px_24px_rgba(0,0,0,0.03)] dark:shadow-[0_8px_32px_rgba(0,0,0,0.5)] hover:border-[#41a1cf]/50 transition-all duration-300 flex flex-col justify-between group">
             <div>
               <div className="text-[12px] font-mono text-[#41a1cf] mb-3 font-semibold">
                 [PILLAR 03]
@@ -242,6 +262,7 @@ export default function Ecosystem() {
         </div>
       </RevealBlock>
 
+      </div>
     </section>
   );
 }
