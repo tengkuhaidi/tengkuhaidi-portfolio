@@ -58,7 +58,7 @@ export default function Ecosystem() {
 
         <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-editorial text-[#171717] dark:text-white leading-[1.15] mb-4">
           <TextReveal delay={0.1} stagger={0.045} duration={0.55}>
-            Legalizin.com — Co-Founding &amp; Scaling a Digital Legality Platform.
+            How we turn digital presence into real-world connections.
           </TextReveal>
         </h2>
 

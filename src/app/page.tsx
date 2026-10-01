@@ -1,5 +1,6 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
+import DigitalBridgeStory from '@/components/DigitalBridgeStory';
 import Ecosystem from '@/components/Ecosystem';
 import CapabilitiesStory from '@/components/CapabilitiesStory';
 import Services from '@/components/Services';
@@ -60,6 +61,7 @@ export default function Home() {
       */}
       <main className="relative z-10 w-full bg-[var(--canvas-bg)] text-[var(--text-main)] shadow-[0_20px_50px_rgba(0,0,0,0.15)] dark:shadow-[0_20px_50px_rgba(0,0,0,0.7)] transition-colors antialiased">
         <Hero />
+        <DigitalBridgeStory />
         <Ecosystem />
         <CapabilitiesStory />
         <Services />
