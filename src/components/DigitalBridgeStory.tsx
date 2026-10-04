@@ -1,74 +1,50 @@
 'use client';
 
 import React, { useRef, useEffect, useState } from 'react';
-import { ArrowRight, ArrowDown } from 'lucide-react';
+import { Search, Globe, Building2, User, ArrowRight, ArrowDown } from 'lucide-react';
 
 interface StageData {
   id: string;
-  phase: string;
   tag: string;
   title: string;
   narrative: string;
-  demandStatus: string;
-  supplyStatus: string;
-  bridgeStatus: string;
 }
 
 const stages: StageData[] = [
   {
     id: 'the-gap',
-    phase: 'SYSTEM DISCONNECT',
-    tag: 'Stage 01 // Structural Asymmetry',
-    title: 'Enterprise value is useless if the market cannot locate it.',
+    tag: 'Stage 01 — The Disconnect',
+    title: 'Your business has the solution. But the right people cannot find you.',
     narrative:
-      'High-tier clients actively seek specialized solutions every hour. On the supply side, your business possesses the exact operational capacity to execute. Yet between both exists an unindexed void—zero discoverability, zero commercial velocity.',
-    demandStatus: 'INTENT UNMATCHED',
-    supplyStatus: 'UNINDEXED (VOID)',
-    bridgeStatus: 'CIRCUIT: OPEN (AIR GAP)',
+      'A great service or product without digital discoverability is invisible. On one side, your business is ready to deliver. On the other side, a potential client is in immediate need. But between both, there is only silence.',
   },
   {
     id: 'the-search',
-    phase: 'INTENT ARBITRAGE',
-    tag: 'Stage 02 // The Market Query',
-    title: 'High-intent decision makers search by specificity, not brand.',
+    tag: 'Stage 02 — The Search',
+    title: 'Every single day, high-intent buyers search for what you offer.',
     narrative:
-      'Buyers open search engines, compare authority signals, and evaluate compliance credentials. If your domain fails to occupy Page 1 real estate during high-intent queries, competitor platforms capture the contract by default.',
-    demandStatus: 'SCANNING SEARCH INDEX',
-    supplyStatus: 'PAGE 1: ABSENT',
-    bridgeStatus: 'TRAFFIC: DEFLECTED',
+      'They open browsers, search queries on Google, compare alternatives, and seek answers. But being the right business is never enough if you do not appear when intent is highest.',
   },
   {
     id: 'the-bridge',
-    phase: 'INFRASTRUCTURE DEPLOYMENT',
-    tag: 'Stage 03 // The Digital Bridge',
-    title: 'Architecting authoritative discoverability through edge systems.',
+    tag: 'Stage 03 — The Digital Bridge',
+    title: 'Technology builds the discoverability bridge.',
     narrative:
-      'We construct the sovereign digital infrastructure: sub-second Next.js edge runtimes, verified JSON-LD statutory taxonomy, and structured organic content pipelines. The invisible enterprise becomes an undeniable market authority.',
-    demandStatus: 'INDEX HIT DETECTED',
-    supplyStatus: 'TOP-TIER PLACEMENT',
-    bridgeStatus: 'PIPELINE: SYNCHRONIZING',
+      'We construct the digital identity: a lightning-fast web platform, authoritative search presence, and clear structured information. Your business shifts from invisible to directly accessible.',
   },
   {
     id: 'the-connection',
-    phase: 'NETWORK CONVERGENCE',
-    tag: 'Stage 04 // Direct Handshake',
-    title: 'Precision routing turns anonymous traffic into direct engagement.',
+    tag: 'Stage 04 — The Connection',
+    title: 'The right person meets the right business.',
     narrative:
-      'Search intent resolves directly into an authoritative landing experience. Cognitive friction drops to zero. Technical credibility is established in under three seconds, routing the client straight into the negotiation funnel.',
-    demandStatus: 'HANDSHAKE VERIFIED',
-    supplyStatus: 'PROPOSAL ENGAGED',
-    bridgeStatus: 'CIRCUIT: LOCKED (SUB-20MS)',
+      'Search query transforms into a live discovery. The visitor lands, understands the offering in seconds, and reaches out. The gap that used to lose deals is permanently closed.',
   },
   {
     id: 'the-opportunity',
-    phase: 'TRANSACTIONAL VELOCITY',
-    tag: 'Stage 05 // Sustained Pipeline',
-    title: 'Digital infrastructure is not marketing—it is compounding equity.',
+    tag: 'Stage 05 — The Opportunity',
+    title: 'We create digital pathways that turn visibility into business opportunity.',
     narrative:
-      'A resilient digital bridge operates around the clock without manual intervention. It systematically converts market friction into recurring enterprise pipelines, enterprise defensibility, and scalable revenue growth.',
-    demandStatus: 'CONTRACT SECURED',
-    supplyStatus: 'COMPOUNDING ASSET',
-    bridgeStatus: 'AUTONOMOUS RUNTIME',
+      'Technology is not just code or templates—it is the bridge that continuously connects your business with the people looking for you.',
   },
 ];
 
@@ -100,16 +76,18 @@ export default function DigitalBridgeStory() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Compute active stage index based on progress (0 to 1 split into 5 intervals)
   const activeIdx = Math.min(Math.floor(progress * stages.length), stages.length - 1);
   const currentStage = stages[activeIdx];
 
-  // Continuous visual transitions
-  const bridgeProgress = Math.min(Math.max((progress - 0.30) / 0.35, 0), 1);
-  const connectionSignal = Math.min(Math.max((progress - 0.65) / 0.25, 0), 1);
+  // Visual interpolations:
+  const bridgeProgress = Math.min(Math.max((progress - 0.32) / 0.36, 0), 1); // 0 to 1 between 32% and 68%
+  const connectionSignal = Math.min(Math.max((progress - 0.65) / 0.25, 0), 1); // 0 to 1 between 65% and 90%
+  const opportunityActive = progress >= 0.80;
 
-  // Search query animation for stage 2
+  // Search input typing effect simulated by progress in stage 2
   const searchProgress = Math.min(Math.max((progress - 0.18) / 0.22, 0), 1);
-  const fullSearchQuery = 'corporate legal tech & cloud partner jakarta';
+  const fullSearchQuery = 'corporate legal partner in jakarta';
   const queryChars = Math.floor(searchProgress * fullSearchQuery.length);
   const displayedQuery = fullSearchQuery.slice(0, queryChars);
 
@@ -119,250 +97,242 @@ export default function DigitalBridgeStory() {
       className="relative w-full border-t border-[var(--border-mist)] transition-colors select-none"
       style={{ height: '420vh' }}
     >
-      {/* Sticky Story Canvas */}
-      <div className="sticky top-0 h-screen w-full flex flex-col justify-between py-8 sm:py-12 px-4 sm:px-8 max-w-[1280px] mx-auto overflow-hidden">
+      {/* Sticky Fullscreen Story Canvas */}
+      <div className="sticky top-0 h-screen w-full flex flex-col justify-between py-8 sm:py-12 px-4 sm:px-8 max-w-[1240px] mx-auto overflow-hidden">
         
-        {/* Top Telemetry Header */}
+        {/* Top Header & Stage Progress Bar */}
         <div className="w-full flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-[var(--border-mist)] pb-4">
           <div className="flex items-center gap-3">
             <span className="w-2 h-2 rounded-full bg-[#41a1cf] animate-pulse" />
-            <span className="text-[11px] font-mono tracking-[0.25em] text-[#006699] dark:text-[#41a1cf] uppercase font-medium">
-              SYSTEM DYNAMICS // {currentStage.phase}
+            <span className="text-[12px] font-mono text-[#006699] dark:text-[#41a1cf] uppercase tracking-wider font-semibold">
+              The Digital Bridge Journey
             </span>
           </div>
 
-          {/* Stepped Stage Index Indicator */}
           <div className="flex items-center gap-3">
             <div className="flex items-center gap-1.5">
               {stages.map((st, i) => (
                 <div
                   key={st.id}
-                  className={`h-1 rounded-sm transition-all duration-300 ${
+                  className={`h-1.5 rounded-full transition-all duration-300 ${
                     i === activeIdx
-                      ? 'w-7 bg-[#41a1cf]'
+                      ? 'w-8 bg-[#41a1cf]'
                       : i < activeIdx
-                      ? 'w-2.5 bg-[#41a1cf]/50'
+                      ? 'w-3 bg-[#41a1cf]/50'
                       : 'w-2 bg-[var(--border-mist)]'
                   }`}
                 />
               ))}
             </div>
-            <span className="text-[11px] font-mono tracking-widest text-[var(--text-muted)]">
-              [ 0{activeIdx + 1} // 05 ]
+            <span className="text-[11px] font-mono text-[var(--text-muted)] tracking-wider">
+              0{activeIdx + 1} / 05
             </span>
           </div>
         </div>
 
-        {/* Central Architectural Blueprint Canvas */}
-        <div className="relative w-full my-auto py-6 sm:py-8 flex flex-col items-center justify-center">
+        {/* Central Visual Motion Canvas */}
+        <div className="relative w-full my-auto py-4 sm:py-8 flex flex-col items-center justify-center">
           
-          <div className="relative w-full max-w-[1040px] rounded-2xl bg-[var(--card-bg)] border border-[var(--border-mist)] p-6 sm:p-10 shadow-[0_1px_3px_rgba(0,0,0,0.05)] dark:shadow-[0_20px_40px_rgba(0,0,0,0.4)] overflow-hidden">
+          {/* Main Visual Arena: Left (Potential Client), Center (Search / The Gap / The Bridge), Right (Your Business) */}
+          <div className="relative w-full max-w-[980px] rounded-2xl bg-[var(--card-bg)] border border-[var(--border-mist)] p-6 sm:p-10 shadow-[0_2px_12px_rgba(0,0,0,0.03)] dark:shadow-[0_16px_40px_rgba(0,0,0,0.35)] flex items-center justify-between overflow-hidden">
             
-            {/* Technical Corner Crosshairs (Architectural Drafting Aesthetic) */}
-            <span className="absolute top-2 left-2 text-[10px] font-mono text-[var(--text-muted)] opacity-40 leading-none">+</span>
-            <span className="absolute top-2 right-2 text-[10px] font-mono text-[var(--text-muted)] opacity-40 leading-none">+</span>
-            <span className="absolute bottom-2 left-2 text-[10px] font-mono text-[var(--text-muted)] opacity-40 leading-none">+</span>
-            <span className="absolute bottom-2 right-2 text-[10px] font-mono text-[var(--text-muted)] opacity-40 leading-none">+</span>
-
-            {/* Subtle Grid Ambient Texture */}
-            <div 
-              className="absolute inset-0 pointer-events-none opacity-[0.03] dark:opacity-[0.06]"
+            {/* Ambient Background Gradient based on progress */}
+            <div
+              className="absolute inset-0 pointer-events-none transition-opacity duration-700"
               style={{
-                backgroundImage: 'radial-gradient(currentColor 1px, transparent 1px)',
-                backgroundSize: '24px 24px',
+                background:
+                  progress < 0.4
+                    ? 'radial-gradient(circle at 18% 55%, rgba(65, 161, 207, 0.04), transparent 55%)'
+                    : 'radial-gradient(circle at 50% 55%, rgba(65, 161, 207, 0.08), transparent 65%)',
               }}
             />
 
-            {/* Top Canvas Status Bar */}
-            <div className="flex items-center justify-between text-[10px] font-mono tracking-wider text-[var(--text-muted)] mb-8 border-b border-[var(--border-mist)] pb-3">
-              <span className="flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#41a1cf]" />
-                TELEMETRY: {currentStage.bridgeStatus}
+            {/* Connecting Bridge Line (SVG) */}
+            <svg
+              className="absolute inset-0 w-full h-full pointer-events-none z-0"
+              viewBox="0 0 800 300"
+              preserveAspectRatio="none"
+            >
+              {/* Gap state (Dashed & Broken) */}
+              <line
+                x1="130"
+                y1="160"
+                x2="670"
+                y2="160"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeDasharray="5 7"
+                className="text-[var(--border-mist)] transition-opacity duration-500"
+                style={{ opacity: 1 - bridgeProgress }}
+              />
+
+              {/* Active Digital Pathway Line */}
+              <line
+                x1="130"
+                y1="160"
+                x2={130 + 540 * bridgeProgress}
+                y2="160"
+                stroke="#41a1cf"
+                strokeWidth={connectionSignal > 0 ? '2.5' : '1.5'}
+                className="transition-all duration-300"
+                style={{ opacity: bridgeProgress }}
+              />
+
+              {/* Pulsing signal along the line when connected */}
+              {connectionSignal > 0 && (
+                <>
+                  <circle
+                    cx={130 + 540 * ((progress * 3.5) % 1)}
+                    cy="160"
+                    r="4.5"
+                    fill="#41a1cf"
+                    className="opacity-90"
+                  />
+                  <circle
+                    cx={130 + 540 * (((progress * 3.5) + 0.4) % 1)}
+                    cy="160"
+                    r="3"
+                    fill="#75cdd6"
+                    className="opacity-60"
+                  />
+                </>
+              )}
+            </svg>
+
+            {/* NODE 1: Potential Client (Left) */}
+            <div className="relative z-10 flex flex-col items-center text-center max-w-[130px] sm:max-w-[160px]">
+              <div
+                className={`w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center transition-all duration-500 ${
+                  connectionSignal > 0
+                    ? 'bg-[#41a1cf] text-white shadow-[0_0_24px_rgba(65,161,207,0.4)] scale-105 border-2 border-white dark:border-[#141517]'
+                    : 'bg-[var(--canvas-bg)] text-[var(--text-main)] border border-[var(--border-mist)] shadow-xs'
+                }`}
+              >
+                <User className="w-5 h-5 sm:w-6 sm:h-6 stroke-[1.5]" />
+              </div>
+
+              <span className="text-[13px] sm:text-[14px] font-editorial font-semibold text-[var(--text-main)] mt-3">
+                Potential Client
               </span>
-              <span className="hidden sm:inline">
-                SCALE: 1:1 ENTERPRISE ARCHITECTURE
+              <span className="text-[10px] sm:text-[11px] font-mono text-[var(--text-muted)] mt-0.5">
+                {progress < 0.2
+                  ? 'Needs a solution'
+                  : progress < 0.6
+                  ? 'Searching Google...'
+                  : 'Connected'}
               </span>
             </div>
 
-            {/* Interactive Schematic Diagram */}
-            <div className="relative w-full h-[180px] sm:h-[220px] flex items-center justify-between px-2 sm:px-6">
+            {/* CENTER ELEMENT: Search Interface & Digital Bridge Transformer */}
+            <div className="relative z-10 flex-1 px-4 sm:px-8 max-w-[420px] flex flex-col items-center">
               
-              {/* SVG Dynamic Data Pathway */}
-              <svg
-                className="absolute inset-0 w-full h-full pointer-events-none z-0"
-                viewBox="0 0 800 220"
-                preserveAspectRatio="none"
+              {/* Stage 1: The Gap / Disconnected indicator */}
+              {progress < 0.2 && (
+                <div className="px-4 py-2 rounded-full bg-[var(--canvas-bg)] border border-[var(--border-mist)] text-[11px] font-mono text-[var(--text-muted)] flex items-center gap-2.5 shadow-xs transition-all">
+                  <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse" />
+                  <span className="tracking-wide">The Gap: Client ↛ Business</span>
+                </div>
+              )}
+
+              {/* Stage 2: Live Search Bar Interface */}
+              {progress >= 0.2 && progress < 0.42 && (
+                <div className="w-full rounded-xl bg-[var(--canvas-bg)] border border-[var(--border-mist)] p-3.5 shadow-sm transition-all">
+                  <div className="flex items-center gap-2 text-[11px] text-[var(--text-muted)] font-mono mb-1.5">
+                    <Search className="w-3.5 h-3.5 text-[#41a1cf]" />
+                    <span>google.com/search</span>
+                  </div>
+                  <div className="flex items-center gap-1 text-[13px] font-mono text-[var(--text-main)]">
+                    <span className="font-medium truncate">{displayedQuery}</span>
+                    <span className="w-1.5 h-4 bg-[#41a1cf] animate-pulse shrink-0" />
+                  </div>
+                  <div className="mt-2 text-[10px] font-mono text-rose-500/90 flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-rose-500" />
+                    <span>Result: Your business does not appear on Page 1.</span>
+                  </div>
+                </div>
+              )}
+
+              {/* Stage 3 & 4: Digital Presence & Search Indexing Bridge */}
+              {progress >= 0.42 && progress < 0.80 && (
+                <div className="w-full rounded-xl bg-[var(--canvas-bg)] border border-[#41a1cf]/50 p-3.5 shadow-[0_4px_20px_rgba(65,161,207,0.12)] transition-all">
+                  <div className="flex items-center justify-between text-[11px] font-mono text-[#006699] dark:text-[#41a1cf] mb-1.5 font-semibold">
+                    <span className="flex items-center gap-1.5">
+                      <Globe className="w-3.5 h-3.5" />
+                      Digital Touchpoint Built
+                    </span>
+                    <span className="text-[#3fb950] font-mono">Indexed Top 3</span>
+                  </div>
+                  <div className="text-[13px] font-editorial font-bold text-[var(--text-main)] line-clamp-1">
+                    Your Business Platform &amp; Clear Offerings
+                  </div>
+                  <p className="text-[11px] text-[var(--text-sub)] font-sans mt-0.5 line-clamp-1">
+                    Direct answers, mobile-first speed, immediate WhatsApp reach.
+                  </p>
+                  <div className="mt-2.5 pt-2 border-t border-[var(--border-mist)] flex items-center justify-between text-[10px] font-mono text-[var(--text-muted)]">
+                    <span>High-Intent Discovery</span>
+                    <span className="text-[#41a1cf] flex items-center gap-1">
+                      Connecting
+                      <ArrowRight className="w-2.5 h-2.5" />
+                    </span>
+                  </div>
+                </div>
+              )}
+
+              {/* Stage 5: Connected Opportunity Card */}
+              {opportunityActive && (
+                <div className="w-full rounded-xl bg-[#0c182b] text-white p-4 shadow-[0_8px_30px_rgba(12,24,43,0.35)] border border-[#41a1cf]/40 text-center transition-all">
+                  <div className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-[#41a1cf]/20 text-[10px] font-mono text-[#75cdd6] mb-1.5 uppercase tracking-wider">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#75cdd6] animate-pulse" />
+                    Business Opportunity Formed
+                  </div>
+                  <div className="text-[14px] sm:text-[15px] font-editorial font-bold">
+                    Right Client ↔ Right Business
+                  </div>
+                  <p className="text-[11px] text-white/80 font-sans mt-1">
+                    Inbound inquiry confirmed. Zero friction. Continuous pipeline.
+                  </p>
+                </div>
+              )}
+
+            </div>
+
+            {/* NODE 2: Business / Solution (Right) */}
+            <div className="relative z-10 flex flex-col items-center text-center max-w-[130px] sm:max-w-[160px]">
+              <div
+                className={`w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center transition-all duration-500 ${
+                  progress < 0.4
+                    ? 'bg-[var(--canvas-bg)] text-[var(--text-muted)] opacity-50 scale-95 border border-dashed border-[var(--border-mist)]'
+                    : connectionSignal > 0
+                    ? 'bg-[var(--text-main)] text-[var(--canvas-bg)] shadow-[0_0_24px_rgba(0,0,0,0.15)] scale-105 border-2 border-[#41a1cf]'
+                    : 'bg-[var(--canvas-bg)] text-[var(--text-main)] border border-[#41a1cf]/40'
+                }`}
               >
-                {/* Background Guide Axis */}
-                <line
-                  x1="140"
-                  y1="110"
-                  x2="660"
-                  y2="110"
-                  stroke="currentColor"
-                  strokeWidth="1"
-                  strokeDasharray="4 6"
-                  className="text-[var(--border-mist)] opacity-60"
-                />
-
-                {/* Dynamic Optical Fiber / Bridge Line */}
-                <line
-                  x1="140"
-                  y1="110"
-                  x2={140 + 520 * bridgeProgress}
-                  y2="110"
-                  stroke="#41a1cf"
-                  strokeWidth={connectionSignal > 0 ? '2.5' : '1.5'}
-                  className="transition-all duration-300"
-                  style={{ opacity: bridgeProgress }}
-                />
-
-                {/* Sub-pixel Transmission Packets when Connected */}
-                {connectionSignal > 0 && (
-                  <>
-                    <circle
-                      cx={140 + 520 * ((progress * 3.5) % 1)}
-                      cy="110"
-                      r="4"
-                      fill="#41a1cf"
-                      className="opacity-90"
-                    />
-                    <circle
-                      cx={140 + 520 * (((progress * 3.5) + 0.5) % 1)}
-                      cy="110"
-                      r="3"
-                      fill="#75cdd6"
-                      className="opacity-60"
-                    />
-                  </>
-                )}
-              </svg>
-
-              {/* NODE A: Client Intent (Demand Vector) */}
-              <div className="relative z-10 flex flex-col items-center sm:items-start text-center sm:text-left max-w-[140px] sm:max-w-[200px]">
-                <div className="flex items-center gap-3 mb-2">
-                  <div className={`w-8 h-8 rounded-lg flex items-center justify-center font-mono text-xs transition-colors duration-300 ${
-                    connectionSignal > 0 
-                      ? 'bg-[#41a1cf] text-white' 
-                      : 'bg-[var(--canvas-bg)] border border-[var(--border-mist)] text-[var(--text-main)]'
-                  }`}>
-                    01
-                  </div>
-                  <div>
-                    <div className="text-[12px] font-mono tracking-wider font-semibold text-[var(--text-main)] uppercase">
-                      Client Demand
-                    </div>
-                    <div className="text-[9px] font-mono text-[var(--text-muted)] tracking-tight">
-                      SEARCH INTENT VECTOR
-                    </div>
-                  </div>
-                </div>
-
-                <div className="mt-3 px-2.5 py-1 rounded bg-[var(--canvas-bg)] border border-[var(--border-mist)] text-[10px] font-mono text-[var(--text-muted)]">
-                  {currentStage.demandStatus}
-                </div>
+                <Building2 className="w-5 h-5 sm:w-6 sm:h-6 stroke-[1.5]" />
               </div>
 
-              {/* CENTER TRANSMISSION INTERACTION */}
-              <div className="relative z-10 flex-1 px-4 sm:px-8 max-w-[380px] flex flex-col items-center">
-                
-                {/* Stage 1: The Disconnect (Air Gap) */}
-                {progress < 0.22 && (
-                  <div className="text-center">
-                    <span className="text-[10px] font-mono tracking-[0.2em] text-amber-600 dark:text-amber-400 block mb-1">
-                      [ PACKET VOID // 100% DEFLECTION ]
-                    </span>
-                    <span className="text-[11px] text-[var(--text-muted)] font-mono">
-                      Query isolated. Zero discovery channel.
-                    </span>
-                  </div>
-                )}
-
-                {/* Stage 2: Intent Query Searching */}
-                {progress >= 0.22 && progress < 0.42 && (
-                  <div className="w-full rounded-lg bg-[var(--canvas-bg)] border border-[var(--border-mist)] p-3 text-left">
-                    <div className="text-[9px] font-mono text-[var(--text-muted)] mb-1 flex items-center justify-between">
-                      <span>HTTP / QUERY PIPELINE</span>
-                      <span className="text-red-500 font-semibold">404 REACH</span>
-                    </div>
-                    <div className="text-xs font-mono text-[var(--text-main)] truncate">
-                      &gt; {displayedQuery}
-                      <span className="inline-block w-1.5 h-3.5 bg-[#41a1cf] ml-1 animate-pulse align-middle" />
-                    </div>
-                  </div>
-                )}
-
-                {/* Stage 3: Systems Pipeline Active */}
-                {progress >= 0.42 && progress < 0.75 && (
-                  <div className="w-full rounded-lg bg-[var(--canvas-bg)] border border-[#41a1cf]/50 p-3 text-left shadow-sm">
-                    <div className="text-[9px] font-mono text-[#006699] dark:text-[#41a1cf] mb-1 flex items-center justify-between">
-                      <span>SEO &amp; CLOUD ARCHITECTURE</span>
-                      <span className="text-[#3fb950] font-semibold">SYNCHRONIZED</span>
-                    </div>
-                    <div className="text-xs font-mono font-medium text-[var(--text-main)] truncate">
-                      Next.js Edge + Schema Indexing
-                    </div>
-                    <div className="text-[10px] font-mono text-[var(--text-muted)] mt-1">
-                      Direct organic ranking · Sub-30ms load
-                    </div>
-                  </div>
-                )}
-
-                {/* Stage 4 & 5: Verified Connection */}
-                {progress >= 0.75 && (
-                  <div className="w-full rounded-lg bg-[#006699]/10 dark:bg-[#41a1cf]/10 border border-[#41a1cf] p-3 text-center">
-                    <div className="text-[9px] font-mono text-[#006699] dark:text-[#41a1cf] uppercase tracking-widest font-semibold mb-1">
-                      TRANSACTION PIPELINE VERIFIED
-                    </div>
-                    <div className="text-xs font-mono font-medium text-[var(--text-main)]">
-                      High-Intent Client ↔ Enterprise Solution
-                    </div>
-                    <div className="text-[10px] font-mono text-[var(--text-muted)] mt-1">
-                      Zero friction handshake completed
-                    </div>
-                  </div>
-                )}
-
-              </div>
-
-              {/* NODE B: Business Solution (Supply Entity) */}
-              <div className="relative z-10 flex flex-col items-center sm:items-end text-center sm:text-right max-w-[140px] sm:max-w-[200px]">
-                <div className="flex items-center gap-3 mb-2 flex-row-reverse sm:flex-row">
-                  <div>
-                    <div className="text-[12px] font-mono tracking-wider font-semibold text-[var(--text-main)] uppercase">
-                      Your Business
-                    </div>
-                    <div className="text-[9px] font-mono text-[var(--text-muted)] tracking-tight">
-                      ENTERPRISE CAPABILITY
-                    </div>
-                  </div>
-                  <div className={`w-8 h-8 rounded-lg flex items-center justify-center font-mono text-xs transition-colors duration-300 ${
-                    connectionSignal > 0 
-                      ? 'bg-[var(--text-main)] text-[var(--canvas-bg)]' 
-                      : 'bg-[var(--canvas-bg)] border border-[var(--border-mist)] text-[var(--text-muted)]'
-                  }`}>
-                    02
-                  </div>
-                </div>
-
-                <div className="mt-3 px-2.5 py-1 rounded bg-[var(--canvas-bg)] border border-[var(--border-mist)] text-[10px] font-mono text-[var(--text-muted)]">
-                  {currentStage.supplyStatus}
-                </div>
-              </div>
-
+              <span className="text-[13px] sm:text-[14px] font-editorial font-semibold text-[var(--text-main)] mt-3">
+                Your Business
+              </span>
+              <span className="text-[10px] sm:text-[11px] font-mono text-[var(--text-muted)] mt-0.5">
+                {progress < 0.4
+                  ? 'Invisible online'
+                  : progress < 0.7
+                  ? 'Found on Google'
+                  : 'Receiving Leads'}
+              </span>
             </div>
 
           </div>
 
         </div>
 
-        {/* Bottom Editorial Narrative & Lead-In to Case Studies */}
+        {/* Bottom Narrative Anchor & Seamless Transition to Case Study */}
         <div className="w-full flex flex-col md:flex-row md:items-end justify-between gap-6 pt-6 border-t border-[var(--border-mist)]">
           <div className="max-w-2xl">
-            <span className="text-[11px] font-mono text-[#006699] dark:text-[#41a1cf] tracking-[0.2em] uppercase font-semibold block mb-2">
+            <span className="text-[11px] font-mono text-[#006699] dark:text-[#41a1cf] uppercase tracking-wider font-semibold block mb-1.5">
               {currentStage.tag}
             </span>
-            <h3 className="text-2xl sm:text-3xl font-editorial text-[var(--text-main)] leading-snug mb-3">
+            <h3 className="text-xl sm:text-2xl font-editorial text-[var(--text-main)] leading-snug mb-2">
               {currentStage.title}
             </h3>
             <p className="text-[14px] sm:text-[15px] text-[var(--text-sub)] font-sans leading-relaxed">
@@ -370,18 +340,18 @@ export default function DigitalBridgeStory() {
             </p>
           </div>
 
-          {/* Clean Case Study Action Button */}
+          {/* Smooth Lead-In to Case Studies */}
           <div className="shrink-0 flex flex-col items-start md:items-end">
-            <div className="text-[10px] font-mono text-[var(--text-muted)] tracking-wider uppercase mb-2 flex items-center gap-1.5">
+            <div className="text-[11px] font-mono text-[var(--text-muted)] mb-2 flex items-center gap-1.5">
               <span>Next up: Real-world proof</span>
-              <ArrowDown className="w-3 h-3 text-[#41a1cf]" />
+              <ArrowDown className="w-3 h-3 text-[#41a1cf] animate-bounce" />
             </div>
             <a
               href="#case-study"
-              className="px-5 py-2.5 rounded-lg border border-[var(--border-mist)] bg-[var(--card-bg)] hover:bg-[var(--card-subtle-bg)] text-[var(--text-main)] text-[12px] font-mono tracking-wider uppercase transition-all duration-200 flex items-center gap-2 active:scale-98 shadow-sm"
+              className="px-5 py-2.5 rounded-lg border border-[var(--border-mist)] bg-[var(--text-main)] text-[var(--canvas-bg)] text-[12px] font-mono uppercase tracking-wider hover:opacity-90 transition-all flex items-center gap-2 active:scale-95 shadow-sm"
             >
               <span>See How We Made It Real</span>
-              <ArrowRight className="w-3.5 h-3.5 text-[#41a1cf]" />
+              <ArrowRight className="w-3.5 h-3.5" />
             </a>
           </div>
         </div>
